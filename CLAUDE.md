@@ -208,3 +208,296 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+---
+
+# Men's Boutique E-Commerce Platform - Implementation Plan
+
+**Project**: Transform learnflow-app into a complete men's boutique e-commerce platform
+**Status**: Ready for autonomous execution
+**Timeline**: 7 days
+**Reusability**: 70-80% of existing codebase
+
+## Execution Mode: FULLY AUTONOMOUS
+
+- ✅ Execute all phases without asking for confirmation
+- ✅ Use browser automation for GitHub, Vercel, image selection
+- ✅ Deploy to production automatically
+- ✅ Run E2E tests autonomously
+- ✅ Create comprehensive documentation
+
+## Implementation Phases
+
+### Phase 1: Product Images & Database (Day 1)
+
+**Objective**: Acquire 40 men's clothing images and update database
+
+**Tasks**:
+1. Use `browser-use` skill to autonomously download images from royalty-free sources:
+   - Unsplash, Pexels, Pixabay
+   - 10 Fancy Suits, 10 Shalwar Qameez, 10 Cotton Suits, 10 Designer Brands
+   - Save to: `/public/images/{category}/{category}-{01-10}.jpg`
+   - Optimize: 800x1200px, <200KB, WebP format
+
+2. Update database content:
+   - Edit `database/seeds/sample_products.sql`
+   - Change product names/descriptions for men's clothing
+   - Run migration: `psql $DATABASE_URL < database/seeds/sample_products.sql`
+
+**Critical Files**:
+- `learnflow-app/app/frontend/public/images/` (add images)
+- `learnflow-app/database/seeds/sample_products.sql` (update)
+
+**Validation**: All 40 images load, products display correctly
+
+---
+
+### Phase 2: RAG System Implementation (Day 2-3)
+
+**Objective**: Implement Qdrant vector database for intelligent product recommendations
+
+**Tasks**:
+1. Set up Qdrant vector database
+   - Add to Docker Compose
+   - Create collection with OpenAI embeddings (1536 dimensions)
+   - Build `chat-service/app/rag_client.py` wrapper
+
+2. Generate product embeddings
+   - Create `scripts/generate_embeddings.py`
+   - Use OpenAI `text-embedding-ada-002`
+   - Store embeddings in Qdrant for all 40 products
+
+3. Enhance chat service with RAG
+   - Modify `chat-service/app/routes.py`
+   - Add semantic search before responses
+   - Inject product context into system prompt
+
+**Skills**: `building-rag-systems`
+**Agent**: `prod-microservices-operator`
+
+**Validation**: Chat query "formal wedding suit" returns relevant products with context
+
+---
+
+### Phase 3: WhatsApp Integration (Day 3)
+
+**Objective**: Add WhatsApp Click-to-Chat feature
+
+**Tasks**:
+1. Create WhatsApp button component
+   - New: `components/WhatsAppButton.tsx`
+   - Pre-fill message with product name + URL
+   - Format: `https://wa.me/{number}?text={message}`
+
+2. Integrate into product pages
+   - Modify: `app/products/[id]/page.tsx`
+   - Add env variable: `NEXT_PUBLIC_WHATSAPP_NUMBER`
+
+**Skills**: `building-nextjs-apps`
+**Agent**: `frontend-ui-architect`
+
+**Validation**: WhatsApp button opens with pre-filled product message
+
+---
+
+### Phase 4: Stripe Payment Integration (Day 4-5)
+
+#### 4.1 Backend (Day 4)
+
+**Tasks**:
+1. Add Stripe to order service
+   - Install `stripe==7.8.0`
+   - New: `order-service/app/stripe_client.py`
+   - Implement `create_payment_intent()` for PKR currency
+
+2. Create webhook handler
+   - Add `/api/webhooks/stripe` endpoint
+   - Verify webhook signature
+   - Update order status on payment success
+
+3. Update checkout endpoint to return `client_secret`
+
+**Skills**: `building-fastapi-apps`
+**Agent**: `prod-microservices-operator`
+
+#### 4.2 Frontend (Day 5)
+
+**Tasks**:
+1. Install Stripe Elements
+   - `npm install @stripe/stripe-js @stripe/react-stripe-js`
+
+2. Create checkout form
+   - New: `components/StripeCheckoutForm.tsx`
+   - Use `PaymentElement` component
+
+3. Integrate in cart page
+   - Modify: `app/cart/page.tsx`
+   - Call checkout API, get `clientSecret`
+
+**Skills**: `building-nextjs-apps`
+**Agent**: `frontend-ui-architect`
+
+**Validation**: Test card (4242 4242 4242 4242) processes successfully
+
+---
+
+### Phase 5: End-to-End Testing (Day 6)
+
+**Objective**: Comprehensive test suite validation
+
+**Tasks**:
+1. Frontend E2E tests (Playwright)
+   - Complete checkout flow
+   - Product browsing and search
+   - Cart management
+
+2. Backend API tests (pytest)
+   - Stripe payment intent creation
+   - Webhook handling
+   - RAG semantic search
+
+3. Integration tests
+   - Service-to-service communication
+   - Database transactions
+
+**Skills**: `autonomous-e2e-testing`
+**Agent**: `autonomous-e2e-testing`
+
+**Validation**: 95%+ test pass rate, 70%+ backend coverage, 60%+ frontend
+
+---
+
+### Phase 6: Production Deployment (Day 7)
+
+#### 6.1 Frontend to Vercel
+
+**Tasks**:
+1. Verify local build succeeds
+2. Deploy with Vercel CLI: `vercel --prod`
+3. Configure environment variables:
+   - `NEXT_PUBLIC_API_URL`
+   - `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
+   - `NEXT_PUBLIC_WHATSAPP_NUMBER`
+
+#### 6.2 Backend Deployment
+
+**Options**:
+- **Railway.app** (recommended for simplicity)
+- **Render.com**
+- **Kubernetes** (production-grade)
+
+**Tasks**:
+1. Deploy each FastAPI service
+2. Set environment variables
+3. Verify database connectivity
+4. Test Stripe webhooks
+
+**Skills**: `deploying-cloud-k8s`, `containerizing-applications`
+**Agent**: `prod-microservices-operator`
+
+#### 6.3 Database & Qdrant
+
+**Tasks**:
+1. Create production PostgreSQL (Neon/Supabase)
+2. Run migrations
+3. Seed product data
+4. Generate production embeddings
+
+**Validation**: All services healthy, payments work, RAG responses correct
+
+---
+
+## Critical Files to Modify
+
+### Must Modify:
+1. `learnflow-app/database/seeds/sample_products.sql` - Products for men's clothing
+2. `learnflow-app/app/backend/chat-service/app/routes.py` - RAG integration
+3. `learnflow-app/app/backend/order-service/app/routes.py` - Stripe checkout + webhook
+4. `learnflow-app/app/frontend/app/products/[id]/page.tsx` - WhatsApp button
+5. `learnflow-app/app/frontend/app/cart/page.tsx` - Stripe checkout form
+
+### Must Create:
+1. `learnflow-app/app/backend/chat-service/app/rag_client.py` - Qdrant wrapper
+2. `learnflow-app/app/backend/order-service/app/stripe_client.py` - Stripe integration
+3. `learnflow-app/app/frontend/components/WhatsAppButton.tsx` - WhatsApp component
+4. `learnflow-app/app/frontend/components/StripeCheckoutForm.tsx` - Payment form
+5. `learnflow-app/scripts/generate_embeddings.py` - Embedding generation
+6. `learnflow-app/docker-compose.yml` - Add Qdrant service
+7. E2E test files for all critical flows
+
+---
+
+## Skill & Agent Mapping
+
+| Phase | Task | Skill | Agent |
+|-------|------|-------|-------|
+| 1 | Image acquisition | `browser-use` | Main |
+| 2 | RAG system | `building-rag-systems` | `prod-microservices-operator` |
+| 3 | WhatsApp | `building-nextjs-apps` | `frontend-ui-architect` |
+| 4.1 | Stripe backend | `building-fastapi-apps` | `prod-microservices-operator` |
+| 4.2 | Stripe frontend | `building-nextjs-apps` | `frontend-ui-architect` |
+| 5 | E2E testing | `autonomous-e2e-testing` | `autonomous-e2e-testing` |
+| 6 | Deployment | `deploying-cloud-k8s` | `prod-microservices-operator` |
+
+---
+
+## Verification Checklist
+
+- [ ] Phase 1: All 40 images load, products show men's clothing
+- [ ] Phase 2: Chat returns context-aware product recommendations
+- [ ] Phase 3: WhatsApp button works on all product pages
+- [ ] Phase 4: Test payment succeeds, order status updates
+- [ ] Phase 5: 95%+ tests pass, no critical failures
+- [ ] Phase 6: Production site live, all features work
+
+**Final Validation**:
+- [ ] Browse → Cart → Checkout → Pay → Order confirmed
+- [ ] Chat provides relevant recommendations
+- [ ] WhatsApp integration works
+- [ ] Images load correctly
+- [ ] Page load <2.5s, API <200ms
+- [ ] Error rate <1%, uptime 99.9%
+
+---
+
+## Risk Mitigation
+
+| Risk | Mitigation |
+|------|------------|
+| Image licensing | Use only Unsplash/Pexels/Pixabay |
+| Stripe webhooks | Implement retry logic, monitor logs |
+| RAG performance | Optimize embeddings, cache results |
+| Deployment issues | Blue-green deployment, rollback plan |
+
+---
+
+## Timeline
+
+| Day | Phase | Hours |
+|-----|-------|-------|
+| 1 | Images + DB | 4-5h |
+| 2 | Qdrant setup | 4-5h |
+| 3 | RAG + WhatsApp | 4-5h |
+| 4 | Stripe backend | 4-5h |
+| 5 | Stripe frontend | 3-4h |
+| 6 | E2E testing | 8h |
+| 7 | Deployment | 6-8h |
+
+**Total**: 7 days (33-41 hours)
+
+---
+
+## Success Metrics
+
+- **Technical**: 99.9% uptime, <200ms API response, <1% error rate
+- **Quality**: 70%+ test coverage, zero critical vulnerabilities
+- **Performance**: <2.5s page load, <500ms RAG search
+- **Business**: >95% payment success rate, >3 messages per chat session
+
+---
+
+## Deployment URLs
+
+**Frontend**: https://vercel.com/naveeds-projects-04d1df6d
+**GitHub**: https://github.com/NAVEED261/Reusable-shop
+**Backend**: TBD (Railway/Render/K8s)
