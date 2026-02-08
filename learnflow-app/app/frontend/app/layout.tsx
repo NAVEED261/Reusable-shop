@@ -3,6 +3,7 @@ import "./globals.css"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import ChatWidget from "@/components/ChatWidget"
+import { FloatingWhatsAppButton } from "@/components/WhatsAppButton"
 
 export const metadata: Metadata = {
   title: "Fatima Zehra Boutique - Elegant Fashion",
@@ -30,6 +31,10 @@ export default function RootLayout({
         </main>
         <Footer />
         <ChatWidget />
+        <FloatingWhatsAppButton
+          phoneNumber={process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}
+          defaultMessage="السلام علیکم! مجھے آپ کی مصنوعات کے بارے میں معلومات چاہیے۔"
+        />
       </body>
     </html>
   )
