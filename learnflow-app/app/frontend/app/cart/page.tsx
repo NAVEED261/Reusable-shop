@@ -4,20 +4,102 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useCartStore } from '@/lib/store'
-import { Trash2, Plus, Minus, ShoppingBag } from 'lucide-react'
+import { Trash2, Plus, Minus, ShoppingBag, X } from 'lucide-react'
+import { loadStripe } from '@stripe/stripe-js'
+import { Elements } from '@stripe/react-stripe-js'
+import StripeCheckoutForm from '@/components/StripeCheckoutForm'
+import axios from 'axios'
+
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || '')
 
 export default function CartPage() {
   const { items, removeItem, updateQuantity, clearCart, getTotal } = useCartStore()
   const [isCheckingOut, setIsCheckingOut] = useState(false)
+  const [showPaymentForm, setShowPaymentForm] = useState(false)
+  const [clientSecret, setClientSecret] = useState<string | null>(null)
+  const [orderId, setOrderId] = useState<number | null>(null)
+  const [customerEmail, setCustomerEmail] = useState('')
+  const [customerName, setCustomerName] = useState('')
+  const [shippingAddress, setShippingAddress] = useState('')
+  const [isCreatingOrder, setIsCreatingOrder] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  const handleCheckout = () => {
+  const handleCheckout = async () => {
     setIsCheckingOut(true)
-    // Simulate checkout
-    setTimeout(() => {
-      alert('Order placed successfully! Thank you for shopping with Fatima Zehra Boutique.')
-      clearCart()
+    setError(null)
+    setIsCreatingOrder(true)
+
+    try {
+      // Validate required fields
+      if (!customerName.trim() || !customerEmail.trim() || !shippingAddress.trim()) {
+        throw new Error('Please fill in all fields')
+      }
+
+      const apiUrl = process.env.NEXT_PUBLIC_ORDER_SERVICE_URL || '/api'
+      const token = localStorage.getItem('auth_token') || 'Bearer 1-test'
+
+      // Create order via checkout endpoint
+      const checkoutResponse = await axios.post(
+        `${apiUrl}/checkout`,
+        {
+          shipping_address: shippingAddress,
+        },
+        {
+          headers: {
+            Authorization: token,
+          },
+        }
+      )
+
+      const createdOrder = checkoutResponse.data
+      setOrderId(createdOrder.id)
+
+      // Create payment intent
+      const paymentResponse = await axios.post(
+        `${apiUrl}/payments/create-intent`,
+        {
+          order_id: createdOrder.id,
+          amount: getTotal(),
+          customer_email: customerEmail,
+          customer_name: customerName,
+        },
+        {
+          headers: {
+            Authorization: token,
+          },
+        }
+      )
+
+      if (!paymentResponse.data.client_secret) {
+        throw new Error('Failed to create payment intent')
+      }
+
+      setClientSecret(paymentResponse.data.client_secret)
+      setShowPaymentForm(true)
+    } catch (err) {
+      const errorMsg = err instanceof Error ? err.message : 'Failed to initiate checkout'
+      setError(errorMsg)
+      console.error('Checkout error:', err)
+    } finally {
+      setIsCreatingOrder(false)
       setIsCheckingOut(false)
-    }, 1500)
+    }
+  }
+
+  const handlePaymentSuccess = (paymentIntentId: string) => {
+    alert('Payment successful! Thank you for shopping with Fatima Zehra Boutique.')
+    clearCart()
+    setShowPaymentForm(false)
+    setCustomerEmail('')
+    setCustomerName('')
+    setShippingAddress('')
+    // Redirect to order confirmation
+    window.location.href = `/orders/${orderId}`
+  }
+
+  const handlePaymentError = (errorMsg: string) => {
+    setError(errorMsg)
+    console.error('Payment error:', errorMsg)
   }
 
   if (items.length === 0) {
@@ -117,44 +199,173 @@ export default function CartPage() {
             </button>
           </div>
 
-          {/* Order Summary */}
+          {/* Order Summary / Checkout Form */}
           <div>
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 sticky top-24">
-              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
-                Order Summary
-              </h2>
+            {!showPaymentForm ? (
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 sticky top-24">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
+                  {isCheckingOut ? 'Checkout Details' : 'Order Summary'}
+                </h2>
 
-              <div className="space-y-3 mb-6 pb-6 border-b border-gray-200 dark:border-gray-700">
-                <div className="flex justify-between text-gray-600 dark:text-gray-400">
-                  <span>Subtotal ({items.length} items)</span>
-                  <span>Rs {getTotal().toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between text-gray-600 dark:text-gray-400">
-                  <span>Shipping</span>
-                  <span className="text-green-600">Free</span>
-                </div>
+                {error && (
+                  <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 text-red-700 dark:text-red-300 px-4 py-3 rounded-lg mb-4">
+                    <p className="font-medium">{error}</p>
+                  </div>
+                )}
+
+                {!isCheckingOut ? (
+                  <>
+                    <div className="space-y-3 mb-6 pb-6 border-b border-gray-200 dark:border-gray-700">
+                      <div className="flex justify-between text-gray-600 dark:text-gray-400">
+                        <span>Subtotal ({items.length} items)</span>
+                        <span>Rs {getTotal().toLocaleString()}</span>
+                      </div>
+                      <div className="flex justify-between text-gray-600 dark:text-gray-400">
+                        <span>Shipping</span>
+                        <span className="text-green-600">Free</span>
+                      </div>
+                    </div>
+
+                    <div className="flex justify-between text-xl font-bold text-gray-900 dark:text-white mb-6">
+                      <span>Total</span>
+                      <span className="text-pink-600">Rs {getTotal().toLocaleString()}</span>
+                    </div>
+
+                    <button
+                      onClick={() => setIsCheckingOut(true)}
+                      className="w-full bg-pink-600 text-white py-3 rounded-lg font-semibold hover:bg-pink-700 transition"
+                    >
+                      Proceed to Checkout
+                    </button>
+
+                    <Link
+                      href="/products"
+                      className="block text-center mt-4 text-pink-600 hover:text-pink-700 font-semibold"
+                    >
+                      Continue Shopping
+                    </Link>
+                  </>
+                ) : (
+                  <>
+                    {/* Checkout Form */}
+                    <form
+                      onSubmit={(e) => {
+                        e.preventDefault()
+                        handleCheckout()
+                      }}
+                      className="space-y-4"
+                    >
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Full Name
+                        </label>
+                        <input
+                          type="text"
+                          value={customerName}
+                          onChange={(e) => setCustomerName(e.target.value)}
+                          placeholder="Enter your full name"
+                          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-pink-500 outline-none dark:bg-gray-700 dark:text-white"
+                          required
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Email Address
+                        </label>
+                        <input
+                          type="email"
+                          value={customerEmail}
+                          onChange={(e) => setCustomerEmail(e.target.value)}
+                          placeholder="Enter your email"
+                          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-pink-500 outline-none dark:bg-gray-700 dark:text-white"
+                          required
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Shipping Address
+                        </label>
+                        <textarea
+                          value={shippingAddress}
+                          onChange={(e) => setShippingAddress(e.target.value)}
+                          placeholder="Enter your complete shipping address"
+                          rows={3}
+                          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-pink-500 outline-none dark:bg-gray-700 dark:text-white"
+                          required
+                        />
+                      </div>
+
+                      <div className="space-y-3 mb-6 pb-6 border-t border-gray-200 dark:border-gray-700 pt-6">
+                        <div className="flex justify-between text-gray-600 dark:text-gray-400">
+                          <span>Subtotal ({items.length} items)</span>
+                          <span>Rs {getTotal().toLocaleString()}</span>
+                        </div>
+                        <div className="flex justify-between text-xl font-bold text-gray-900 dark:text-white">
+                          <span>Total Amount</span>
+                          <span className="text-pink-600">Rs {getTotal().toLocaleString()}</span>
+                        </div>
+                      </div>
+
+                      <button
+                        type="submit"
+                        disabled={isCreatingOrder}
+                        className="w-full bg-pink-600 text-white py-3 rounded-lg font-semibold hover:bg-pink-700 disabled:bg-gray-400 transition"
+                      >
+                        {isCreatingOrder ? 'Processing...' : 'Continue to Payment'}
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setIsCheckingOut(false)
+                          setError(null)
+                        }}
+                        className="w-full bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white py-3 rounded-lg font-semibold hover:bg-gray-300 transition"
+                      >
+                        Back to Cart
+                      </button>
+                    </form>
+                  </>
+                )}
               </div>
+            ) : clientSecret ? (
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 sticky top-24">
+                <Elements
+                  stripe={stripePromise}
+                  options={{
+                    clientSecret,
+                    appearance: {
+                      theme: 'stripe',
+                      variables: {
+                        colorPrimary: '#ec4899',
+                        colorBackground: '#f3f4f6',
+                        colorText: '#111827',
+                        borderRadius: '8px',
+                        fontFamily: 'ui-rounded, system-ui, sans-serif',
+                      },
+                    },
+                  }}
+                >
+                  <StripeCheckoutForm
+                    clientSecret={clientSecret}
+                    amount={getTotal()}
+                    orderId={orderId || 0}
+                    email={customerEmail}
+                    onSuccess={handlePaymentSuccess}
+                    onError={handlePaymentError}
+                  />
+                </Elements>
 
-              <div className="flex justify-between text-xl font-bold text-gray-900 dark:text-white mb-6">
-                <span>Total</span>
-                <span className="text-pink-600">Rs {getTotal().toLocaleString()}</span>
+                <button
+                  onClick={() => setShowPaymentForm(false)}
+                  className="w-full mt-4 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white py-3 rounded-lg font-semibold hover:bg-gray-300 transition"
+                >
+                  Back to Checkout
+                </button>
               </div>
-
-              <button
-                onClick={handleCheckout}
-                disabled={isCheckingOut}
-                className="w-full bg-pink-600 text-white py-3 rounded-lg font-semibold hover:bg-pink-700 disabled:bg-gray-400 transition"
-              >
-                {isCheckingOut ? 'Processing...' : 'Proceed to Checkout'}
-              </button>
-
-              <Link
-                href="/products"
-                className="block text-center mt-4 text-pink-600 hover:text-pink-700 font-semibold"
-              >
-                Continue Shopping
-              </Link>
-            </div>
+            ) : null}
           </div>
         </div>
       </div>

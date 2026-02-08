@@ -45,6 +45,7 @@ class Order(SQLModel, table=True):
     total_amount: Decimal = Field(sa_column=Column(Numeric(precision=10, scale=2)))
     shipping_address: str
     payment_status: str = Field(default="pending", max_length=50)
+    payment_intent_id: Optional[str] = Field(default=None, max_length=255, index=True)
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 
