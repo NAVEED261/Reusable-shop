@@ -5,7 +5,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { PRODUCTS } from '@/lib/products'
-import { Star, Heart, ShoppingCart } from 'lucide-react'
+import { Star, Heart, ShoppingCart, MessageCircle } from 'lucide-react'
+import { WhatsAppButton } from './WhatsAppButton'
 
 export default function ProductDetailClient({ params }: { params: { id: string } }) {
   const router = useRouter()
@@ -271,31 +272,48 @@ export default function ProductDetailClient({ params }: { params: { id: string }
               </div>
             </div>
 
-            {/* Add to Cart & Wishlist */}
-            <div className="flex gap-4">
-              <button
-                onClick={handleAddToCart}
-                disabled={!product.inStock}
-                className={`flex-1 flex items-center justify-center gap-3 py-4 rounded-lg font-bold text-white transition text-xl ${
-                  product.inStock
-                    ? 'bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 shadow-lg'
-                    : 'bg-gray-300 cursor-not-allowed'
-                }`}
-              >
-                <ShoppingCart size={28} />
-                کارٹ میں شامل کریں
-              </button>
+            {/* Add to Cart & Wishlist & WhatsApp */}
+            <div className="flex flex-col gap-4">
+              <div className="flex gap-3">
+                <button
+                  onClick={handleAddToCart}
+                  disabled={!product.inStock}
+                  className={`flex-1 flex items-center justify-center gap-3 py-4 rounded-lg font-bold text-white transition text-xl ${
+                    product.inStock
+                      ? 'bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 shadow-lg'
+                      : 'bg-gray-300 cursor-not-allowed'
+                  }`}
+                >
+                  <ShoppingCart size={28} />
+                  کارٹ میں شامل کریں
+                </button>
 
-              <button
-                onClick={() => setWishlist(!wishlist)}
-                className={`px-8 py-4 border-2 rounded-lg transition font-bold text-3xl ${
-                  wishlist
-                    ? 'bg-pink-50 border-pink-600 text-pink-600'
-                    : 'border-gray-300 text-gray-600 hover:border-pink-400'
-                }`}
-              >
-                <Heart size={28} fill={wishlist ? 'currentColor' : 'none'} />
-              </button>
+                <button
+                  onClick={() => setWishlist(!wishlist)}
+                  className={`px-8 py-4 border-2 rounded-lg transition font-bold text-2xl ${
+                    wishlist
+                      ? 'bg-pink-50 border-pink-600 text-pink-600'
+                      : 'border-gray-300 text-gray-600 hover:border-pink-400'
+                  }`}
+                  title="Add to Wishlist"
+                >
+                  <Heart size={28} fill={wishlist ? 'currentColor' : 'none'} />
+                </button>
+              </div>
+
+              {/* WhatsApp Button */}
+              <div className="w-full">
+                <WhatsAppButton
+                  productName={product.name}
+                  productPrice={product.price}
+                  productId={product.id}
+                  productCategory={product.category}
+                  buttonText="📱 WhatsApp پر پوچھیں"
+                  variant="primary"
+                  size="md"
+                  className="w-full justify-center"
+                />
+              </div>
             </div>
 
             {/* Delivery Info */}
