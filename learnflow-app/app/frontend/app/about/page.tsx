@@ -3,155 +3,138 @@ import Link from 'next/link'
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 py-24">
-        <div className="max-w-5xl mx-auto px-4 text-center">
-          <h1 className="text-7xl md:text-8xl font-serif font-bold mb-6 text-white drop-shadow-lg">
+    <div className="min-h-screen bg-white text-slate-900 selection:bg-amber-100">
+      
+      {/* --- HERO SECTION (Teesri Image Yahan Lagayi Hai) --- */}
+      <section className="relative h-[85vh] flex items-center justify-center bg-slate-900 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-black/60 z-10"></div>
+          {/* TEESRI IMAGE: Yahan aapki main best photo aayegi */}
+          <Image 
+            src="/images/naveed/THIRD_IMAGE_HERE.jpg" 
+            alt="Fatima Zehra Boutique Main" 
+            fill 
+            className="object-cover object-top opacity-80"
+            priority
+          />
+        </div>
+        
+        <div className="relative z-20 text-center px-4 max-w-5xl">
+          <span className="text-amber-500 tracking-[0.5em] uppercase text-xs font-bold mb-6 block">
+            Premium Bespoke Tailoring
+          </span>
+          <h1 className="text-6xl md:text-9xl font-serif font-bold mb-8 text-white leading-none tracking-tighter">
             Fatima Zehra <br />
-            <span className="bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent">
-              Boutique
-            </span>
+            <span className="italic font-normal text-amber-500">Boutique</span>
           </h1>
-          <p className="text-2xl md:text-3xl text-white font-light drop-shadow">
-            Elegant Fashion for Every Occasion
+          <p className="text-gray-300 text-lg md:text-2xl font-light max-w-2xl mx-auto leading-relaxed italic">
+            "Definement in every stitch, excellence in every detail."
           </p>
         </div>
-      </div>
 
-      {/* About Section */}
-      <div className="max-w-5xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <div>
-            <h2 className="text-4xl font-serif font-bold mb-6">Our Story</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Founded with a passion for elegant fashion, Fatima Zehra Boutique
-              has been serving customers who appreciate quality and style.
-              Every piece in our collection is carefully selected to ensure that
-              our customers feel confident and beautiful.
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent z-20"></div>
+      </section>
+
+      {/* --- OUR STORY SECTION --- */}
+      <section className="py-24 px-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          
+          {/* Text Content */}
+          <div className="space-y-8 order-2 lg:order-1">
+            <div className="inline-block border-l-4 border-amber-500 pl-4">
+              <h2 className="text-sm uppercase tracking-[0.3em] text-amber-600 font-bold">The Craftsmanship</h2>
+              <h3 className="text-4xl md:text-5xl font-serif font-bold mt-2">Where Tradition <br/> Meets Modernity</h3>
+            </div>
+            
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Fatima Zehra Boutique mein hum sirf suits nahi banate, hum ek legacy create karte hain. 
+              Pichle kayi saalon se hum mardana fashion mein apne "Bespoke" experience ki wajah se pehchane jate hain. 
+              Hamara har suit, sherwani aur waistcoat aapki body measurements ke mutabiq customize kiya jata hai.
             </p>
-            <p className="text-gray-700 leading-relaxed">
-              We believe that fashion is more than just clothing—it's a form of
-              self-expression. Our mission is to provide our customers with
-              access to the finest fashion pieces that make them feel special
-              on every occasion.
-            </p>
+
+            <div className="space-y-4">
+              <div className="flex items-start gap-4">
+                <span className="text-amber-500 font-bold text-xl">01.</span>
+                <p className="text-slate-700 font-medium">Behtareen Fabric: Hum sirf top-tier imported aur local fabrics use karte hain.</p>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="text-amber-500 font-bold text-xl">02.</span>
+                <p className="text-slate-700 font-medium">Master Cut: Hamare master tailors har cut ko perfection se design karte hain.</p>
+              </div>
+            </div>
+
+            <Link href="https://wa.me/923002385209" className="inline-block bg-slate-900 text-white px-10 py-4 font-bold tracking-widest uppercase text-xs hover:bg-amber-600 transition-all duration-300">
+              Book Your Appointment
+            </Link>
           </div>
-          <div className="relative h-96 rounded-lg overflow-hidden shadow-xl bg-gradient-to-br from-pink-200 to-purple-200">
-            <svg className="w-full h-full" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg">
-              {/* Elegant silhouette of a dress */}
-              <defs>
-                <linearGradient id="dressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{stopColor: 'rgb(236, 72, 153)', stopOpacity: 1}} />
-                  <stop offset="100%" style={{stopColor: 'rgb(168, 85, 247)', stopOpacity: 1}} />
-                </linearGradient>
-              </defs>
 
-              {/* Background */}
-              <rect width="500" height="600" fill="url(#dressGradient)" opacity="0.1"/>
+          {/* Image Grid Side */}
+          <div className="order-1 lg:order-2 grid grid-cols-12 gap-4 h-[600px]">
+            <div className="col-span-7 relative rounded-sm overflow-hidden shadow-2xl">
+               <Image src="/images/naveed/IMG_20251220_191017_697.jpg" alt="Suit Design" fill className="object-cover" />
+            </div>
+            <div className="col-span-5 flex flex-col gap-4">
+               <div className="h-1/2 relative rounded-sm overflow-hidden shadow-xl">
+                  <Image src="/images/naveed/IMG_20230601_205523_081.jpg" alt="Fabric" fill className="object-cover" />
+               </div>
+               
+               {/* BEST QUALITY BOX */}
+               <div className="h-1/2 relative bg-amber-500 flex items-center justify-center p-8 text-center text-white overflow-hidden group">
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all"></div>
+                  <div className="relative z-10">
+                    <p className="text-4xl font-bold mb-2 tracking-tighter italic font-serif leading-none">Best <br/> Quality</p>
+                    <p className="text-[10px] uppercase tracking-widest font-bold border-t border-white/40 pt-2 inline-block">Guaranteed Selection</p>
+                  </div>
+               </div>
+            </div>
+          </div>
 
-              {/* Dress silhouette */}
-              <g>
-                {/* Neck */}
-                <circle cx="250" cy="80" r="20" fill="url(#dressGradient)" />
+        </div>
+      </section>
 
-                {/* Bodice */}
-                <path d="M 230 100 L 220 180 Q 220 200 230 200 L 270 200 Q 280 200 280 180 L 270 100 Z"
-                      fill="url(#dressGradient)" />
+      {/* --- SERVICES SECTION --- */}
+      <section className="bg-slate-50 py-24">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16">
+          <div className="text-center group">
+            <div className="w-20 h-20 bg-white shadow-lg rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-amber-500 transition-colors duration-500">
+              <span className="text-3xl text-slate-800 group-hover:text-white">✂️</span>
+            </div>
+            <h4 className="text-xl font-bold mb-4 font-serif text-slate-800">Master Tailoring</h4>
+            <p className="text-gray-500 text-sm">Har stitch mein perfection. Hum ensure karte hain ke aapka suit aapke liye hi bana ho.</p>
+          </div>
+          
+          <div className="text-center group">
+            <div className="w-20 h-20 bg-white shadow-lg rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-amber-500 transition-colors duration-500">
+              <span className="text-3xl text-slate-800 group-hover:text-white">👔</span>
+            </div>
+            <h4 className="text-xl font-bold mb-4 font-serif text-slate-800">Formal & Casual</h4>
+            <p className="text-gray-500 text-sm">Office wear ho ya Wedding event, hum har maukay ke liye best fashion provide karte hain.</p>
+          </div>
 
-                {/* Sleeves */}
-                <ellipse cx="190" cy="120" rx="30" ry="50" fill="url(#dressGradient)" opacity="0.8"/>
-                <ellipse cx="310" cy="120" rx="30" ry="50" fill="url(#dressGradient)" opacity="0.8"/>
-
-                {/* Waist detail */}
-                <ellipse cx="250" cy="210" rx="45" ry="15" fill="url(#dressGradient)" opacity="0.6"/>
-
-                {/* Skirt */}
-                <path d="M 205 210 Q 150 250 140 400 Q 140 550 250 560 Q 360 550 360 400 Q 350 250 295 210 Z"
-                      fill="url(#dressGradient)" />
-
-                {/* Skirt details - pleats */}
-                <line x1="200" y1="210" x2="180" y2="400" stroke="rgba(255,255,255,0.3)" strokeWidth="3"/>
-                <line x1="250" y1="210" x2="250" y2="560" stroke="rgba(255,255,255,0.2)" strokeWidth="2"/>
-                <line x1="300" y1="210" x2="320" y2="400" stroke="rgba(255,255,255,0.3)" strokeWidth="3"/>
-              </g>
-
-              {/* Decorative elements */}
-              <circle cx="100" cy="100" r="40" fill="rgba(251, 146, 60, 0.2)"/>
-              <circle cx="400" cy="500" r="50" fill="rgba(168, 85, 247, 0.15)"/>
-              <circle cx="450" cy="150" r="30" fill="rgba(236, 72, 153, 0.1)"/>
-            </svg>
+          <div className="text-center group">
+            <div className="w-20 h-20 bg-white shadow-lg rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-amber-500 transition-colors duration-500">
+              <span className="text-3xl text-slate-800 group-hover:text-white">⭐</span>
+            </div>
+            <h4 className="text-xl font-bold mb-4 font-serif text-slate-800">Client Priority</h4>
+            <p className="text-gray-500 text-sm">Hafiz Naveed Chuhan aur unki team aapki satisfaction ko pehle rakhti hai.</p>
           </div>
         </div>
+      </section>
 
-        {/* Mission & Values */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white rounded-lg shadow-md p-8 text-center">
-            <div className="text-5xl mb-4">✨</div>
-            <h3 className="text-2xl font-serif font-bold mb-4">Quality</h3>
-            <p className="text-gray-600">
-              Every item is selected for its quality, ensuring our customers
-              get the best value for their investment.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-8 text-center">
-            <div className="text-5xl mb-4">💎</div>
-            <h3 className="text-2xl font-serif font-bold mb-4">Style</h3>
-            <p className="text-gray-600">
-              Our curated collection features the latest trends and timeless
-              pieces that work for every occasion.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-8 text-center">
-            <div className="text-5xl mb-4">❤️</div>
-            <h3 className="text-2xl font-serif font-bold mb-4">Service</h3>
-            <p className="text-gray-600">
-              We're committed to providing exceptional customer service and
-              ensuring every shopping experience is delightful.
-            </p>
+      {/* --- CONTACT BANNER --- */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto bg-slate-900 text-white p-12 md:p-20 text-center relative overflow-hidden border-b-8 border-amber-500">
+          <div className="relative z-10">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 italic">Visit Fatima Zehra Today</h2>
+            <p className="text-gray-400 mb-10 text-lg tracking-widest uppercase">Hafiz Naveed Chuhan: <span className="text-amber-500 ml-2">923002385209</span></p>
+            <div className="flex flex-wrap justify-center gap-8 text-xs uppercase tracking-[0.2em] font-bold text-gray-300">
+               <div className="border-r border-gray-700 pr-8">Email: hafiznaveedchuhan@gmail.com</div>
+               <div>Location: Karachi, Pakistan</div>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Contact Section */}
-        <div className="bg-white rounded-lg shadow-md p-12 text-center mb-16">
-          <h2 className="text-3xl font-serif font-bold mb-6">Get in Touch</h2>
-          <p className="text-gray-600 mb-8">
-            Have questions? We'd love to hear from you!
-          </p>
-          <div className="space-y-3 text-gray-700 mb-8">
-            <p>
-              <strong>Email:</strong> info@fatimaboutique.com
-            </p>
-            <p>
-              <strong>Phone:</strong> +1 (555) 123-4567
-            </p>
-            <p>
-              <strong>Hours:</strong> Monday - Friday, 9 AM - 6 PM
-            </p>
-          </div>
-          <button className="bg-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-700 transition">
-            Contact Us
-          </button>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <h2 className="text-3xl font-serif font-bold mb-6">
-            Discover Our Collection
-          </h2>
-          <p className="text-gray-600 mb-8 text-lg">
-            Browse our beautiful selection of elegant fashion pieces
-          </p>
-          <Link
-            href="/products"
-            className="inline-block bg-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-700 transition"
-          >
-            Shop Now
-          </Link>
-        </div>
-      </div>
     </div>
   )
 }

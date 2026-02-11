@@ -1,35 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "cd learnflow-app/app/frontend && npm run build",
-  "outputDirectory": "learnflow-app/app/frontend/.next",
-  "publicPath": "learnflow-app/app/frontend/public",
-  "env": {
-    "NEXT_PUBLIC_API_URL": "@next-public-api-url",
-    "NEXT_PUBLIC_CHAT_SERVICE_URL": "@next-public-chat-service-url",
-    "NEXT_PUBLIC_PRODUCT_SERVICE_URL": "@next-public-product-service-url",
-    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY": "@next-public-stripe-key",
-    "NEXT_PUBLIC_WHATSAPP_NUMBER": "@next-public-whatsapp-number",
-    "DATABASE_URL": "@database-url",
-    "OPENAI_API_KEY": "@openai-api-key",
-    "JWT_SECRET": "@jwt-secret"
-  },
+  "buildCommand": "cd learnflow-app/app/frontend && npm install && npm run build",
+  "outputDirectory": "learnflow-app/app/frontend/out",
   "framework": "nextjs",
-  "regions": ["iad1"],
-  "functions": {
-    "learnflow-app/app/backend/**/*.py": {
-      "runtime": "python3.11"
-    }
-  },
-  "builds": [
-    {
-      "src": "learnflow-app/app/frontend/package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "learnflow-app/app/frontend/$1"
-    }
-  ]
+  "installCommand": "cd learnflow-app/app/frontend && npm install"
 }
