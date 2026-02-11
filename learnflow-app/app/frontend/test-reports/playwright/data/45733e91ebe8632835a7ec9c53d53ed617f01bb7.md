@@ -1,0 +1,201 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img [ref=e7]
+          - text: Karachi, Pakistan
+        - generic [ref=e10]:
+          - img [ref=e11]
+          - text: +92 300 2385209
+      - generic [ref=e13]: Free Worldwide Shipping on Orders Over $200
+    - navigation [ref=e14]:
+      - generic [ref=e16]:
+        - link "Fatima Zehra Signature Logo FATIMA ZEHRA Luxury Boutique" [ref=e17] [cursor=pointer]:
+          - /url: /
+          - img "Fatima Zehra Signature Logo" [ref=e21]
+          - generic [ref=e22]:
+            - generic [ref=e23]: FATIMA ZEHRA
+            - generic [ref=e24]: Luxury Boutique
+        - generic [ref=e25]:
+          - link "Home" [ref=e26] [cursor=pointer]:
+            - /url: /
+          - link "Shop" [ref=e27] [cursor=pointer]:
+            - /url: /products
+          - link "About" [ref=e28] [cursor=pointer]:
+            - /url: /about
+          - link "Contact" [active] [ref=e29] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=e30]:
+          - button [ref=e31] [cursor=pointer]:
+            - img [ref=e32]
+          - link "0" [ref=e35] [cursor=pointer]:
+            - /url: /cart
+            - img [ref=e36]
+            - generic [ref=e40]: "0"
+          - link [ref=e41] [cursor=pointer]:
+            - /url: /profile
+            - img [ref=e42]
+  - main [ref=e45]:
+    - generic [ref=e46]:
+      - generic [ref=e49]:
+        - generic [ref=e50]: Let's Craft Excellence
+        - heading "Contact Us" [level=1] [ref=e51]
+        - paragraph [ref=e52]: Aapki fit aur style hamari zimmedari hai. Bespoke tailoring ya kisi bhi inquiry ke liye humse rabta karein.
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - img [ref=e57]
+          - heading "Visit Our Studio" [level=3] [ref=e60]
+          - paragraph [ref=e61]: Experience luxury fabrics in person.
+          - paragraph [ref=e62]: Model Town, Lahore, Pakistan
+        - generic [ref=e63]:
+          - img [ref=e65]
+          - heading "Direct Line" [level=3] [ref=e67]
+          - paragraph [ref=e68]: Available for consultations (10 AM - 10 PM)
+          - link "+92 300 2385209" [ref=e69] [cursor=pointer]:
+            - /url: tel:+923002385209
+        - generic [ref=e70]:
+          - img [ref=e72]
+          - heading "Support Email" [level=3] [ref=e75]
+          - paragraph [ref=e76]: We respond within 24 hours.
+          - link "HAFIZNAVEEDCHUHAN@GMAIL.COM" [ref=e77] [cursor=pointer]:
+            - /url: mailto:HAFIZNAVEEDCHUHAN@GMAIL.COM
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - generic [ref=e81]:
+            - heading "Our Mission" [level=2] [ref=e82]
+            - paragraph [ref=e83]: Fatima Zehra Boutique ka maqsad sirf kapray bechna nahi, balkay aapki shakhsiyat ko mardana wajahat aur naye fashion se araasta karna hai. Hum har suit ko aik 'Masterpiece' samajh kar silye hain.
+            - generic [ref=e84]:
+              - img [ref=e85]
+              - paragraph [ref=e88]: "\"Hum waqt par delivery aur behtareen fitting ki guarantee dete hain.\""
+          - generic [ref=e89]:
+            - generic [ref=e90]:
+              - paragraph [ref=e91]: 15+
+              - paragraph [ref=e92]: Years Experience
+            - generic [ref=e93]:
+              - paragraph [ref=e94]: 100%
+              - paragraph [ref=e95]: Premium Fabric
+        - generic [ref=e96]:
+          - heading "Send a Message" [level=3] [ref=e97]:
+            - img [ref=e98]
+            - text: Send a Message
+          - generic [ref=e100]:
+            - generic [ref=e101]:
+              - generic [ref=e102]:
+                - text: Full Name
+                - textbox "E.g. Naveed Chuhan" [ref=e103]
+              - generic [ref=e104]:
+                - text: Email Address
+                - textbox "E.g. info@boutique.com" [ref=e105]
+            - generic [ref=e106]:
+              - text: Phone Number (WhatsApp)
+              - textbox "E.g. +92 300 1234567" [ref=e107]
+            - generic [ref=e108]:
+              - text: Inquiry / Feedback
+              - textbox "How can we help you today?" [ref=e109]
+            - button "CONFIRM MESSAGE" [ref=e110] [cursor=pointer]:
+              - text: CONFIRM MESSAGE
+              - img [ref=e111]
+      - generic [ref=e113]:
+        - generic [ref=e114]:
+          - link "About" [ref=e115] [cursor=pointer]:
+            - /url: /about
+          - link "Products" [ref=e116] [cursor=pointer]:
+            - /url: /products
+          - link "Privacy" [ref=e117] [cursor=pointer]:
+            - /url: /privacy
+        - paragraph [ref=e118]: © 2026 FATIMA ZEHRA BOUTIQUE. ALL RIGHTS RESERVED.
+  - contentinfo [ref=e119]:
+    - generic [ref=e121]:
+      - generic [ref=e122]:
+        - generic [ref=e123]:
+          - img [ref=e125]
+          - heading "Free Shipping" [level=5] [ref=e130]
+          - paragraph [ref=e131]: Across Pakistan
+        - generic [ref=e132]:
+          - img [ref=e134]
+          - heading "Easy Returns" [level=5] [ref=e137]
+          - paragraph [ref=e138]: 7-Day Exchange
+        - generic [ref=e139]:
+          - img [ref=e141]
+          - heading "Secure Payment" [level=5] [ref=e144]
+          - paragraph [ref=e145]: 100% Protected
+        - generic [ref=e146]:
+          - img [ref=e148]
+          - heading "Cash on Delivery" [level=5] [ref=e150]
+          - paragraph [ref=e151]: Pay at Door
+      - generic [ref=e152]:
+        - generic [ref=e153]:
+          - heading "FATIMA ZEHRA" [level=3] [ref=e154]
+          - paragraph [ref=e155]: Defining the future of Eastern couture. From intricate craftsmanship to modern silhouettes, we create legacies, not just garments.
+          - generic [ref=e156]:
+            - link [ref=e157] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e158]
+            - link [ref=e160] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e161]
+            - link [ref=e164] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e165]
+        - generic [ref=e167]:
+          - heading "Navigation" [level=4] [ref=e168]
+          - list [ref=e169]:
+            - listitem [ref=e170]:
+              - link "Shop" [ref=e171] [cursor=pointer]:
+                - /url: /products
+                - text: Shop
+            - listitem [ref=e172]:
+              - link "About" [ref=e173] [cursor=pointer]:
+                - /url: /about
+                - text: About
+            - listitem [ref=e174]:
+              - link "Contact" [ref=e175] [cursor=pointer]:
+                - /url: /contact
+                - text: Contact
+            - listitem [ref=e176]:
+              - link "Orders" [ref=e177] [cursor=pointer]:
+                - /url: /orders
+                - text: Orders
+        - generic [ref=e178]:
+          - heading "Boutique Office" [level=4] [ref=e179]
+          - generic [ref=e180]:
+            - generic [ref=e181]:
+              - img [ref=e182]
+              - paragraph [ref=e185]: House No. R-98, Sector 5C-2, North Karachi
+            - generic [ref=e186]:
+              - img [ref=e187]
+              - paragraph [ref=e189]: +92 300 2385209
+            - generic [ref=e190]:
+              - img [ref=e191]
+              - paragraph [ref=e194]: hnaveed264@gmail.com
+        - generic [ref=e195]:
+          - heading "The Insider" [level=4] [ref=e196]
+          - paragraph [ref=e197]: Join our elite circle for private collection launches.
+          - generic [ref=e198]:
+            - textbox "EMAIL ADDRESS" [ref=e199]
+            - button [ref=e200] [cursor=pointer]:
+              - img [ref=e201]
+      - generic [ref=e205]:
+        - generic [ref=e206]:
+          - generic [ref=e208]: "N"
+          - generic [ref=e209]:
+            - paragraph [ref=e210]: Architected By
+            - heading "HAFIZ NAVEED UDDIN" [level=6] [ref=e211]
+            - paragraph [ref=e212]: Agentic AI Developer / Full-Stack Engineer
+        - generic [ref=e213]:
+          - link "HAFIZNAVEEDCHUHAN@GMAIL.COM" [ref=e214] [cursor=pointer]:
+            - /url: mailto:HAFIZNAVEEDCHUHAN@GMAIL.COM
+          - generic [ref=e215]: Available for New Ventures
+      - paragraph [ref=e217]: © 2026 Fatima Zehra Boutique. Crafted for Excellence.
+  - button "Open chat" [ref=e218] [cursor=pointer]:
+    - img [ref=e219]
+  - generic [ref=e221]:
+    - button "Open WhatsApp chat" [ref=e222] [cursor=pointer]:
+      - img [ref=e223]
+    - generic: Chat with us
+  - alert [ref=e225]
+```

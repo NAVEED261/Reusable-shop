@@ -1,0 +1,388 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img [ref=e7]
+          - text: Karachi, Pakistan
+        - generic [ref=e10]:
+          - img [ref=e11]
+          - text: +92 300 2385209
+      - generic [ref=e13]: Free Worldwide Shipping on Orders Over $200
+    - navigation [ref=e14]:
+      - generic [ref=e16]:
+        - link "Fatima Zehra Signature Logo FATIMA ZEHRA Luxury Boutique" [active] [ref=e17] [cursor=pointer]:
+          - /url: /
+          - img "Fatima Zehra Signature Logo" [ref=e21]
+          - generic [ref=e22]:
+            - generic [ref=e23]: FATIMA ZEHRA
+            - generic [ref=e24]: Luxury Boutique
+        - generic [ref=e25]:
+          - link "Home" [ref=e26] [cursor=pointer]:
+            - /url: /
+          - link "Shop" [ref=e27] [cursor=pointer]:
+            - /url: /products
+          - link "About" [ref=e28] [cursor=pointer]:
+            - /url: /about
+          - link "Contact" [ref=e29] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=e30]:
+          - button [ref=e31] [cursor=pointer]:
+            - img [ref=e32]
+          - link "0" [ref=e35] [cursor=pointer]:
+            - /url: /cart
+            - img [ref=e36]
+            - generic [ref=e40]: "0"
+          - link [ref=e41] [cursor=pointer]:
+            - /url: /profile
+            - img [ref=e42]
+  - main [ref=e45]:
+    - main [ref=e46]:
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - img [ref=e53]
+            - text: New Collection 2026
+          - heading "Timeless Elegance Redefined." [level=1] [ref=e56]:
+            - text: Timeless Elegance
+            - text: Redefined.
+          - paragraph [ref=e57]: Fatima Zehra Boutique brings you a curated blend of traditional craftsmanship and modern silhouettes. Experience the luxury of premium fabrics.
+          - link "Explore Boutique" [ref=e59] [cursor=pointer]:
+            - /url: /products
+            - generic [ref=e60]:
+              - text: Explore Boutique
+              - img [ref=e61]
+        - img "Fatima Zehra Luxury Collection" [ref=e67]
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - img [ref=e72]
+          - generic [ref=e77]:
+            - heading "Express Shipping" [level=4] [ref=e78]
+            - paragraph [ref=e79]: Across Pakistan
+        - generic [ref=e80]:
+          - img [ref=e82]
+          - generic [ref=e84]:
+            - heading "Secure Payment" [level=4] [ref=e85]
+            - paragraph [ref=e86]: 100% Protected
+        - generic [ref=e87]:
+          - img [ref=e89]
+          - generic [ref=e91]:
+            - heading "Made with Love" [level=4] [ref=e92]
+            - paragraph [ref=e93]: Artisan Crafted
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - generic [ref=e97]:
+            - generic [ref=e98]: The Collections
+            - heading "Shop by Department" [level=2] [ref=e99]
+          - paragraph [ref=e100]: Carefully curated masterpieces designed to make you stand out.
+        - generic [ref=e101]:
+          - link "Fancy Suits Wedding Wear Explore Fancy Suits View Catalog →" [ref=e102] [cursor=pointer]:
+            - /url: /products?category=Fancy Suits
+            - img "Fancy Suits" [ref=e103]
+            - generic [ref=e105]: Wedding Wear
+            - generic [ref=e106]:
+              - paragraph [ref=e107]: Explore
+              - heading "Fancy Suits" [level=3] [ref=e108]
+              - generic [ref=e109]:
+                - text: View Catalog
+                - generic [ref=e110]: →
+          - link "Shalwar Qameez Luxury Edition Explore Shalwar Qameez View Catalog →" [ref=e111] [cursor=pointer]:
+            - /url: /products?category=Shalwar Qameez
+            - img "Shalwar Qameez" [ref=e112]
+            - generic [ref=e114]: Luxury Edition
+            - generic [ref=e115]:
+              - paragraph [ref=e116]: Explore
+              - heading "Shalwar Qameez" [level=3] [ref=e117]
+              - generic [ref=e118]:
+                - text: View Catalog
+                - generic [ref=e119]: →
+          - link "Cotton Suits Premium Fabric Explore Cotton Suits View Catalog →" [ref=e120] [cursor=pointer]:
+            - /url: /products?category=Cotton Suits
+            - img "Cotton Suits" [ref=e121]
+            - generic [ref=e123]: Premium Fabric
+            - generic [ref=e124]:
+              - paragraph [ref=e125]: Explore
+              - heading "Cotton Suits" [level=3] [ref=e126]
+              - generic [ref=e127]:
+                - text: View Catalog
+                - generic [ref=e128]: →
+          - link "Designer Brands New Arrival Explore Designer Brands View Catalog →" [ref=e129] [cursor=pointer]:
+            - /url: /products?category=Designer Brands
+            - img "Designer Brands" [ref=e130]
+            - generic [ref=e132]: New Arrival
+            - generic [ref=e133]:
+              - paragraph [ref=e134]: Explore
+              - heading "Designer Brands" [level=3] [ref=e135]
+              - generic [ref=e136]:
+                - text: View Catalog
+                - generic [ref=e137]: →
+      - generic [ref=e139]:
+        - heading "Trending Now" [level=2] [ref=e141]
+        - generic [ref=e143]:
+          - link "Royal Embroidered Fancy Suit -29% In Stock Fancy Suits Royal Embroidered Fancy Suit Elegant party wear with intricate hand embroidery and premium fabric. (124 reviews) Premium Chiffon Rs 8,500 Rs 12,000 Add to Cart WhatsApp Us" [ref=e145] [cursor=pointer]:
+            - /url: /products/1
+            - generic [ref=e146]:
+              - generic [ref=e147]:
+                - img "Royal Embroidered Fancy Suit" [ref=e148]
+                - generic [ref=e149]: "-29%"
+                - generic [ref=e150]: In Stock
+                - button [ref=e151]:
+                  - img [ref=e152]
+              - generic [ref=e154]:
+                - generic [ref=e156]: Fancy Suits
+                - heading "Royal Embroidered Fancy Suit" [level=3] [ref=e157]
+                - paragraph [ref=e158]: Elegant party wear with intricate hand embroidery and premium fabric.
+                - generic [ref=e159]:
+                  - generic [ref=e160]:
+                    - img [ref=e161]
+                    - img [ref=e163]
+                    - img [ref=e165]
+                    - img [ref=e167]
+                    - img [ref=e169]
+                  - generic [ref=e171]: (124 reviews)
+                - paragraph [ref=e172]: Premium Chiffon
+                - generic [ref=e173]:
+                  - generic [ref=e175]:
+                    - generic [ref=e176]: Rs 8,500
+                    - generic [ref=e177]: Rs 12,000
+                  - button "Add to Cart" [ref=e178]:
+                    - img [ref=e179]
+                    - text: Add to Cart
+                  - link "WhatsApp Us" [ref=e183]:
+                    - /url: https://wa.me/03002385209
+                    - img [ref=e184]
+                    - text: WhatsApp Us
+          - link "Golden Zari Work Suit -30% In Stock Fancy Suits Golden Zari Work Suit Luxurious golden zari embroidery perfect for weddings and special occasions. (89 reviews) Pure Silk Rs 9,500 Rs 13,500 Add to Cart WhatsApp Us" [ref=e187] [cursor=pointer]:
+            - /url: /products/2
+            - generic [ref=e188]:
+              - generic [ref=e189]:
+                - img "Golden Zari Work Suit" [ref=e190]
+                - generic [ref=e191]: "-30%"
+                - generic [ref=e192]: In Stock
+                - button [ref=e193]:
+                  - img [ref=e194]
+              - generic [ref=e196]:
+                - generic [ref=e198]: Fancy Suits
+                - heading "Golden Zari Work Suit" [level=3] [ref=e199]
+                - paragraph [ref=e200]: Luxurious golden zari embroidery perfect for weddings and special occasions.
+                - generic [ref=e201]:
+                  - generic [ref=e202]:
+                    - img [ref=e203]
+                    - img [ref=e205]
+                    - img [ref=e207]
+                    - img [ref=e209]
+                    - img [ref=e211]
+                  - generic [ref=e213]: (89 reviews)
+                - paragraph [ref=e214]: Pure Silk
+                - generic [ref=e215]:
+                  - generic [ref=e217]:
+                    - generic [ref=e218]: Rs 9,500
+                    - generic [ref=e219]: Rs 13,500
+                  - button "Add to Cart" [ref=e220]:
+                    - img [ref=e221]
+                    - text: Add to Cart
+                  - link "WhatsApp Us" [ref=e225]:
+                    - /url: https://wa.me/03002385209
+                    - img [ref=e226]
+                    - text: WhatsApp Us
+          - link "Pearl Embellished Fancy Dress -26% In Stock Fancy Suits Pearl Embellished Fancy Dress Beautiful pearl work with delicate sequins for a sophisticated look. (156 reviews) Organza Rs 7,800 Rs 10,500 Add to Cart WhatsApp Us" [ref=e229] [cursor=pointer]:
+            - /url: /products/3
+            - generic [ref=e230]:
+              - generic [ref=e231]:
+                - img "Pearl Embellished Fancy Dress" [ref=e232]
+                - generic [ref=e233]: "-26%"
+                - generic [ref=e234]: In Stock
+                - button [ref=e235]:
+                  - img [ref=e236]
+              - generic [ref=e238]:
+                - generic [ref=e240]: Fancy Suits
+                - heading "Pearl Embellished Fancy Dress" [level=3] [ref=e241]
+                - paragraph [ref=e242]: Beautiful pearl work with delicate sequins for a sophisticated look.
+                - generic [ref=e243]:
+                  - generic [ref=e244]:
+                    - img [ref=e245]
+                    - img [ref=e247]
+                    - img [ref=e249]
+                    - img [ref=e251]
+                    - img [ref=e253]
+                  - generic [ref=e255]: (156 reviews)
+                - paragraph [ref=e256]: Organza
+                - generic [ref=e257]:
+                  - generic [ref=e259]:
+                    - generic [ref=e260]: Rs 7,800
+                    - generic [ref=e261]: Rs 10,500
+                  - button "Add to Cart" [ref=e262]:
+                    - img [ref=e263]
+                    - text: Add to Cart
+                  - link "WhatsApp Us" [ref=e267]:
+                    - /url: https://wa.me/03002385209
+                    - img [ref=e268]
+                    - text: WhatsApp Us
+          - link "Velvet Royal Collection -27% In Stock Fancy Suits Velvet Royal Collection Premium velvet suit with traditional motifs and modern cuts. (67 reviews) Italian Velvet Rs 11,000 Rs 15,000 Add to Cart WhatsApp Us" [ref=e271] [cursor=pointer]:
+            - /url: /products/4
+            - generic [ref=e272]:
+              - generic [ref=e273]:
+                - img "Velvet Royal Collection" [ref=e274]
+                - generic [ref=e275]: "-27%"
+                - generic [ref=e276]: In Stock
+                - button [ref=e277]:
+                  - img [ref=e278]
+              - generic [ref=e280]:
+                - generic [ref=e282]: Fancy Suits
+                - heading "Velvet Royal Collection" [level=3] [ref=e283]
+                - paragraph [ref=e284]: Premium velvet suit with traditional motifs and modern cuts.
+                - generic [ref=e285]:
+                  - generic [ref=e286]:
+                    - img [ref=e287]
+                    - img [ref=e289]
+                    - img [ref=e291]
+                    - img [ref=e293]
+                    - img [ref=e295]
+                  - generic [ref=e297]: (67 reviews)
+                - paragraph [ref=e298]: Italian Velvet
+                - generic [ref=e299]:
+                  - generic [ref=e301]:
+                    - generic [ref=e302]: Rs 11,000
+                    - generic [ref=e303]: Rs 15,000
+                  - button "Add to Cart" [ref=e304]:
+                    - img [ref=e305]
+                    - text: Add to Cart
+                  - link "WhatsApp Us" [ref=e309]:
+                    - /url: https://wa.me/03002385209
+                    - img [ref=e310]
+                    - text: WhatsApp Us
+          - link "Crystal Stone Work Suit -29% In Stock Fancy Suits Crystal Stone Work Suit Dazzling crystal stone work for glamorous evening events. (98 reviews) Net with Silk Lining Rs 8,900 Rs 12,500 Add to Cart WhatsApp Us" [ref=e313] [cursor=pointer]:
+            - /url: /products/5
+            - generic [ref=e314]:
+              - generic [ref=e315]:
+                - img "Crystal Stone Work Suit" [ref=e316]
+                - generic [ref=e317]: "-29%"
+                - generic [ref=e318]: In Stock
+                - button [ref=e319]:
+                  - img [ref=e320]
+              - generic [ref=e322]:
+                - generic [ref=e324]: Fancy Suits
+                - heading "Crystal Stone Work Suit" [level=3] [ref=e325]
+                - paragraph [ref=e326]: Dazzling crystal stone work for glamorous evening events.
+                - generic [ref=e327]:
+                  - generic [ref=e328]:
+                    - img [ref=e329]
+                    - img [ref=e331]
+                    - img [ref=e333]
+                    - img [ref=e335]
+                    - img [ref=e337]
+                  - generic [ref=e339]: (98 reviews)
+                - paragraph [ref=e340]: Net with Silk Lining
+                - generic [ref=e341]:
+                  - generic [ref=e343]:
+                    - generic [ref=e344]: Rs 8,900
+                    - generic [ref=e345]: Rs 12,500
+                  - button "Add to Cart" [ref=e346]:
+                    - img [ref=e347]
+                    - text: Add to Cart
+                  - link "WhatsApp Us" [ref=e351]:
+                    - /url: https://wa.me/03002385209
+                    - img [ref=e352]
+                    - text: WhatsApp Us
+      - generic [ref=e354]:
+        - img "CTA Background" [ref=e355]
+        - generic [ref=e357]:
+          - heading "Ready to wear your Confidence?" [level=2] [ref=e358]:
+            - text: Ready to wear your
+            - text: Confidence?
+          - link "Shop the Collection" [ref=e359] [cursor=pointer]:
+            - /url: /products
+  - contentinfo [ref=e360]:
+    - generic [ref=e362]:
+      - generic [ref=e363]:
+        - generic [ref=e364]:
+          - img [ref=e366]
+          - heading "Free Shipping" [level=5] [ref=e371]
+          - paragraph [ref=e372]: Across Pakistan
+        - generic [ref=e373]:
+          - img [ref=e375]
+          - heading "Easy Returns" [level=5] [ref=e378]
+          - paragraph [ref=e379]: 7-Day Exchange
+        - generic [ref=e380]:
+          - img [ref=e382]
+          - heading "Secure Payment" [level=5] [ref=e385]
+          - paragraph [ref=e386]: 100% Protected
+        - generic [ref=e387]:
+          - img [ref=e389]
+          - heading "Cash on Delivery" [level=5] [ref=e391]
+          - paragraph [ref=e392]: Pay at Door
+      - generic [ref=e393]:
+        - generic [ref=e394]:
+          - heading "FATIMA ZEHRA" [level=3] [ref=e395]
+          - paragraph [ref=e396]: Defining the future of Eastern couture. From intricate craftsmanship to modern silhouettes, we create legacies, not just garments.
+          - generic [ref=e397]:
+            - link [ref=e398] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e399]
+            - link [ref=e401] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e402]
+            - link [ref=e405] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e406]
+        - generic [ref=e408]:
+          - heading "Navigation" [level=4] [ref=e409]
+          - list [ref=e410]:
+            - listitem [ref=e411]:
+              - link "Shop" [ref=e412] [cursor=pointer]:
+                - /url: /products
+                - text: Shop
+            - listitem [ref=e413]:
+              - link "About" [ref=e414] [cursor=pointer]:
+                - /url: /about
+                - text: About
+            - listitem [ref=e415]:
+              - link "Contact" [ref=e416] [cursor=pointer]:
+                - /url: /contact
+                - text: Contact
+            - listitem [ref=e417]:
+              - link "Orders" [ref=e418] [cursor=pointer]:
+                - /url: /orders
+                - text: Orders
+        - generic [ref=e419]:
+          - heading "Boutique Office" [level=4] [ref=e420]
+          - generic [ref=e421]:
+            - generic [ref=e422]:
+              - img [ref=e423]
+              - paragraph [ref=e426]: House No. R-98, Sector 5C-2, North Karachi
+            - generic [ref=e427]:
+              - img [ref=e428]
+              - paragraph [ref=e430]: +92 300 2385209
+            - generic [ref=e431]:
+              - img [ref=e432]
+              - paragraph [ref=e435]: hnaveed264@gmail.com
+        - generic [ref=e436]:
+          - heading "The Insider" [level=4] [ref=e437]
+          - paragraph [ref=e438]: Join our elite circle for private collection launches.
+          - generic [ref=e439]:
+            - textbox "EMAIL ADDRESS" [ref=e440]
+            - button [ref=e441] [cursor=pointer]:
+              - img [ref=e442]
+      - generic [ref=e446]:
+        - generic [ref=e447]:
+          - generic [ref=e449]: "N"
+          - generic [ref=e450]:
+            - paragraph [ref=e451]: Architected By
+            - heading "HAFIZ NAVEED UDDIN" [level=6] [ref=e452]
+            - paragraph [ref=e453]: Agentic AI Developer / Full-Stack Engineer
+        - generic [ref=e454]:
+          - link "HAFIZNAVEEDCHUHAN@GMAIL.COM" [ref=e455] [cursor=pointer]:
+            - /url: mailto:HAFIZNAVEEDCHUHAN@GMAIL.COM
+          - generic [ref=e456]: Available for New Ventures
+      - paragraph [ref=e458]: © 2026 Fatima Zehra Boutique. Crafted for Excellence.
+  - button "Open chat" [ref=e459] [cursor=pointer]:
+    - img [ref=e460]
+  - generic [ref=e462]:
+    - button "Open WhatsApp chat" [ref=e463] [cursor=pointer]:
+      - img [ref=e464]
+    - generic: Chat with us
+  - alert [ref=e466]
+```

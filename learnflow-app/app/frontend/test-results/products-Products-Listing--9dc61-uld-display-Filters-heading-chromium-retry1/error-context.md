@@ -1,0 +1,1361 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img [ref=e7]
+          - text: Karachi, Pakistan
+        - generic [ref=e10]:
+          - img [ref=e11]
+          - text: +92 300 2385209
+      - generic [ref=e13]: Free Worldwide Shipping on Orders Over $200
+    - navigation [ref=e14]:
+      - generic [ref=e16]:
+        - link "Fatima Zehra Signature Logo FATIMA ZEHRA Luxury Boutique" [ref=e17] [cursor=pointer]:
+          - /url: /
+          - img "Fatima Zehra Signature Logo" [ref=e21]
+          - generic [ref=e22]:
+            - generic [ref=e23]: FATIMA ZEHRA
+            - generic [ref=e24]: Luxury Boutique
+        - generic [ref=e25]:
+          - link "Home" [ref=e26] [cursor=pointer]:
+            - /url: /
+          - link "Shop" [ref=e27] [cursor=pointer]:
+            - /url: /products
+          - link "About" [ref=e28] [cursor=pointer]:
+            - /url: /about
+          - link "Contact" [ref=e29] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=e30]:
+          - button [ref=e31] [cursor=pointer]:
+            - img [ref=e32]
+          - link "0" [ref=e35] [cursor=pointer]:
+            - /url: /cart
+            - img [ref=e36]
+            - generic [ref=e40]: "0"
+          - link [ref=e41] [cursor=pointer]:
+            - /url: /profile
+            - img [ref=e42]
+  - main [ref=e45]:
+    - main [ref=e46]:
+      - generic [ref=e48]:
+        - heading "Our Collection" [level=1] [ref=e49]
+        - paragraph [ref=e50]: Discover 40+ premium ladies suits, shalwar qameez, and designer wear.
+      - generic [ref=e52]:
+        - complementary [ref=e53]:
+          - generic [ref=e54]:
+            - heading "Filters" [level=2] [ref=e55]:
+              - img [ref=e56]
+              - text: Filters
+            - generic [ref=e58]:
+              - heading "Categories" [level=3] [ref=e59]
+              - generic [ref=e60]:
+                - button "All Products (40)" [ref=e61] [cursor=pointer]
+                - button "Fancy Suits (10)" [ref=e62] [cursor=pointer]
+                - button "Shalwar Qameez (10)" [ref=e63] [cursor=pointer]
+                - button "Cotton Suits (10)" [ref=e64] [cursor=pointer]
+                - button "Designer Brands (10)" [ref=e65] [cursor=pointer]
+            - generic [ref=e67]:
+              - heading "Price Range" [level=3] [ref=e68]
+              - generic [ref=e69]:
+                - slider [ref=e70]: "0"
+                - slider [ref=e71]: "10000"
+                - generic [ref=e72]:
+                  - generic [ref=e73]: Rs 0
+                  - generic [ref=e74]: Rs 10,000
+            - generic [ref=e76]:
+              - heading "Sort By" [level=3] [ref=e77]
+              - combobox [ref=e78]:
+                - option "Newest" [selected]
+                - 'option "Price: Low to High"'
+                - 'option "Price: High to Low"'
+                - option "Top Rated"
+            - button "Clear Filters" [ref=e79] [cursor=pointer]
+        - generic [ref=e80]:
+          - generic [ref=e82]:
+            - img [ref=e83]
+            - textbox "Search by name, material, or category..." [ref=e86]
+          - paragraph [ref=e88]: Showing 36 products
+          - generic [ref=e89]:
+            - link "Limelight Designer -23% In Stock Designer Brands Limelight Designer Limelight designer suit with premium embellishments. (156 reviews) Cotton Blend Rs 5,800 Rs 7,500 Add to Cart WhatsApp Us" [ref=e91] [cursor=pointer]:
+              - /url: /products/40
+              - generic [ref=e92]:
+                - generic [ref=e93]:
+                  - img "Limelight Designer" [ref=e94]
+                  - generic [ref=e95]: "-23%"
+                  - generic [ref=e96]: In Stock
+                  - button [ref=e97]:
+                    - img [ref=e98]
+                - generic [ref=e100]:
+                  - generic [ref=e102]: Designer Brands
+                  - heading "Limelight Designer" [level=3] [ref=e103]
+                  - paragraph [ref=e104]: Limelight designer suit with premium embellishments.
+                  - generic [ref=e105]:
+                    - generic [ref=e106]:
+                      - img [ref=e107]
+                      - img [ref=e109]
+                      - img [ref=e111]
+                      - img [ref=e113]
+                      - img [ref=e115]
+                    - generic [ref=e117]: (156 reviews)
+                  - paragraph [ref=e118]: Cotton Blend
+                  - generic [ref=e119]:
+                    - generic [ref=e121]:
+                      - generic [ref=e122]: Rs 5,800
+                      - generic [ref=e123]: Rs 7,500
+                    - button "Add to Cart" [ref=e124]:
+                      - img [ref=e125]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e129]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e130]
+                      - text: WhatsApp Us
+            - link "Bonanza Satrangi -23% In Stock Designer Brands Bonanza Satrangi Bonanza Satrangi vibrant collection for festive season. (123 reviews) Lawn Rs 6,200 Rs 8,000 Add to Cart WhatsApp Us" [ref=e133] [cursor=pointer]:
+              - /url: /products/39
+              - generic [ref=e134]:
+                - generic [ref=e135]:
+                  - img "Bonanza Satrangi" [ref=e136]
+                  - generic [ref=e137]: "-23%"
+                  - generic [ref=e138]: In Stock
+                  - button [ref=e139]:
+                    - img [ref=e140]
+                - generic [ref=e142]:
+                  - generic [ref=e144]: Designer Brands
+                  - heading "Bonanza Satrangi" [level=3] [ref=e145]
+                  - paragraph [ref=e146]: Bonanza Satrangi vibrant collection for festive season.
+                  - generic [ref=e147]:
+                    - generic [ref=e148]:
+                      - img [ref=e149]
+                      - img [ref=e151]
+                      - img [ref=e153]
+                      - img [ref=e155]
+                      - img [ref=e157]
+                    - generic [ref=e159]: (123 reviews)
+                  - paragraph [ref=e160]: Lawn
+                  - generic [ref=e161]:
+                    - generic [ref=e163]:
+                      - generic [ref=e164]: Rs 6,200
+                      - generic [ref=e165]: Rs 8,000
+                    - button "Add to Cart" [ref=e166]:
+                      - img [ref=e167]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e171]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e172]
+                      - text: WhatsApp Us
+            - link "Ethnic by Outfitters -21% In Stock Designer Brands Ethnic by Outfitters Contemporary ethnic wear with fusion elements. (167 reviews) Lawn Blend Rs 5,500 Rs 7,000 Add to Cart WhatsApp Us" [ref=e175] [cursor=pointer]:
+              - /url: /products/38
+              - generic [ref=e176]:
+                - generic [ref=e177]:
+                  - img "Ethnic by Outfitters" [ref=e178]
+                  - generic [ref=e179]: "-21%"
+                  - generic [ref=e180]: In Stock
+                  - button [ref=e181]:
+                    - img [ref=e182]
+                - generic [ref=e184]:
+                  - generic [ref=e186]: Designer Brands
+                  - heading "Ethnic by Outfitters" [level=3] [ref=e187]
+                  - paragraph [ref=e188]: Contemporary ethnic wear with fusion elements.
+                  - generic [ref=e189]:
+                    - generic [ref=e190]:
+                      - img [ref=e191]
+                      - img [ref=e193]
+                      - img [ref=e195]
+                      - img [ref=e197]
+                      - img [ref=e199]
+                    - generic [ref=e201]: (167 reviews)
+                  - paragraph [ref=e202]: Lawn Blend
+                  - generic [ref=e203]:
+                    - generic [ref=e205]:
+                      - generic [ref=e206]: Rs 5,500
+                      - generic [ref=e207]: Rs 7,000
+                    - button "Add to Cart" [ref=e208]:
+                      - img [ref=e209]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e213]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e214]
+                      - text: WhatsApp Us
+            - link "Nishat Linen Luxury -24% In Stock Designer Brands Nishat Linen Luxury Nishat Linen premium collection with exclusive prints. (145 reviews) Pure Linen Rs 7,200 Rs 9,500 Add to Cart WhatsApp Us" [ref=e217] [cursor=pointer]:
+              - /url: /products/37
+              - generic [ref=e218]:
+                - generic [ref=e219]:
+                  - img "Nishat Linen Luxury" [ref=e220]
+                  - generic [ref=e221]: "-24%"
+                  - generic [ref=e222]: In Stock
+                  - button [ref=e223]:
+                    - img [ref=e224]
+                - generic [ref=e226]:
+                  - generic [ref=e228]: Designer Brands
+                  - heading "Nishat Linen Luxury" [level=3] [ref=e229]
+                  - paragraph [ref=e230]: Nishat Linen premium collection with exclusive prints.
+                  - generic [ref=e231]:
+                    - generic [ref=e232]:
+                      - img [ref=e233]
+                      - img [ref=e235]
+                      - img [ref=e237]
+                      - img [ref=e239]
+                      - img [ref=e241]
+                    - generic [ref=e243]: (145 reviews)
+                  - paragraph [ref=e244]: Pure Linen
+                  - generic [ref=e245]:
+                    - generic [ref=e247]:
+                      - generic [ref=e248]: Rs 7,200
+                      - generic [ref=e249]: Rs 9,500
+                    - button "Add to Cart" [ref=e250]:
+                      - img [ref=e251]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e255]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e256]
+                      - text: WhatsApp Us
+            - link "Sapphire Designer Suit -20% In Stock Designer Brands Sapphire Designer Suit Sapphire signature style with modern aesthetics. (178 reviews) Cotton Silk Rs 6,800 Rs 8,500 Add to Cart WhatsApp Us" [ref=e259] [cursor=pointer]:
+              - /url: /products/36
+              - generic [ref=e260]:
+                - generic [ref=e261]:
+                  - img "Sapphire Designer Suit" [ref=e262]
+                  - generic [ref=e263]: "-20%"
+                  - generic [ref=e264]: In Stock
+                  - button [ref=e265]:
+                    - img [ref=e266]
+                - generic [ref=e268]:
+                  - generic [ref=e270]: Designer Brands
+                  - heading "Sapphire Designer Suit" [level=3] [ref=e271]
+                  - paragraph [ref=e272]: Sapphire signature style with modern aesthetics.
+                  - generic [ref=e273]:
+                    - generic [ref=e274]:
+                      - img [ref=e275]
+                      - img [ref=e277]
+                      - img [ref=e279]
+                      - img [ref=e281]
+                      - img [ref=e283]
+                    - generic [ref=e285]: (178 reviews)
+                  - paragraph [ref=e286]: Cotton Silk
+                  - generic [ref=e287]:
+                    - generic [ref=e289]:
+                      - generic [ref=e290]: Rs 6,800
+                      - generic [ref=e291]: Rs 8,500
+                    - button "Add to Cart" [ref=e292]:
+                      - img [ref=e293]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e297]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e298]
+                      - text: WhatsApp Us
+            - link "Alkaram Studio -26% In Stock Designer Brands Alkaram Studio Alkaram Studio festive collection with luxury dupatta. (134 reviews) Silk Blend Rs 9,200 Rs 12,500 Add to Cart WhatsApp Us" [ref=e301] [cursor=pointer]:
+              - /url: /products/35
+              - generic [ref=e302]:
+                - generic [ref=e303]:
+                  - img "Alkaram Studio" [ref=e304]
+                  - generic [ref=e305]: "-26%"
+                  - generic [ref=e306]: In Stock
+                  - button [ref=e307]:
+                    - img [ref=e308]
+                - generic [ref=e310]:
+                  - generic [ref=e312]: Designer Brands
+                  - heading "Alkaram Studio" [level=3] [ref=e313]
+                  - paragraph [ref=e314]: Alkaram Studio festive collection with luxury dupatta.
+                  - generic [ref=e315]:
+                    - generic [ref=e316]:
+                      - img [ref=e317]
+                      - img [ref=e319]
+                      - img [ref=e321]
+                      - img [ref=e323]
+                      - img [ref=e325]
+                    - generic [ref=e327]: (134 reviews)
+                  - paragraph [ref=e328]: Silk Blend
+                  - generic [ref=e329]:
+                    - generic [ref=e331]:
+                      - generic [ref=e332]: Rs 9,200
+                      - generic [ref=e333]: Rs 12,500
+                    - button "Add to Cart" [ref=e334]:
+                      - img [ref=e335]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e339]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e340]
+                      - text: WhatsApp Us
+            - link "Gul Ahmed Premium -26% In Stock Designer Brands Gul Ahmed Premium Gul Ahmed premium lawn with digital embroidery. (198 reviews) Premium Lawn Rs 7,800 Rs 10,500 Add to Cart WhatsApp Us" [ref=e343] [cursor=pointer]:
+              - /url: /products/34
+              - generic [ref=e344]:
+                - generic [ref=e345]:
+                  - img "Gul Ahmed Premium" [ref=e346]
+                  - generic [ref=e347]: "-26%"
+                  - generic [ref=e348]: In Stock
+                  - button [ref=e349]:
+                    - img [ref=e350]
+                - generic [ref=e352]:
+                  - generic [ref=e354]: Designer Brands
+                  - heading "Gul Ahmed Premium" [level=3] [ref=e355]
+                  - paragraph [ref=e356]: Gul Ahmed premium lawn with digital embroidery.
+                  - generic [ref=e357]:
+                    - generic [ref=e358]:
+                      - img [ref=e359]
+                      - img [ref=e361]
+                      - img [ref=e363]
+                      - img [ref=e365]
+                      - img [ref=e367]
+                    - generic [ref=e369]: (198 reviews)
+                  - paragraph [ref=e370]: Premium Lawn
+                  - generic [ref=e371]:
+                    - generic [ref=e373]:
+                      - generic [ref=e374]: Rs 7,800
+                      - generic [ref=e375]: Rs 10,500
+                    - button "Add to Cart" [ref=e376]:
+                      - img [ref=e377]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e381]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e382]
+                      - text: WhatsApp Us
+            - link "Khaadi Exclusive -23% In Stock Designer Brands Khaadi Exclusive Khaadi exclusive print with traditional craftsmanship. (156 reviews) Khaddar Rs 8,500 Rs 11,000 Add to Cart WhatsApp Us" [ref=e385] [cursor=pointer]:
+              - /url: /products/33
+              - generic [ref=e386]:
+                - generic [ref=e387]:
+                  - img "Khaadi Exclusive" [ref=e388]
+                  - generic [ref=e389]: "-23%"
+                  - generic [ref=e390]: In Stock
+                  - button [ref=e391]:
+                    - img [ref=e392]
+                - generic [ref=e394]:
+                  - generic [ref=e396]: Designer Brands
+                  - heading "Khaadi Exclusive" [level=3] [ref=e397]
+                  - paragraph [ref=e398]: Khaadi exclusive print with traditional craftsmanship.
+                  - generic [ref=e399]:
+                    - generic [ref=e400]:
+                      - img [ref=e401]
+                      - img [ref=e403]
+                      - img [ref=e405]
+                      - img [ref=e407]
+                      - img [ref=e409]
+                    - generic [ref=e411]: (156 reviews)
+                  - paragraph [ref=e412]: Khaddar
+                  - generic [ref=e413]:
+                    - generic [ref=e415]:
+                      - generic [ref=e416]: Rs 8,500
+                      - generic [ref=e417]: Rs 11,000
+                    - button "Add to Cart" [ref=e418]:
+                      - img [ref=e419]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e423]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e424]
+                      - text: WhatsApp Us
+            - link "Pastel Cotton Collection -21% In Stock Cotton Suits Pastel Cotton Collection Soft pastel shades in comfortable cotton fabric. (212 reviews) Soft Cotton Rs 2,300 Rs 2,900 Add to Cart WhatsApp Us" [ref=e427] [cursor=pointer]:
+              - /url: /products/30
+              - generic [ref=e428]:
+                - generic [ref=e429]:
+                  - img "Pastel Cotton Collection" [ref=e430]
+                  - generic [ref=e431]: "-21%"
+                  - generic [ref=e432]: In Stock
+                  - button [ref=e433]:
+                    - img [ref=e434]
+                - generic [ref=e436]:
+                  - generic [ref=e438]: Cotton Suits
+                  - heading "Pastel Cotton Collection" [level=3] [ref=e439]
+                  - paragraph [ref=e440]: Soft pastel shades in comfortable cotton fabric.
+                  - generic [ref=e441]:
+                    - generic [ref=e442]:
+                      - img [ref=e443]
+                      - img [ref=e445]
+                      - img [ref=e447]
+                      - img [ref=e449]
+                      - img [ref=e451]
+                    - generic [ref=e453]: (212 reviews)
+                  - paragraph [ref=e454]: Soft Cotton
+                  - generic [ref=e455]:
+                    - generic [ref=e457]:
+                      - generic [ref=e458]: Rs 2,300
+                      - generic [ref=e459]: Rs 2,900
+                    - button "Add to Cart" [ref=e460]:
+                      - img [ref=e461]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e465]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e466]
+                      - text: WhatsApp Us
+            - link "Embroidered Cotton Suit -24% In Stock Cotton Suits Embroidered Cotton Suit Light embroidery on pure cotton for semi-formal wear. (145 reviews) Premium Cotton Rs 2,900 Rs 3,800 Add to Cart WhatsApp Us" [ref=e469] [cursor=pointer]:
+              - /url: /products/29
+              - generic [ref=e470]:
+                - generic [ref=e471]:
+                  - img "Embroidered Cotton Suit" [ref=e472]
+                  - generic [ref=e473]: "-24%"
+                  - generic [ref=e474]: In Stock
+                  - button [ref=e475]:
+                    - img [ref=e476]
+                - generic [ref=e478]:
+                  - generic [ref=e480]: Cotton Suits
+                  - heading "Embroidered Cotton Suit" [level=3] [ref=e481]
+                  - paragraph [ref=e482]: Light embroidery on pure cotton for semi-formal wear.
+                  - generic [ref=e483]:
+                    - generic [ref=e484]:
+                      - img [ref=e485]
+                      - img [ref=e487]
+                      - img [ref=e489]
+                      - img [ref=e491]
+                      - img [ref=e493]
+                    - generic [ref=e495]: (145 reviews)
+                  - paragraph [ref=e496]: Premium Cotton
+                  - generic [ref=e497]:
+                    - generic [ref=e499]:
+                      - generic [ref=e500]: Rs 2,900
+                      - generic [ref=e501]: Rs 3,800
+                    - button "Add to Cart" [ref=e502]:
+                      - img [ref=e503]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e507]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e508]
+                      - text: WhatsApp Us
+            - link "Linen Cotton Blend -24% In Stock Cotton Suits Linen Cotton Blend Luxurious linen-cotton blend for special occasions. (87 reviews) Linen Cotton Rs 3,800 Rs 5,000 Add to Cart WhatsApp Us" [ref=e511] [cursor=pointer]:
+              - /url: /products/28
+              - generic [ref=e512]:
+                - generic [ref=e513]:
+                  - img "Linen Cotton Blend" [ref=e514]
+                  - generic [ref=e515]: "-24%"
+                  - generic [ref=e516]: In Stock
+                  - button [ref=e517]:
+                    - img [ref=e518]
+                - generic [ref=e520]:
+                  - generic [ref=e522]: Cotton Suits
+                  - heading "Linen Cotton Blend" [level=3] [ref=e523]
+                  - paragraph [ref=e524]: Luxurious linen-cotton blend for special occasions.
+                  - generic [ref=e525]:
+                    - generic [ref=e526]:
+                      - img [ref=e527]
+                      - img [ref=e529]
+                      - img [ref=e531]
+                      - img [ref=e533]
+                      - img [ref=e535]
+                    - generic [ref=e537]: (87 reviews)
+                  - paragraph [ref=e538]: Linen Cotton
+                  - generic [ref=e539]:
+                    - generic [ref=e541]:
+                      - generic [ref=e542]: Rs 3,800
+                      - generic [ref=e543]: Rs 5,000
+                    - button "Add to Cart" [ref=e544]:
+                      - img [ref=e545]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e549]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e550]
+                      - text: WhatsApp Us
+            - link "Stripes Cotton Collection -23% In Stock Cotton Suits Stripes Cotton Collection Classic stripes pattern for a timeless look. (198 reviews) Cotton Rs 2,400 Rs 3,100 Add to Cart WhatsApp Us" [ref=e553] [cursor=pointer]:
+              - /url: /products/27
+              - generic [ref=e554]:
+                - generic [ref=e555]:
+                  - img "Stripes Cotton Collection" [ref=e556]
+                  - generic [ref=e557]: "-23%"
+                  - generic [ref=e558]: In Stock
+                  - button [ref=e559]:
+                    - img [ref=e560]
+                - generic [ref=e562]:
+                  - generic [ref=e564]: Cotton Suits
+                  - heading "Stripes Cotton Collection" [level=3] [ref=e565]
+                  - paragraph [ref=e566]: Classic stripes pattern for a timeless look.
+                  - generic [ref=e567]:
+                    - generic [ref=e568]:
+                      - img [ref=e569]
+                      - img [ref=e571]
+                      - img [ref=e573]
+                      - img [ref=e575]
+                      - img [ref=e577]
+                    - generic [ref=e579]: (198 reviews)
+                  - paragraph [ref=e580]: Cotton
+                  - generic [ref=e581]:
+                    - generic [ref=e583]:
+                      - generic [ref=e584]: Rs 2,400
+                      - generic [ref=e585]: Rs 3,100
+                    - button "Add to Cart" [ref=e586]:
+                      - img [ref=e587]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e591]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e592]
+                      - text: WhatsApp Us
+            - link "Summer Breathable Suit -22% In Stock Cotton Suits Summer Breathable Suit Ultra-breathable cotton for hot summer days. (234 reviews) Soft Cotton Rs 2,100 Rs 2,700 Add to Cart WhatsApp Us" [ref=e595] [cursor=pointer]:
+              - /url: /products/26
+              - generic [ref=e596]:
+                - generic [ref=e597]:
+                  - img "Summer Breathable Suit" [ref=e598]
+                  - generic [ref=e599]: "-22%"
+                  - generic [ref=e600]: In Stock
+                  - button [ref=e601]:
+                    - img [ref=e602]
+                - generic [ref=e604]:
+                  - generic [ref=e606]: Cotton Suits
+                  - heading "Summer Breathable Suit" [level=3] [ref=e607]
+                  - paragraph [ref=e608]: Ultra-breathable cotton for hot summer days.
+                  - generic [ref=e609]:
+                    - generic [ref=e610]:
+                      - img [ref=e611]
+                      - img [ref=e613]
+                      - img [ref=e615]
+                      - img [ref=e617]
+                      - img [ref=e619]
+                    - generic [ref=e621]: (234 reviews)
+                  - paragraph [ref=e622]: Soft Cotton
+                  - generic [ref=e623]:
+                    - generic [ref=e625]:
+                      - generic [ref=e626]: Rs 2,100
+                      - generic [ref=e627]: Rs 2,700
+                    - button "Add to Cart" [ref=e628]:
+                      - img [ref=e629]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e633]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e634]
+                      - text: WhatsApp Us
+            - link "Khadi Cotton Classic -24% In Stock Cotton Suits Khadi Cotton Classic Traditional khadi cotton with modern cuts. (156 reviews) Khadi Cotton Rs 3,200 Rs 4,200 Add to Cart WhatsApp Us" [ref=e637] [cursor=pointer]:
+              - /url: /products/25
+              - generic [ref=e638]:
+                - generic [ref=e639]:
+                  - img "Khadi Cotton Classic" [ref=e640]
+                  - generic [ref=e641]: "-24%"
+                  - generic [ref=e642]: In Stock
+                  - button [ref=e643]:
+                    - img [ref=e644]
+                - generic [ref=e646]:
+                  - generic [ref=e648]: Cotton Suits
+                  - heading "Khadi Cotton Classic" [level=3] [ref=e649]
+                  - paragraph [ref=e650]: Traditional khadi cotton with modern cuts.
+                  - generic [ref=e651]:
+                    - generic [ref=e652]:
+                      - img [ref=e653]
+                      - img [ref=e655]
+                      - img [ref=e657]
+                      - img [ref=e659]
+                      - img [ref=e661]
+                    - generic [ref=e663]: (156 reviews)
+                  - paragraph [ref=e664]: Khadi Cotton
+                  - generic [ref=e665]:
+                    - generic [ref=e667]:
+                      - generic [ref=e668]: Rs 3,200
+                      - generic [ref=e669]: Rs 4,200
+                    - button "Add to Cart" [ref=e670]:
+                      - img [ref=e671]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e675]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e676]
+                      - text: WhatsApp Us
+            - link "Handloom Cotton Suit -27% In Stock Cotton Suits Handloom Cotton Suit Authentic handloom cotton with natural dyes. (94 reviews) Handloom Cotton Rs 3,500 Rs 4,800 Add to Cart WhatsApp Us" [ref=e679] [cursor=pointer]:
+              - /url: /products/24
+              - generic [ref=e680]:
+                - generic [ref=e681]:
+                  - img "Handloom Cotton Suit" [ref=e682]
+                  - generic [ref=e683]: "-27%"
+                  - generic [ref=e684]: In Stock
+                  - button [ref=e685]:
+                    - img [ref=e686]
+                - generic [ref=e688]:
+                  - generic [ref=e690]: Cotton Suits
+                  - heading "Handloom Cotton Suit" [level=3] [ref=e691]
+                  - paragraph [ref=e692]: Authentic handloom cotton with natural dyes.
+                  - generic [ref=e693]:
+                    - generic [ref=e694]:
+                      - img [ref=e695]
+                      - img [ref=e697]
+                      - img [ref=e699]
+                      - img [ref=e701]
+                      - img [ref=e703]
+                    - generic [ref=e705]: (94 reviews)
+                  - paragraph [ref=e706]: Handloom Cotton
+                  - generic [ref=e707]:
+                    - generic [ref=e709]:
+                      - generic [ref=e710]: Rs 3,500
+                      - generic [ref=e711]: Rs 4,800
+                    - button "Add to Cart" [ref=e712]:
+                      - img [ref=e713]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e717]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e718]
+                      - text: WhatsApp Us
+            - link "Printed Cotton Daily Wear -21% In Stock Cotton Suits Printed Cotton Daily Wear Cheerful prints for everyday comfort and style. (289 reviews) Cotton Blend Rs 1,900 Rs 2,400 Add to Cart WhatsApp Us" [ref=e721] [cursor=pointer]:
+              - /url: /products/23
+              - generic [ref=e722]:
+                - generic [ref=e723]:
+                  - img "Printed Cotton Daily Wear" [ref=e724]
+                  - generic [ref=e725]: "-21%"
+                  - generic [ref=e726]: In Stock
+                  - button [ref=e727]:
+                    - img [ref=e728]
+                - generic [ref=e730]:
+                  - generic [ref=e732]: Cotton Suits
+                  - heading "Printed Cotton Daily Wear" [level=3] [ref=e733]
+                  - paragraph [ref=e734]: Cheerful prints for everyday comfort and style.
+                  - generic [ref=e735]:
+                    - generic [ref=e736]:
+                      - img [ref=e737]
+                      - img [ref=e739]
+                      - img [ref=e741]
+                      - img [ref=e743]
+                      - img [ref=e745]
+                    - generic [ref=e747]: (289 reviews)
+                  - paragraph [ref=e748]: Cotton Blend
+                  - generic [ref=e749]:
+                    - generic [ref=e751]:
+                      - generic [ref=e752]: Rs 1,900
+                      - generic [ref=e753]: Rs 2,400
+                    - button "Add to Cart" [ref=e754]:
+                      - img [ref=e755]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e759]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e760]
+                      - text: WhatsApp Us
+            - link "Organic Cotton Collection -22% In Stock Cotton Suits Organic Cotton Collection Eco-friendly organic cotton for conscious fashion. (178 reviews) Organic Cotton Rs 2,800 Rs 3,600 Add to Cart WhatsApp Us" [ref=e763] [cursor=pointer]:
+              - /url: /products/22
+              - generic [ref=e764]:
+                - generic [ref=e765]:
+                  - img "Organic Cotton Collection" [ref=e766]
+                  - generic [ref=e767]: "-22%"
+                  - generic [ref=e768]: In Stock
+                  - button [ref=e769]:
+                    - img [ref=e770]
+                - generic [ref=e772]:
+                  - generic [ref=e774]: Cotton Suits
+                  - heading "Organic Cotton Collection" [level=3] [ref=e775]
+                  - paragraph [ref=e776]: Eco-friendly organic cotton for conscious fashion.
+                  - generic [ref=e777]:
+                    - generic [ref=e778]:
+                      - img [ref=e779]
+                      - img [ref=e781]
+                      - img [ref=e783]
+                      - img [ref=e785]
+                      - img [ref=e787]
+                    - generic [ref=e789]: (178 reviews)
+                  - paragraph [ref=e790]: Organic Cotton
+                  - generic [ref=e791]:
+                    - generic [ref=e793]:
+                      - generic [ref=e794]: Rs 2,800
+                      - generic [ref=e795]: Rs 3,600
+                    - button "Add to Cart" [ref=e796]:
+                      - img [ref=e797]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e801]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e802]
+                      - text: WhatsApp Us
+            - link "Pure Cotton Comfort Suit -21% In Stock Cotton Suits Pure Cotton Comfort Suit 100% pure cotton for maximum comfort in all seasons. (312 reviews) Pure Cotton Rs 2,200 Rs 2,800 Add to Cart WhatsApp Us" [ref=e805] [cursor=pointer]:
+              - /url: /products/21
+              - generic [ref=e806]:
+                - generic [ref=e807]:
+                  - img "Pure Cotton Comfort Suit" [ref=e808]
+                  - generic [ref=e809]: "-21%"
+                  - generic [ref=e810]: In Stock
+                  - button [ref=e811]:
+                    - img [ref=e812]
+                - generic [ref=e814]:
+                  - generic [ref=e816]: Cotton Suits
+                  - heading "Pure Cotton Comfort Suit" [level=3] [ref=e817]
+                  - paragraph [ref=e818]: 100% pure cotton for maximum comfort in all seasons.
+                  - generic [ref=e819]:
+                    - generic [ref=e820]:
+                      - img [ref=e821]
+                      - img [ref=e823]
+                      - img [ref=e825]
+                      - img [ref=e827]
+                      - img [ref=e829]
+                    - generic [ref=e831]: (312 reviews)
+                  - paragraph [ref=e832]: Pure Cotton
+                  - generic [ref=e833]:
+                    - generic [ref=e835]:
+                      - generic [ref=e836]: Rs 2,200
+                      - generic [ref=e837]: Rs 2,800
+                    - button "Add to Cart" [ref=e838]:
+                      - img [ref=e839]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e843]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e844]
+                      - text: WhatsApp Us
+            - link "Royal Blue Shalwar Qameez -24% In Stock Shalwar Qameez Royal Blue Shalwar Qameez Elegant royal blue with silver embroidery accents. (112 reviews) Cambric Cotton Rs 3,800 Rs 5,000 Add to Cart WhatsApp Us" [ref=e847] [cursor=pointer]:
+              - /url: /products/20
+              - generic [ref=e848]:
+                - generic [ref=e849]:
+                  - img "Royal Blue Shalwar Qameez" [ref=e850]
+                  - generic [ref=e851]: "-24%"
+                  - generic [ref=e852]: In Stock
+                  - button [ref=e853]:
+                    - img [ref=e854]
+                - generic [ref=e856]:
+                  - generic [ref=e858]: Shalwar Qameez
+                  - heading "Royal Blue Shalwar Qameez" [level=3] [ref=e859]
+                  - paragraph [ref=e860]: Elegant royal blue with silver embroidery accents.
+                  - generic [ref=e861]:
+                    - generic [ref=e862]:
+                      - img [ref=e863]
+                      - img [ref=e865]
+                      - img [ref=e867]
+                      - img [ref=e869]
+                      - img [ref=e871]
+                    - generic [ref=e873]: (112 reviews)
+                  - paragraph [ref=e874]: Cambric Cotton
+                  - generic [ref=e875]:
+                    - generic [ref=e877]:
+                      - generic [ref=e878]: Rs 3,800
+                      - generic [ref=e879]: Rs 5,000
+                    - button "Add to Cart" [ref=e880]:
+                      - img [ref=e881]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e885]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e886]
+                      - text: WhatsApp Us
+            - link "Eid Special Collection -26% In Stock Shalwar Qameez Eid Special Collection Special Eid collection with premium finish and dupatta. (78 reviews) Premium Lawn Rs 4,800 Rs 6,500 Add to Cart WhatsApp Us" [ref=e889] [cursor=pointer]:
+              - /url: /products/19
+              - generic [ref=e890]:
+                - generic [ref=e891]:
+                  - img "Eid Special Collection" [ref=e892]
+                  - generic [ref=e893]: "-26%"
+                  - generic [ref=e894]: In Stock
+                  - button [ref=e895]:
+                    - img [ref=e896]
+                - generic [ref=e898]:
+                  - generic [ref=e900]: Shalwar Qameez
+                  - heading "Eid Special Collection" [level=3] [ref=e901]
+                  - paragraph [ref=e902]: Special Eid collection with premium finish and dupatta.
+                  - generic [ref=e903]:
+                    - generic [ref=e904]:
+                      - img [ref=e905]
+                      - img [ref=e907]
+                      - img [ref=e909]
+                      - img [ref=e911]
+                      - img [ref=e913]
+                    - generic [ref=e915]: (78 reviews)
+                  - paragraph [ref=e916]: Premium Lawn
+                  - generic [ref=e917]:
+                    - generic [ref=e919]:
+                      - generic [ref=e920]: Rs 4,800
+                      - generic [ref=e921]: Rs 6,500
+                    - button "Add to Cart" [ref=e922]:
+                      - img [ref=e923]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e927]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e928]
+                      - text: WhatsApp Us
+            - link "Geometric Pattern Suit -23% In Stock Shalwar Qameez Geometric Pattern Suit Modern geometric patterns with contrast borders. (134 reviews) Lawn Cotton Rs 3,100 Rs 4,000 Add to Cart WhatsApp Us" [ref=e931] [cursor=pointer]:
+              - /url: /products/18
+              - generic [ref=e932]:
+                - generic [ref=e933]:
+                  - img "Geometric Pattern Suit" [ref=e934]
+                  - generic [ref=e935]: "-23%"
+                  - generic [ref=e936]: In Stock
+                  - button [ref=e937]:
+                    - img [ref=e938]
+                - generic [ref=e940]:
+                  - generic [ref=e942]: Shalwar Qameez
+                  - heading "Geometric Pattern Suit" [level=3] [ref=e943]
+                  - paragraph [ref=e944]: Modern geometric patterns with contrast borders.
+                  - generic [ref=e945]:
+                    - generic [ref=e946]:
+                      - img [ref=e947]
+                      - img [ref=e949]
+                      - img [ref=e951]
+                      - img [ref=e953]
+                      - img [ref=e955]
+                    - generic [ref=e957]: (134 reviews)
+                  - paragraph [ref=e958]: Lawn Cotton
+                  - generic [ref=e959]:
+                    - generic [ref=e961]:
+                      - generic [ref=e962]: Rs 3,100
+                      - generic [ref=e963]: Rs 4,000
+                    - button "Add to Cart" [ref=e964]:
+                      - img [ref=e965]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e969]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e970]
+                      - text: WhatsApp Us
+            - link "Floral Print Daily Wear -20% In Stock Shalwar Qameez Floral Print Daily Wear Cheerful floral prints for comfortable daily wear. (245 reviews) Cotton Blend Rs 2,400 Rs 3,000 Add to Cart WhatsApp Us" [ref=e973] [cursor=pointer]:
+              - /url: /products/17
+              - generic [ref=e974]:
+                - generic [ref=e975]:
+                  - img "Floral Print Daily Wear" [ref=e976]
+                  - generic [ref=e977]: "-20%"
+                  - generic [ref=e978]: In Stock
+                  - button [ref=e979]:
+                    - img [ref=e980]
+                - generic [ref=e982]:
+                  - generic [ref=e984]: Shalwar Qameez
+                  - heading "Floral Print Daily Wear" [level=3] [ref=e985]
+                  - paragraph [ref=e986]: Cheerful floral prints for comfortable daily wear.
+                  - generic [ref=e987]:
+                    - generic [ref=e988]:
+                      - img [ref=e989]
+                      - img [ref=e991]
+                      - img [ref=e993]
+                      - img [ref=e995]
+                      - img [ref=e997]
+                    - generic [ref=e999]: (245 reviews)
+                  - paragraph [ref=e1000]: Cotton Blend
+                  - generic [ref=e1001]:
+                    - generic [ref=e1003]:
+                      - generic [ref=e1004]: Rs 2,400
+                      - generic [ref=e1005]: Rs 3,000
+                    - button "Add to Cart" [ref=e1006]:
+                      - img [ref=e1007]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e1011]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e1012]
+                      - text: WhatsApp Us
+            - link "Chikan Kari Suit -27% In Stock Shalwar Qameez Chikan Kari Suit Authentic Lucknowi chikan embroidery on premium fabric. (89 reviews) Muslin Rs 5,500 Rs 7,500 Add to Cart WhatsApp Us" [ref=e1015] [cursor=pointer]:
+              - /url: /products/16
+              - generic [ref=e1016]:
+                - generic [ref=e1017]:
+                  - img "Chikan Kari Suit" [ref=e1018]
+                  - generic [ref=e1019]: "-27%"
+                  - generic [ref=e1020]: In Stock
+                  - button [ref=e1021]:
+                    - img [ref=e1022]
+                - generic [ref=e1024]:
+                  - generic [ref=e1026]: Shalwar Qameez
+                  - heading "Chikan Kari Suit" [level=3] [ref=e1027]
+                  - paragraph [ref=e1028]: Authentic Lucknowi chikan embroidery on premium fabric.
+                  - generic [ref=e1029]:
+                    - generic [ref=e1030]:
+                      - img [ref=e1031]
+                      - img [ref=e1033]
+                      - img [ref=e1035]
+                      - img [ref=e1037]
+                      - img [ref=e1039]
+                    - generic [ref=e1041]: (89 reviews)
+                  - paragraph [ref=e1042]: Muslin
+                  - generic [ref=e1043]:
+                    - generic [ref=e1045]:
+                      - generic [ref=e1046]: Rs 5,500
+                      - generic [ref=e1047]: Rs 7,500
+                    - button "Add to Cart" [ref=e1048]:
+                      - img [ref=e1049]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e1053]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e1054]
+                      - text: WhatsApp Us
+            - link "Pastel Summer Collection -24% In Stock Shalwar Qameez Pastel Summer Collection Light and breezy pastel shades perfect for summer days. (198 reviews) Lawn Rs 2,600 Rs 3,400 Add to Cart WhatsApp Us" [ref=e1057] [cursor=pointer]:
+              - /url: /products/15
+              - generic [ref=e1058]:
+                - generic [ref=e1059]:
+                  - img "Pastel Summer Collection" [ref=e1060]
+                  - generic [ref=e1061]: "-24%"
+                  - generic [ref=e1062]: In Stock
+                  - button [ref=e1063]:
+                    - img [ref=e1064]
+                - generic [ref=e1066]:
+                  - generic [ref=e1068]: Shalwar Qameez
+                  - heading "Pastel Summer Collection" [level=3] [ref=e1069]
+                  - paragraph [ref=e1070]: Light and breezy pastel shades perfect for summer days.
+                  - generic [ref=e1071]:
+                    - generic [ref=e1072]:
+                      - img [ref=e1073]
+                      - img [ref=e1075]
+                      - img [ref=e1077]
+                      - img [ref=e1079]
+                      - img [ref=e1081]
+                    - generic [ref=e1083]: (198 reviews)
+                  - paragraph [ref=e1084]: Lawn
+                  - generic [ref=e1085]:
+                    - generic [ref=e1087]:
+                      - generic [ref=e1088]: Rs 2,600
+                      - generic [ref=e1089]: Rs 3,400
+                    - button "Add to Cart" [ref=e1090]:
+                      - img [ref=e1091]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e1095]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e1096]
+                      - text: WhatsApp Us
+            - link "Traditional Block Print -24% In Stock Shalwar Qameez Traditional Block Print Hand block printed design with traditional patterns. (167 reviews) Pure Cotton Rs 3,200 Rs 4,200 Add to Cart WhatsApp Us" [ref=e1099] [cursor=pointer]:
+              - /url: /products/14
+              - generic [ref=e1100]:
+                - generic [ref=e1101]:
+                  - img "Traditional Block Print" [ref=e1102]
+                  - generic [ref=e1103]: "-24%"
+                  - generic [ref=e1104]: In Stock
+                  - button [ref=e1105]:
+                    - img [ref=e1106]
+                - generic [ref=e1108]:
+                  - generic [ref=e1110]: Shalwar Qameez
+                  - heading "Traditional Block Print" [level=3] [ref=e1111]
+                  - paragraph [ref=e1112]: Hand block printed design with traditional patterns.
+                  - generic [ref=e1113]:
+                    - generic [ref=e1114]:
+                      - img [ref=e1115]
+                      - img [ref=e1117]
+                      - img [ref=e1119]
+                      - img [ref=e1121]
+                      - img [ref=e1123]
+                    - generic [ref=e1125]: (167 reviews)
+                  - paragraph [ref=e1126]: Pure Cotton
+                  - generic [ref=e1127]:
+                    - generic [ref=e1129]:
+                      - generic [ref=e1130]: Rs 3,200
+                      - generic [ref=e1131]: Rs 4,200
+                    - button "Add to Cart" [ref=e1132]:
+                      - img [ref=e1133]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e1137]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e1138]
+                      - text: WhatsApp Us
+            - link "Embroidered Neck Design -24% In Stock Shalwar Qameez Embroidered Neck Design Beautiful neck embroidery with matching trouser and dupatta. (156 reviews) Cambric Rs 4,200 Rs 5,500 Add to Cart WhatsApp Us" [ref=e1141] [cursor=pointer]:
+              - /url: /products/13
+              - generic [ref=e1142]:
+                - generic [ref=e1143]:
+                  - img "Embroidered Neck Design" [ref=e1144]
+                  - generic [ref=e1145]: "-24%"
+                  - generic [ref=e1146]: In Stock
+                  - button [ref=e1147]:
+                    - img [ref=e1148]
+                - generic [ref=e1150]:
+                  - generic [ref=e1152]: Shalwar Qameez
+                  - heading "Embroidered Neck Design" [level=3] [ref=e1153]
+                  - paragraph [ref=e1154]: Beautiful neck embroidery with matching trouser and dupatta.
+                  - generic [ref=e1155]:
+                    - generic [ref=e1156]:
+                      - img [ref=e1157]
+                      - img [ref=e1159]
+                      - img [ref=e1161]
+                      - img [ref=e1163]
+                      - img [ref=e1165]
+                    - generic [ref=e1167]: (156 reviews)
+                  - paragraph [ref=e1168]: Cambric
+                  - generic [ref=e1169]:
+                    - generic [ref=e1171]:
+                      - generic [ref=e1172]: Rs 4,200
+                      - generic [ref=e1173]: Rs 5,500
+                    - button "Add to Cart" [ref=e1174]:
+                      - img [ref=e1175]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e1179]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e1180]
+                      - text: WhatsApp Us
+            - link "Printed Lawn Collection -26% In Stock Shalwar Qameez Printed Lawn Collection Vibrant digital prints for a fresh summer look. (189 reviews) Digital Lawn Rs 2,800 Rs 3,800 Add to Cart WhatsApp Us" [ref=e1183] [cursor=pointer]:
+              - /url: /products/12
+              - generic [ref=e1184]:
+                - generic [ref=e1185]:
+                  - img "Printed Lawn Collection" [ref=e1186]
+                  - generic [ref=e1187]: "-26%"
+                  - generic [ref=e1188]: In Stock
+                  - button [ref=e1189]:
+                    - img [ref=e1190]
+                - generic [ref=e1192]:
+                  - generic [ref=e1194]: Shalwar Qameez
+                  - heading "Printed Lawn Collection" [level=3] [ref=e1195]
+                  - paragraph [ref=e1196]: Vibrant digital prints for a fresh summer look.
+                  - generic [ref=e1197]:
+                    - generic [ref=e1198]:
+                      - img [ref=e1199]
+                      - img [ref=e1201]
+                      - img [ref=e1203]
+                      - img [ref=e1205]
+                      - img [ref=e1207]
+                    - generic [ref=e1209]: (189 reviews)
+                  - paragraph [ref=e1210]: Digital Lawn
+                  - generic [ref=e1211]:
+                    - generic [ref=e1213]:
+                      - generic [ref=e1214]: Rs 2,800
+                      - generic [ref=e1215]: Rs 3,800
+                    - button "Add to Cart" [ref=e1216]:
+                      - img [ref=e1217]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e1221]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e1222]
+                      - text: WhatsApp Us
+            - link "Classic White Shalwar Qameez -22% In Stock Shalwar Qameez Classic White Shalwar Qameez Timeless white with subtle embroidery for everyday elegance. (234 reviews) Lawn Cotton Rs 3,500 Rs 4,500 Add to Cart WhatsApp Us" [ref=e1225] [cursor=pointer]:
+              - /url: /products/11
+              - generic [ref=e1226]:
+                - generic [ref=e1227]:
+                  - img "Classic White Shalwar Qameez" [ref=e1228]
+                  - generic [ref=e1229]: "-22%"
+                  - generic [ref=e1230]: In Stock
+                  - button [ref=e1231]:
+                    - img [ref=e1232]
+                - generic [ref=e1234]:
+                  - generic [ref=e1236]: Shalwar Qameez
+                  - heading "Classic White Shalwar Qameez" [level=3] [ref=e1237]
+                  - paragraph [ref=e1238]: Timeless white with subtle embroidery for everyday elegance.
+                  - generic [ref=e1239]:
+                    - generic [ref=e1240]:
+                      - img [ref=e1241]
+                      - img [ref=e1243]
+                      - img [ref=e1245]
+                      - img [ref=e1247]
+                      - img [ref=e1249]
+                    - generic [ref=e1251]: (234 reviews)
+                  - paragraph [ref=e1252]: Lawn Cotton
+                  - generic [ref=e1253]:
+                    - generic [ref=e1255]:
+                      - generic [ref=e1256]: Rs 3,500
+                      - generic [ref=e1257]: Rs 4,500
+                    - button "Add to Cart" [ref=e1258]:
+                      - img [ref=e1259]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e1263]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e1264]
+                      - text: WhatsApp Us
+            - link "Navy Blue Sequin Suit -29% In Stock Fancy Suits Navy Blue Sequin Suit Stunning navy blue with all-over sequin work for party nights. (91 reviews) Premium Net Rs 9,200 Rs 13,000 Add to Cart WhatsApp Us" [ref=e1267] [cursor=pointer]:
+              - /url: /products/10
+              - generic [ref=e1268]:
+                - generic [ref=e1269]:
+                  - img "Navy Blue Sequin Suit" [ref=e1270]
+                  - generic [ref=e1271]: "-29%"
+                  - generic [ref=e1272]: In Stock
+                  - button [ref=e1273]:
+                    - img [ref=e1274]
+                - generic [ref=e1276]:
+                  - generic [ref=e1278]: Fancy Suits
+                  - heading "Navy Blue Sequin Suit" [level=3] [ref=e1279]
+                  - paragraph [ref=e1280]: Stunning navy blue with all-over sequin work for party nights.
+                  - generic [ref=e1281]:
+                    - generic [ref=e1282]:
+                      - img [ref=e1283]
+                      - img [ref=e1285]
+                      - img [ref=e1287]
+                      - img [ref=e1289]
+                      - img [ref=e1291]
+                    - generic [ref=e1293]: (91 reviews)
+                  - paragraph [ref=e1294]: Premium Net
+                  - generic [ref=e1295]:
+                    - generic [ref=e1297]:
+                      - generic [ref=e1298]: Rs 9,200
+                      - generic [ref=e1299]: Rs 13,000
+                    - button "Add to Cart" [ref=e1300]:
+                      - img [ref=e1301]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e1305]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e1306]
+                      - text: WhatsApp Us
+            - link "Maroon Festive Suit -25% In Stock Fancy Suits Maroon Festive Suit Rich maroon color with gold accents for festive celebrations. (78 reviews) Silk Blend Rs 8,200 Rs 11,000 Add to Cart WhatsApp Us" [ref=e1309] [cursor=pointer]:
+              - /url: /products/9
+              - generic [ref=e1310]:
+                - generic [ref=e1311]:
+                  - img "Maroon Festive Suit" [ref=e1312]
+                  - generic [ref=e1313]: "-25%"
+                  - generic [ref=e1314]: In Stock
+                  - button [ref=e1315]:
+                    - img [ref=e1316]
+                - generic [ref=e1318]:
+                  - generic [ref=e1320]: Fancy Suits
+                  - heading "Maroon Festive Suit" [level=3] [ref=e1321]
+                  - paragraph [ref=e1322]: Rich maroon color with gold accents for festive celebrations.
+                  - generic [ref=e1323]:
+                    - generic [ref=e1324]:
+                      - img [ref=e1325]
+                      - img [ref=e1327]
+                      - img [ref=e1329]
+                      - img [ref=e1331]
+                      - img [ref=e1333]
+                    - generic [ref=e1335]: (78 reviews)
+                  - paragraph [ref=e1336]: Silk Blend
+                  - generic [ref=e1337]:
+                    - generic [ref=e1339]:
+                      - generic [ref=e1340]: Rs 8,200
+                      - generic [ref=e1341]: Rs 11,000
+                    - button "Add to Cart" [ref=e1342]:
+                      - img [ref=e1343]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e1347]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e1348]
+                      - text: WhatsApp Us
+            - link "Pastel Fancy Collection -20% In Stock Fancy Suits Pastel Fancy Collection Soft pastel shades with delicate threadwork for elegant occasions. (134 reviews) Chiffon Rs 6,800 Rs 8,500 Add to Cart WhatsApp Us" [ref=e1351] [cursor=pointer]:
+              - /url: /products/8
+              - generic [ref=e1352]:
+                - generic [ref=e1353]:
+                  - img "Pastel Fancy Collection" [ref=e1354]
+                  - generic [ref=e1355]: "-20%"
+                  - generic [ref=e1356]: In Stock
+                  - button [ref=e1357]:
+                    - img [ref=e1358]
+                - generic [ref=e1360]:
+                  - generic [ref=e1362]: Fancy Suits
+                  - heading "Pastel Fancy Collection" [level=3] [ref=e1363]
+                  - paragraph [ref=e1364]: Soft pastel shades with delicate threadwork for elegant occasions.
+                  - generic [ref=e1365]:
+                    - generic [ref=e1366]:
+                      - img [ref=e1367]
+                      - img [ref=e1369]
+                      - img [ref=e1371]
+                      - img [ref=e1373]
+                      - img [ref=e1375]
+                    - generic [ref=e1377]: (134 reviews)
+                  - paragraph [ref=e1378]: Chiffon
+                  - generic [ref=e1379]:
+                    - generic [ref=e1381]:
+                      - generic [ref=e1382]: Rs 6,800
+                      - generic [ref=e1383]: Rs 8,500
+                    - button "Add to Cart" [ref=e1384]:
+                      - img [ref=e1385]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e1389]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e1390]
+                      - text: WhatsApp Us
+            - link "Mirror Work Designer Suit -23% In Stock Fancy Suits Mirror Work Designer Suit Traditional mirror work with contemporary design elements. (112 reviews) Georgette Rs 7,500 Rs 9,800 Add to Cart WhatsApp Us" [ref=e1393] [cursor=pointer]:
+              - /url: /products/7
+              - generic [ref=e1394]:
+                - generic [ref=e1395]:
+                  - img "Mirror Work Designer Suit" [ref=e1396]
+                  - generic [ref=e1397]: "-23%"
+                  - generic [ref=e1398]: In Stock
+                  - button [ref=e1399]:
+                    - img [ref=e1400]
+                - generic [ref=e1402]:
+                  - generic [ref=e1404]: Fancy Suits
+                  - heading "Mirror Work Designer Suit" [level=3] [ref=e1405]
+                  - paragraph [ref=e1406]: Traditional mirror work with contemporary design elements.
+                  - generic [ref=e1407]:
+                    - generic [ref=e1408]:
+                      - img [ref=e1409]
+                      - img [ref=e1411]
+                      - img [ref=e1413]
+                      - img [ref=e1415]
+                      - img [ref=e1417]
+                    - generic [ref=e1419]: (112 reviews)
+                  - paragraph [ref=e1420]: Georgette
+                  - generic [ref=e1421]:
+                    - generic [ref=e1423]:
+                      - generic [ref=e1424]: Rs 7,500
+                      - generic [ref=e1425]: Rs 9,800
+                    - button "Add to Cart" [ref=e1426]:
+                      - img [ref=e1427]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e1431]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e1432]
+                      - text: WhatsApp Us
+            - link "Crystal Stone Work Suit -29% In Stock Fancy Suits Crystal Stone Work Suit Dazzling crystal stone work for glamorous evening events. (98 reviews) Net with Silk Lining Rs 8,900 Rs 12,500 Add to Cart WhatsApp Us" [ref=e1435] [cursor=pointer]:
+              - /url: /products/5
+              - generic [ref=e1436]:
+                - generic [ref=e1437]:
+                  - img "Crystal Stone Work Suit" [ref=e1438]
+                  - generic [ref=e1439]: "-29%"
+                  - generic [ref=e1440]: In Stock
+                  - button [ref=e1441]:
+                    - img [ref=e1442]
+                - generic [ref=e1444]:
+                  - generic [ref=e1446]: Fancy Suits
+                  - heading "Crystal Stone Work Suit" [level=3] [ref=e1447]
+                  - paragraph [ref=e1448]: Dazzling crystal stone work for glamorous evening events.
+                  - generic [ref=e1449]:
+                    - generic [ref=e1450]:
+                      - img [ref=e1451]
+                      - img [ref=e1453]
+                      - img [ref=e1455]
+                      - img [ref=e1457]
+                      - img [ref=e1459]
+                    - generic [ref=e1461]: (98 reviews)
+                  - paragraph [ref=e1462]: Net with Silk Lining
+                  - generic [ref=e1463]:
+                    - generic [ref=e1465]:
+                      - generic [ref=e1466]: Rs 8,900
+                      - generic [ref=e1467]: Rs 12,500
+                    - button "Add to Cart" [ref=e1468]:
+                      - img [ref=e1469]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e1473]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e1474]
+                      - text: WhatsApp Us
+            - link "Pearl Embellished Fancy Dress -26% In Stock Fancy Suits Pearl Embellished Fancy Dress Beautiful pearl work with delicate sequins for a sophisticated look. (156 reviews) Organza Rs 7,800 Rs 10,500 Add to Cart WhatsApp Us" [ref=e1477] [cursor=pointer]:
+              - /url: /products/3
+              - generic [ref=e1478]:
+                - generic [ref=e1479]:
+                  - img "Pearl Embellished Fancy Dress" [ref=e1480]
+                  - generic [ref=e1481]: "-26%"
+                  - generic [ref=e1482]: In Stock
+                  - button [ref=e1483]:
+                    - img [ref=e1484]
+                - generic [ref=e1486]:
+                  - generic [ref=e1488]: Fancy Suits
+                  - heading "Pearl Embellished Fancy Dress" [level=3] [ref=e1489]
+                  - paragraph [ref=e1490]: Beautiful pearl work with delicate sequins for a sophisticated look.
+                  - generic [ref=e1491]:
+                    - generic [ref=e1492]:
+                      - img [ref=e1493]
+                      - img [ref=e1495]
+                      - img [ref=e1497]
+                      - img [ref=e1499]
+                      - img [ref=e1501]
+                    - generic [ref=e1503]: (156 reviews)
+                  - paragraph [ref=e1504]: Organza
+                  - generic [ref=e1505]:
+                    - generic [ref=e1507]:
+                      - generic [ref=e1508]: Rs 7,800
+                      - generic [ref=e1509]: Rs 10,500
+                    - button "Add to Cart" [ref=e1510]:
+                      - img [ref=e1511]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e1515]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e1516]
+                      - text: WhatsApp Us
+            - link "Golden Zari Work Suit -30% In Stock Fancy Suits Golden Zari Work Suit Luxurious golden zari embroidery perfect for weddings and special occasions. (89 reviews) Pure Silk Rs 9,500 Rs 13,500 Add to Cart WhatsApp Us" [ref=e1519] [cursor=pointer]:
+              - /url: /products/2
+              - generic [ref=e1520]:
+                - generic [ref=e1521]:
+                  - img "Golden Zari Work Suit" [ref=e1522]
+                  - generic [ref=e1523]: "-30%"
+                  - generic [ref=e1524]: In Stock
+                  - button [ref=e1525]:
+                    - img [ref=e1526]
+                - generic [ref=e1528]:
+                  - generic [ref=e1530]: Fancy Suits
+                  - heading "Golden Zari Work Suit" [level=3] [ref=e1531]
+                  - paragraph [ref=e1532]: Luxurious golden zari embroidery perfect for weddings and special occasions.
+                  - generic [ref=e1533]:
+                    - generic [ref=e1534]:
+                      - img [ref=e1535]
+                      - img [ref=e1537]
+                      - img [ref=e1539]
+                      - img [ref=e1541]
+                      - img [ref=e1543]
+                    - generic [ref=e1545]: (89 reviews)
+                  - paragraph [ref=e1546]: Pure Silk
+                  - generic [ref=e1547]:
+                    - generic [ref=e1549]:
+                      - generic [ref=e1550]: Rs 9,500
+                      - generic [ref=e1551]: Rs 13,500
+                    - button "Add to Cart" [ref=e1552]:
+                      - img [ref=e1553]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e1557]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e1558]
+                      - text: WhatsApp Us
+            - link "Royal Embroidered Fancy Suit -29% In Stock Fancy Suits Royal Embroidered Fancy Suit Elegant party wear with intricate hand embroidery and premium fabric. (124 reviews) Premium Chiffon Rs 8,500 Rs 12,000 Add to Cart WhatsApp Us" [ref=e1561] [cursor=pointer]:
+              - /url: /products/1
+              - generic [ref=e1562]:
+                - generic [ref=e1563]:
+                  - img "Royal Embroidered Fancy Suit" [ref=e1564]
+                  - generic [ref=e1565]: "-29%"
+                  - generic [ref=e1566]: In Stock
+                  - button [ref=e1567]:
+                    - img [ref=e1568]
+                - generic [ref=e1570]:
+                  - generic [ref=e1572]: Fancy Suits
+                  - heading "Royal Embroidered Fancy Suit" [level=3] [ref=e1573]
+                  - paragraph [ref=e1574]: Elegant party wear with intricate hand embroidery and premium fabric.
+                  - generic [ref=e1575]:
+                    - generic [ref=e1576]:
+                      - img [ref=e1577]
+                      - img [ref=e1579]
+                      - img [ref=e1581]
+                      - img [ref=e1583]
+                      - img [ref=e1585]
+                    - generic [ref=e1587]: (124 reviews)
+                  - paragraph [ref=e1588]: Premium Chiffon
+                  - generic [ref=e1589]:
+                    - generic [ref=e1591]:
+                      - generic [ref=e1592]: Rs 8,500
+                      - generic [ref=e1593]: Rs 12,000
+                    - button "Add to Cart" [ref=e1594]:
+                      - img [ref=e1595]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e1599]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e1600]
+                      - text: WhatsApp Us
+  - contentinfo [ref=e1602]:
+    - generic [ref=e1604]:
+      - generic [ref=e1605]:
+        - generic [ref=e1606]:
+          - img [ref=e1608]
+          - heading "Free Shipping" [level=5] [ref=e1613]
+          - paragraph [ref=e1614]: Across Pakistan
+        - generic [ref=e1615]:
+          - img [ref=e1617]
+          - heading "Easy Returns" [level=5] [ref=e1620]
+          - paragraph [ref=e1621]: 7-Day Exchange
+        - generic [ref=e1622]:
+          - img [ref=e1624]
+          - heading "Secure Payment" [level=5] [ref=e1627]
+          - paragraph [ref=e1628]: 100% Protected
+        - generic [ref=e1629]:
+          - img [ref=e1631]
+          - heading "Cash on Delivery" [level=5] [ref=e1633]
+          - paragraph [ref=e1634]: Pay at Door
+      - generic [ref=e1635]:
+        - generic [ref=e1636]:
+          - heading "FATIMA ZEHRA" [level=3] [ref=e1637]
+          - paragraph [ref=e1638]: Defining the future of Eastern couture. From intricate craftsmanship to modern silhouettes, we create legacies, not just garments.
+          - generic [ref=e1639]:
+            - link [ref=e1640] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e1641]
+            - link [ref=e1643] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e1644]
+            - link [ref=e1647] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e1648]
+        - generic [ref=e1650]:
+          - heading "Navigation" [level=4] [ref=e1651]
+          - list [ref=e1652]:
+            - listitem [ref=e1653]:
+              - link "Shop" [ref=e1654] [cursor=pointer]:
+                - /url: /products
+                - text: Shop
+            - listitem [ref=e1655]:
+              - link "About" [ref=e1656] [cursor=pointer]:
+                - /url: /about
+                - text: About
+            - listitem [ref=e1657]:
+              - link "Contact" [ref=e1658] [cursor=pointer]:
+                - /url: /contact
+                - text: Contact
+            - listitem [ref=e1659]:
+              - link "Orders" [ref=e1660] [cursor=pointer]:
+                - /url: /orders
+                - text: Orders
+        - generic [ref=e1661]:
+          - heading "Boutique Office" [level=4] [ref=e1662]
+          - generic [ref=e1663]:
+            - generic [ref=e1664]:
+              - img [ref=e1665]
+              - paragraph [ref=e1668]: House No. R-98, Sector 5C-2, North Karachi
+            - generic [ref=e1669]:
+              - img [ref=e1670]
+              - paragraph [ref=e1672]: +92 300 2385209
+            - generic [ref=e1673]:
+              - img [ref=e1674]
+              - paragraph [ref=e1677]: hnaveed264@gmail.com
+        - generic [ref=e1678]:
+          - heading "The Insider" [level=4] [ref=e1679]
+          - paragraph [ref=e1680]: Join our elite circle for private collection launches.
+          - generic [ref=e1681]:
+            - textbox "EMAIL ADDRESS" [ref=e1682]
+            - button [ref=e1683] [cursor=pointer]:
+              - img [ref=e1684]
+      - generic [ref=e1688]:
+        - generic [ref=e1689]:
+          - generic [ref=e1691]: "N"
+          - generic [ref=e1692]:
+            - paragraph [ref=e1693]: Architected By
+            - heading "HAFIZ NAVEED UDDIN" [level=6] [ref=e1694]
+            - paragraph [ref=e1695]: Agentic AI Developer / Full-Stack Engineer
+        - generic [ref=e1696]:
+          - link "HAFIZNAVEEDCHUHAN@GMAIL.COM" [ref=e1697] [cursor=pointer]:
+            - /url: mailto:HAFIZNAVEEDCHUHAN@GMAIL.COM
+          - generic [ref=e1698]: Available for New Ventures
+      - paragraph [ref=e1700]: © 2026 Fatima Zehra Boutique. Crafted for Excellence.
+  - button "Open chat" [ref=e1701] [cursor=pointer]:
+    - img [ref=e1702]
+  - generic [ref=e1704]:
+    - button "Open WhatsApp chat" [ref=e1705] [cursor=pointer]:
+      - img [ref=e1706]
+    - generic: Chat with us
+  - alert [ref=e1708]
+```
