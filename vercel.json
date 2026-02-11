@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "cd learnflow-app/app/frontend && npm install && npm run build",
-  "outputDirectory": "learnflow-app/app/frontend/out",
+  "buildCommand": "npm run build",
+  "outputDirectory": "out",
   "framework": "nextjs",
-  "installCommand": "cd learnflow-app/app/frontend && npm install"
+  "rootDirectory": "learnflow-app/app/frontend"
 }

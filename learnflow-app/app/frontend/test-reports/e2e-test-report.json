@@ -1,0 +1,737 @@
+{
+  "total": 100,
+  "passed": 96,
+  "failed": 4,
+  "skipped": 0,
+  "errors": [],
+  "warnings": [],
+  "criticalIssues": [],
+  "highIssues": [
+    {
+      "test": "User Service (8001) health check",
+      "error": "User Service UNAVAILABLE: ",
+      "severity": "HIGH"
+    },
+    {
+      "test": "Product Service (8002) health check",
+      "error": "Product Service UNAVAILABLE: ",
+      "severity": "HIGH"
+    },
+    {
+      "test": "Order Service (8003) health check",
+      "error": "Order Service UNAVAILABLE: ",
+      "severity": "HIGH"
+    },
+    {
+      "test": "Chat Service (8004) health check",
+      "error": "Chat Service UNAVAILABLE: ",
+      "severity": "HIGH"
+    }
+  ],
+  "mediumIssues": [],
+  "lowIssues": [],
+  "testDetails": [
+    {
+      "name": "Homepage loads with 200 status",
+      "severity": "CRITICAL",
+      "status": "PASSED",
+      "duration": 4019,
+      "error": null
+    },
+    {
+      "name": "Homepage contains site title \"Fatima Zehra\"",
+      "severity": "CRITICAL",
+      "status": "PASSED",
+      "duration": 576,
+      "error": null
+    },
+    {
+      "name": "Homepage contains \"Boutique\" branding",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 620,
+      "error": null
+    },
+    {
+      "name": "Homepage has hero section with welcome text",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 390,
+      "error": null
+    },
+    {
+      "name": "Homepage has Explore Collection CTA",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 378,
+      "error": null
+    },
+    {
+      "name": "Homepage displays categories section",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 395,
+      "error": null
+    },
+    {
+      "name": "Homepage shows Fancy Suits category",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 475,
+      "error": null
+    },
+    {
+      "name": "Homepage shows Shalwar Qameez category",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 683,
+      "error": null
+    },
+    {
+      "name": "Homepage shows Cotton Suits category",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 417,
+      "error": null
+    },
+    {
+      "name": "Homepage shows Designer Brands category",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 411,
+      "error": null
+    },
+    {
+      "name": "Homepage has testimonials section",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 352,
+      "error": null
+    },
+    {
+      "name": "Homepage has CTA section",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 333,
+      "error": null
+    },
+    {
+      "name": "Homepage has Free Delivery badge",
+      "severity": "LOW",
+      "status": "PASSED",
+      "duration": 364,
+      "error": null
+    },
+    {
+      "name": "Homepage has Secure Checkout badge",
+      "severity": "LOW",
+      "status": "PASSED",
+      "duration": 418,
+      "error": null
+    },
+    {
+      "name": "Homepage has Premium Quality badge",
+      "severity": "LOW",
+      "status": "PASSED",
+      "duration": 321,
+      "error": null
+    },
+    {
+      "name": "Homepage contains proper meta title",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 364,
+      "error": null
+    },
+    {
+      "name": "Homepage response time under 5 seconds",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 375,
+      "error": null
+    },
+    {
+      "name": "Homepage HTML is not empty",
+      "severity": "CRITICAL",
+      "status": "PASSED",
+      "duration": 337,
+      "error": null
+    },
+    {
+      "name": "Homepage contains DOCTYPE",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 306,
+      "error": null
+    },
+    {
+      "name": "Homepage has proper lang attribute",
+      "severity": "LOW",
+      "status": "PASSED",
+      "duration": 430,
+      "error": null
+    },
+    {
+      "name": "Products page loads with 200 status",
+      "severity": "CRITICAL",
+      "status": "PASSED",
+      "duration": 626,
+      "error": null
+    },
+    {
+      "name": "Products page has \"Our Collection\" heading",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 440,
+      "error": null
+    },
+    {
+      "name": "Cart page loads with 200 status",
+      "severity": "CRITICAL",
+      "status": "PASSED",
+      "duration": 362,
+      "error": null
+    },
+    {
+      "name": "Cart page shows empty cart state",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 99,
+      "error": null
+    },
+    {
+      "name": "About page loads with 200 status",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 233,
+      "error": null
+    },
+    {
+      "name": "Contact page loads with 200 status",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 171,
+      "error": null
+    },
+    {
+      "name": "Login page loads with 200 status",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 196,
+      "error": null
+    },
+    {
+      "name": "Privacy page loads with 200 status",
+      "severity": "LOW",
+      "status": "PASSED",
+      "duration": 188,
+      "error": null
+    },
+    {
+      "name": "Terms page loads with 200 status",
+      "severity": "LOW",
+      "status": "PASSED",
+      "duration": 187,
+      "error": null
+    },
+    {
+      "name": "Orders page loads with 200 status",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 174,
+      "error": null
+    },
+    {
+      "name": "Profile page loads with 200 status",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 252,
+      "error": null
+    },
+    {
+      "name": "404 page returns proper not found for invalid routes",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 384,
+      "error": null
+    },
+    {
+      "name": "Product detail page loads for product ID 1",
+      "severity": "CRITICAL",
+      "status": "PASSED",
+      "duration": 1204,
+      "error": null
+    },
+    {
+      "name": "Product detail page loads for product ID 20",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 98,
+      "error": null
+    },
+    {
+      "name": "Product detail page loads for product ID 40",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 186,
+      "error": null
+    },
+    {
+      "name": "Products page lists all 40 products text",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 722,
+      "error": null
+    },
+    {
+      "name": "Products page has search functionality",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 646,
+      "error": null
+    },
+    {
+      "name": "Products page has category filter",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 453,
+      "error": null
+    },
+    {
+      "name": "Products page has price range filter",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 404,
+      "error": null
+    },
+    {
+      "name": "Products page has sort options",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 383,
+      "error": null
+    },
+    {
+      "name": "Products page shows \"Showing X products\" text",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 362,
+      "error": null
+    },
+    {
+      "name": "Products page has Clear Filters button",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 486,
+      "error": null
+    },
+    {
+      "name": "Product names are displayed (Royal Embroidered Fancy Suit)",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 388,
+      "error": null
+    },
+    {
+      "name": "Product prices are displayed",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 364,
+      "error": null
+    },
+    {
+      "name": "Product detail page returns 200 status",
+      "severity": "CRITICAL",
+      "status": "PASSED",
+      "duration": 109,
+      "error": null
+    },
+    {
+      "name": "Product detail page contains client-side product script bundle",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 120,
+      "error": null
+    },
+    {
+      "name": "Product detail page has proper HTML structure",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 112,
+      "error": null
+    },
+    {
+      "name": "Product detail SSR includes loading state (client-rendered)",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 105,
+      "error": null
+    },
+    {
+      "name": "Product detail page response time under 3 seconds",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 107,
+      "error": null
+    },
+    {
+      "name": "All 40 product detail pages return 200",
+      "severity": "CRITICAL",
+      "status": "PASSED",
+      "duration": 8327,
+      "error": null
+    },
+    {
+      "name": "Invalid product ID returns a page (not crash)",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 690,
+      "error": null
+    },
+    {
+      "name": "Hero image file reference exists in HTML",
+      "severity": "CRITICAL",
+      "status": "PASSED",
+      "duration": 1691,
+      "error": null
+    },
+    {
+      "name": "Favicon/SVG loads successfully",
+      "severity": "LOW",
+      "status": "PASSED",
+      "duration": 26,
+      "error": null
+    },
+    {
+      "name": "Image reference: fancy-suits-01.jpg returns 200",
+      "severity": "CRITICAL",
+      "status": "PASSED",
+      "duration": 33,
+      "error": null
+    },
+    {
+      "name": "Image reference: shalwar-qameez-01.jpg returns 200",
+      "severity": "CRITICAL",
+      "status": "PASSED",
+      "duration": 20,
+      "error": null
+    },
+    {
+      "name": "Image reference: cotton-suits-01.jpg returns 200",
+      "severity": "CRITICAL",
+      "status": "PASSED",
+      "duration": 8,
+      "error": null
+    },
+    {
+      "name": "Image reference: designer-brands-01.jpg returns 200",
+      "severity": "CRITICAL",
+      "status": "PASSED",
+      "duration": 13,
+      "error": null
+    },
+    {
+      "name": "Testimonial image: customer-1.jpg returns 200",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 8,
+      "error": null
+    },
+    {
+      "name": "Navbar contains Home link",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 1320,
+      "error": null
+    },
+    {
+      "name": "Navbar contains Shop link",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 1059,
+      "error": null
+    },
+    {
+      "name": "Navbar contains About link",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 1081,
+      "error": null
+    },
+    {
+      "name": "Navbar contains Contact link",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 1077,
+      "error": null
+    },
+    {
+      "name": "Navbar has cart icon with link to /cart",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 1661,
+      "error": null
+    },
+    {
+      "name": "Navbar has login link to /auth/login",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 1098,
+      "error": null
+    },
+    {
+      "name": "Footer is present on homepage",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 985,
+      "error": null
+    },
+    {
+      "name": "ChatWidget button is present",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 800,
+      "error": null
+    },
+    {
+      "name": "FloatingWhatsAppButton is present",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 897,
+      "error": null
+    },
+    {
+      "name": "Cart page loads correctly",
+      "severity": "CRITICAL",
+      "status": "PASSED",
+      "duration": 299,
+      "error": null
+    },
+    {
+      "name": "Cart page has \"Continue Shopping\" link",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 138,
+      "error": null
+    },
+    {
+      "name": "Cart page contains client-side JS for Stripe checkout",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 120,
+      "error": null
+    },
+    {
+      "name": "Cart page has ShoppingBag icon for empty state",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 141,
+      "error": null
+    },
+    {
+      "name": "CSS file loads successfully",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 340,
+      "error": null
+    },
+    {
+      "name": "JavaScript files load successfully",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 326,
+      "error": null
+    },
+    {
+      "name": "_next directory is accessible",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 283,
+      "error": null
+    },
+    {
+      "name": "User Service (8001) health check",
+      "severity": "HIGH",
+      "status": "FAILED",
+      "duration": 41,
+      "error": "User Service UNAVAILABLE: "
+    },
+    {
+      "name": "Product Service (8002) health check",
+      "severity": "HIGH",
+      "status": "FAILED",
+      "duration": 3,
+      "error": "Product Service UNAVAILABLE: "
+    },
+    {
+      "name": "Order Service (8003) health check",
+      "severity": "HIGH",
+      "status": "FAILED",
+      "duration": 2,
+      "error": "Order Service UNAVAILABLE: "
+    },
+    {
+      "name": "Chat Service (8004) health check",
+      "severity": "HIGH",
+      "status": "FAILED",
+      "duration": 2,
+      "error": "Chat Service UNAVAILABLE: "
+    },
+    {
+      "name": "Server does not expose version headers",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 273,
+      "error": null
+    },
+    {
+      "name": "Content-Type header is set correctly",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 281,
+      "error": null
+    },
+    {
+      "name": "No server error information exposed in HTML",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 433,
+      "error": null
+    },
+    {
+      "name": "No API keys or secrets in HTML source",
+      "severity": "CRITICAL",
+      "status": "PASSED",
+      "duration": 468,
+      "error": null
+    },
+    {
+      "name": "No .env file accessible",
+      "severity": "CRITICAL",
+      "status": "PASSED",
+      "duration": 124,
+      "error": null
+    },
+    {
+      "name": "No source maps exposed in production",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 348,
+      "error": null
+    },
+    {
+      "name": "Homepage loads under 3 seconds",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 327,
+      "error": null
+    },
+    {
+      "name": "Products page loads under 3 seconds",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 393,
+      "error": null
+    },
+    {
+      "name": "Product detail page loads under 3 seconds",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 225,
+      "error": null
+    },
+    {
+      "name": "Cart page loads under 3 seconds",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 323,
+      "error": null
+    },
+    {
+      "name": "Homepage HTML size is reasonable (<500KB)",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 509,
+      "error": null
+    },
+    {
+      "name": "Concurrent requests handled correctly (5 parallel)",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 1706,
+      "error": null
+    },
+    {
+      "name": "Cart page has checkout form structure",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 136,
+      "error": null
+    },
+    {
+      "name": "Cart page has client-side JS bundle for checkout flow",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 157,
+      "error": null
+    },
+    {
+      "name": "Cart page has Continue Shopping link to products",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 102,
+      "error": null
+    },
+    {
+      "name": "Login page has email input",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 104,
+      "error": null
+    },
+    {
+      "name": "Login page has password input",
+      "severity": "HIGH",
+      "status": "PASSED",
+      "duration": 107,
+      "error": null
+    },
+    {
+      "name": "Chat widget has aria-label",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 438,
+      "error": null
+    },
+    {
+      "name": "WhatsApp button has aria-label",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 423,
+      "error": null
+    },
+    {
+      "name": "Images have alt attributes in HTML",
+      "severity": "MEDIUM",
+      "status": "PASSED",
+      "duration": 405,
+      "error": null
+    },
+    {
+      "name": "Navigation uses semantic nav element",
+      "severity": "LOW",
+      "status": "PASSED",
+      "duration": 864,
+      "error": null
+    },
+    {
+      "name": "Main content uses semantic main element",
+      "severity": "LOW",
+      "status": "PASSED",
+      "duration": 811,
+      "error": null
+    }
+  ],
+  "startTime": "2026-02-11T06:33:39.261Z",
+  "endTime": "2026-02-11T06:34:32.253Z"
+}
