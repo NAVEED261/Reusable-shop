@@ -23,12 +23,23 @@ export default function ChatWidget() {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [sessionId, setSessionId] = useState<string | null>(null);
+  const [userId, setUserId] = useState<number>(1); // Default user ID
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Initialize session ID on mount
+  // Initialize session ID and user ID on mount
   useEffect(() => {
     const id = `session-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
     setSessionId(id);
+
+    // Try to get user ID from localStorage if available
+    try {
+      const storedUserId = localStorage.getItem("userId");
+      if (storedUserId) {
+        setUserId(parseInt(storedUserId, 10));
+      }
+    } catch (e) {
+      console.log("Could not retrieve user ID from storage");
+    }
   }, []);
 
   // Auto-scroll to latest message
@@ -59,8 +70,8 @@ export default function ChatWidget() {
     setIsLoading(true);
 
     try {
-      // Call chat-service:8004 with SSE streaming
-      const chatServiceUrl = process.env.NEXT_PUBLIC_CHAT_SERVICE_URL ?? 'http://localhost:8004';
+      // Call chat-service with SSE streaming
+      const chatServiceUrl = process.env.NEXT_PUBLIC_CHAT_SERVICE_URL || process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8004';
       const response = await fetch(`${chatServiceUrl}/api/chat/messages`, {
         method: "POST",
         headers: {
@@ -69,6 +80,7 @@ export default function ChatWidget() {
         body: JSON.stringify({
           text: userText,
           session_id: sessionId,
+          user_id: userId,
         }),
       });
 

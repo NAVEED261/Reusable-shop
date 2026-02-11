@@ -13,10 +13,32 @@ export default function Navbar() {
     <nav className="fixed w-full top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b-2 border-gradient-to-r from-pink-500 to-purple-600 shadow-lg">
       <div className="container-wide py-4">
         <div className="flex items-center justify-between">
-          {/* Logo with Icon */}
+          {/* Logo with 3D Animation */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all transform group-hover:scale-105">
-              <span className="text-xl font-bold text-white">👗</span>
+            <style>{`
+              @keyframes rotate3d {
+                0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+                25% { transform: rotateX(20deg) rotateY(10deg) rotateZ(5deg); }
+                50% { transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg); }
+                75% { transform: rotateX(-20deg) rotateY(10deg) rotateZ(-5deg); }
+                100% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+              }
+              @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-8px); }
+              }
+              @keyframes glow {
+                0%, 100% { box-shadow: 0 0 20px rgba(236, 72, 153, 0.5), 0 0 40px rgba(168, 85, 247, 0.3); }
+                50% { box-shadow: 0 0 30px rgba(236, 72, 153, 0.8), 0 0 60px rgba(168, 85, 247, 0.5); }
+              }
+              .logo-3d {
+                animation: rotate3d 6s infinite, float 3s ease-in-out infinite, glow 2s ease-in-out infinite;
+                perspective: 1000px;
+                transform-style: preserve-3d;
+              }
+            `}</style>
+            <div className="logo-3d w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg transition-all">
+              <span className="text-xl font-bold text-white">✨</span>
             </div>
             <div className="flex flex-col">
               <div className="text-xl font-serif font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
