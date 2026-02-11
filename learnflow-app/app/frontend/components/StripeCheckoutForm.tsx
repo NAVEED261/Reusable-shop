@@ -10,9 +10,7 @@ import {
   PaymentElement,
   useStripe,
   useElements,
-  LinkAuthenticationElement,
 } from '@stripe/react-stripe-js'
-import { Stripe, StripeElements } from '@stripe/stripe-js'
 
 interface StripeCheckoutFormProps {
   /**

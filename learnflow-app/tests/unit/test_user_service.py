@@ -20,12 +20,7 @@ import sys
 import pytest
 from datetime import timedelta
 
-# Ensure test environment before importing modules
-os.environ["JWT_SECRET"] = "test-secret-key-for-unit-tests-minimum-32-chars-long"
-os.environ["DATABASE_URL"] = "sqlite://"
-os.environ["OPENAI_API_KEY"] = "sk-test-placeholder"
-
-# Add user-service to path
+# Add user-service to path (env vars and engine patches set in conftest.py)
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "app", "backend", "user-service"))
 
 from fastapi.testclient import TestClient

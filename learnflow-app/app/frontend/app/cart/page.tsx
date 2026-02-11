@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useCartStore } from '@/lib/store'
-import { Trash2, Plus, Minus, ShoppingBag, X } from 'lucide-react'
+import { Trash2, Plus, Minus, ShoppingBag } from 'lucide-react'
 import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js'
 import StripeCheckoutForm from '@/components/StripeCheckoutForm'
@@ -79,7 +79,6 @@ export default function CartPage() {
     } catch (err) {
       const errorMsg = err instanceof Error ? err.message : 'Failed to initiate checkout'
       setError(errorMsg)
-      console.error('Checkout error:', err)
     } finally {
       setIsCreatingOrder(false)
       setIsCheckingOut(false)
@@ -99,7 +98,6 @@ export default function CartPage() {
 
   const handlePaymentError = (errorMsg: string) => {
     setError(errorMsg)
-    console.error('Payment error:', errorMsg)
   }
 
   if (items.length === 0) {
