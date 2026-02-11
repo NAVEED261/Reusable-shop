@@ -4,6 +4,8 @@
  * Pre-fills message with product name, price, and link
  */
 
+'use client'
+
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 
