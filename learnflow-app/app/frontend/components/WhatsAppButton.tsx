@@ -216,7 +216,7 @@ interface FloatingWhatsAppButtonProps {
 export const FloatingWhatsAppButton: React.FC<FloatingWhatsAppButtonProps> = ({
   phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '923001234567',
   defaultMessage = 'Hi! I have a question about your products.',
-  position = 'bottom-right',
+  position = 'bottom-left',
 }) => {
   const [isVisible, setIsVisible] = React.useState(true);
 
@@ -235,7 +235,7 @@ export const FloatingWhatsAppButton: React.FC<FloatingWhatsAppButtonProps> = ({
 
   return (
     <div
-      className={`fixed ${positionClasses[position]} z-40 group`}
+      className={`fixed ${positionClasses[position]} z-30 group`}
     >
       <button
         onClick={handleClick}

@@ -13,6 +13,7 @@ alembic==1.13.0
 
 # Utilities
 python-dotenv==1.0.0
+requests==2.31.0
 
 # Serverless (Netlify)
 mangum==0.17.0

@@ -34,6 +34,7 @@ export default function RootLayout({
         <FloatingWhatsAppButton
           phoneNumber={process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}
           defaultMessage="السلام علیکم! مجھے آپ کی مصنوعات کے بارے میں معلومات چاہیے۔"
+          position="bottom-left"
         />
       </body>
     </html>

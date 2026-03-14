@@ -8,6 +8,7 @@ from typing import List, Dict, Any
 import logging
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, VectorParams, PointStruct
+from openai import OpenAI
 import openai
 
 logger = logging.getLogger(__name__)
@@ -52,8 +53,10 @@ class ProductRAGClient:
             logger.error(f"Failed to connect to Qdrant: {e}")
             raise
 
-        # Set OpenAI API key
-        openai.api_key = openai_api_key or os.getenv("OPENAI_API_KEY")
+        # Initialize OpenAI client (v1.x API)
+        self.openai_client = OpenAI(
+            api_key=openai_api_key or os.getenv("OPENAI_API_KEY")
+        )
 
         # Create or verify collection
         self._ensure_collection()
@@ -91,11 +94,11 @@ class ProductRAGClient:
             Embedding vector (1536 dimensions)
         """
         try:
-            response = openai.Embedding.create(
+            response = self.openai_client.embeddings.create(
                 model=self.embedding_model,
                 input=text
             )
-            embedding = response['data'][0]['embedding']
+            embedding = response.data[0].embedding
             logger.debug(f"Generated embedding for: {text[:50]}...")
             return embedding
         except Exception as e:

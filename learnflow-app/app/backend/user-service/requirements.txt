@@ -19,6 +19,7 @@ PyJWT==2.10.1
 # Utilities
 python-dotenv==1.0.0
 email-validator==2.1.0
+requests==2.31.0
 
 # Serverless (Netlify)
 mangum==0.17.0

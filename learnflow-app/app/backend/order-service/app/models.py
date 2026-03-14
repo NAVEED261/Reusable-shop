@@ -4,7 +4,7 @@ from datetime import datetime
 from decimal import Decimal
 from typing import Optional
 from sqlmodel import SQLModel, Field, Relationship, Column
-from sqlalchemy import Numeric
+from sqlalchemy import Numeric, ForeignKey
 
 
 # Database Models
@@ -18,7 +18,10 @@ class Cart(SQLModel, table=True):
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 
     # Relationships
-    items: list["CartItem"] = Relationship(back_populates="cart", cascade_delete=True)
+    items: list["CartItem"] = Relationship(
+        back_populates="cart",
+        sa_relationship_kwargs={"cascade": "all, delete-orphan"}
+    )
 
 
 class CartItem(SQLModel, table=True):
@@ -50,7 +53,10 @@ class Order(SQLModel, table=True):
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 
     # Relationships
-    items: list["OrderItem"] = Relationship(back_populates="order", cascade_delete=True)
+    items: list["OrderItem"] = Relationship(
+        back_populates="order",
+        sa_relationship_kwargs={"cascade": "all, delete-orphan"}
+    )
 
 
 class OrderItem(SQLModel, table=True):

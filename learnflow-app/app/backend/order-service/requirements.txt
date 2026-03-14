@@ -21,6 +21,7 @@ stripe==7.8.0
 # Utilities
 python-dotenv==1.0.0
 httpx==0.25.1
+requests==2.31.0
 
 # Serverless (Netlify)
 mangum==0.17.0

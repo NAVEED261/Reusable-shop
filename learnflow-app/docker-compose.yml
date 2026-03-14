@@ -26,88 +26,49 @@ services:
     container_name: boutique-qdrant
     ports:
       - "6333:6333"
-      - "6334:6334"
-    environment:
-      QDRANT_EXPERIMENTAL_FIXED_VECTOR_CONTENT_SIZE: "1536"
     volumes:
       - qdrant_data:/qdrant/storage
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:6333/health"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
 
   # User Service
   user-service:
-    build:
-      context: ./app/backend/user-service
-      dockerfile: Dockerfile
+    build: ./app/backend/user-service  # Short version
     container_name: boutique-user-service
     ports:
       - "8001:8000"
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-boutique_shop}
-      JWT_SECRET: ${JWT_SECRET:-your-secret-key-change-in-production}
-      JWT_EXPIRATION: ${JWT_EXPIRATION:-24}
-      ENVIRONMENT: ${ENVIRONMENT:-development}
     depends_on:
       postgres:
         condition: service_healthy
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
 
   # Product Service
   product-service:
-    build:
-      context: ./app/backend/product-service
-      dockerfile: Dockerfile
+    build: ./app/backend/product-service
     container_name: boutique-product-service
     ports:
       - "8002:8000"
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-boutique_shop}
-      ENVIRONMENT: ${ENVIRONMENT:-development}
     depends_on:
       postgres:
         condition: service_healthy
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
 
   # Order Service
   order-service:
-    build:
-      context: ./app/backend/order-service
-      dockerfile: Dockerfile
+    build: ./app/backend/order-service
     container_name: boutique-order-service
     ports:
       - "8003:8000"
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-boutique_shop}
       PRODUCT_SERVICE_URL: http://product-service:8000
-      ORDER_SERVICE_URL: http://order-service:8000
-      ENVIRONMENT: ${ENVIRONMENT:-development}
     depends_on:
-      postgres:
-        condition: service_healthy
-      product-service:
-        condition: service_healthy
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+      - postgres
+      - product-service
 
-  # Chat Service with RAG
+  # Chat Service
   chat-service:
-    build:
-      context: ./app/backend/chat-service
-      dockerfile: Dockerfile
+    build: ./app/backend/chat-service
     container_name: boutique-chat-service
     ports:
       - "8004:8000"
@@ -115,51 +76,35 @@ services:
       DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-boutique_shop}
       QDRANT_HOST: qdrant
       QDRANT_PORT: 6333
-      OPENAI_API_KEY: ${OPENAI_API_KEY:-sk-proj-your-key-here}
-      ENVIRONMENT: ${ENVIRONMENT:-development}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
     depends_on:
-      postgres:
-        condition: service_healthy
-      qdrant:
-        condition: service_healthy
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+      - postgres
+      - qdrant
 
-  # Frontend (Optional - for development)
+  # Frontend
   frontend:
-    build:
-      context: ./app/frontend
-      dockerfile: Dockerfile
+    build: ./app/frontend
     container_name: boutique-frontend
     ports:
       - "3000:3000"
-    environment:
-      NEXT_PUBLIC_API_URL: http://localhost:8000
-      NEXT_PUBLIC_USER_SERVICE_URL: http://localhost:8001
-      NEXT_PUBLIC_PRODUCT_SERVICE_URL: http://localhost:8002
-      NEXT_PUBLIC_ORDER_SERVICE_URL: http://localhost:8003
-      NEXT_PUBLIC_CHAT_SERVICE_URL: http://localhost:8004
     depends_on:
       - user-service
       - product-service
       - order-service
       - chat-service
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3000"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+
+  # NGINX Gateway
+  nginx:
+    image: nginx:alpine # Agar custom build nahi chal rahi to direct ye use karein
+    container_name: boutique-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - frontend
+      - user-service
 
 volumes:
   postgres_data:
-    driver: local
   qdrant_data:
-    driver: local
-
-networks:
-  default:
-    name: boutique-network
-    driver: bridge
