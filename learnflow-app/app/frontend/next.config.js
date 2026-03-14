@@ -21,9 +21,6 @@ const nextConfig = {
     NEXT_PUBLIC_CHAT_SERVICE_URL: process.env.NEXT_PUBLIC_CHAT_SERVICE_URL ?? 'http://localhost:8004',
     NEXT_PUBLIC_SITE_NAME: process.env.NEXT_PUBLIC_SITE_NAME || 'Fatima Zehra Boutique',
   },
-  experimental: {
-    turbopack: false,
-  },
 }
 
 module.exports = nextConfig
