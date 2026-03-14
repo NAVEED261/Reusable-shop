@@ -1,0 +1,176 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img [ref=e7]
+          - text: Karachi, Pakistan
+        - generic [ref=e10]:
+          - img [ref=e11]
+          - text: +92 300 2385209
+      - generic [ref=e13]: Free Worldwide Shipping on Orders Over $200
+    - navigation [ref=e14]:
+      - generic [ref=e16]:
+        - link "Fatima Zehra Signature Logo FATIMA ZEHRA Luxury Boutique" [ref=e17] [cursor=pointer]:
+          - /url: /
+          - img "Fatima Zehra Signature Logo" [ref=e21]
+          - generic [ref=e22]:
+            - generic [ref=e23]: FATIMA ZEHRA
+            - generic [ref=e24]: Luxury Boutique
+        - generic [ref=e25]:
+          - link "Home" [ref=e26] [cursor=pointer]:
+            - /url: /
+          - link "Shop" [ref=e27] [cursor=pointer]:
+            - /url: /products
+          - link "About" [ref=e28] [cursor=pointer]:
+            - /url: /about
+          - link "Contact" [ref=e29] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=e30]:
+          - button [ref=e31] [cursor=pointer]:
+            - img [ref=e32]
+          - link "0" [ref=e35] [cursor=pointer]:
+            - /url: /cart
+            - img [ref=e36]
+            - generic [ref=e40]: "0"
+          - link [ref=e41] [cursor=pointer]:
+            - /url: /profile
+            - img [ref=e42]
+  - main [ref=e45]:
+    - main [ref=e46]:
+      - generic [ref=e48]:
+        - heading "Our Collection" [level=1] [ref=e49]
+        - paragraph [ref=e50]: Discover 40+ premium ladies suits, shalwar qameez, and designer wear.
+      - generic [ref=e52]:
+        - complementary [ref=e53]:
+          - generic [ref=e54]:
+            - heading "Filters" [level=2] [ref=e55]:
+              - img [ref=e56]
+              - text: Filters
+            - generic [ref=e58]:
+              - heading "Categories" [level=3] [ref=e59]
+              - generic [ref=e60]:
+                - button "All Products (40)" [ref=e61] [cursor=pointer]
+                - button "Fancy Suits (10)" [ref=e62] [cursor=pointer]
+                - button "Shalwar Qameez (10)" [ref=e63] [cursor=pointer]
+                - button "Cotton Suits (10)" [ref=e64] [cursor=pointer]
+                - button "Designer Brands (10)" [ref=e65] [cursor=pointer]
+            - generic [ref=e67]:
+              - heading "Price Range" [level=3] [ref=e68]
+              - generic [ref=e69]:
+                - slider [ref=e70]: "0"
+                - slider [ref=e71]: "10000"
+                - generic [ref=e72]:
+                  - generic [ref=e73]: Rs 0
+                  - generic [ref=e74]: Rs 10,000
+            - generic [ref=e76]:
+              - heading "Sort By" [level=3] [ref=e77]
+              - combobox [ref=e78]:
+                - option "Newest" [selected]
+                - 'option "Price: Low to High"'
+                - 'option "Price: High to Low"'
+                - option "Top Rated"
+            - button "Clear Filters" [ref=e79] [cursor=pointer]
+        - generic [ref=e80]:
+          - generic [ref=e82]:
+            - img [ref=e83]
+            - textbox "Search by name, material, or category..." [active] [ref=e86]: Velvet
+          - paragraph [ref=e88]: Showing 0 products
+          - generic [ref=e89]:
+            - generic [ref=e90]: 🔍
+            - heading "No Products Found" [level=3] [ref=e91]
+            - paragraph [ref=e92]: Try adjusting your filters or search query
+  - contentinfo [ref=e93]:
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - generic [ref=e97]:
+          - img [ref=e99]
+          - heading "Free Shipping" [level=5] [ref=e104]
+          - paragraph [ref=e105]: Across Pakistan
+        - generic [ref=e106]:
+          - img [ref=e108]
+          - heading "Easy Returns" [level=5] [ref=e111]
+          - paragraph [ref=e112]: 7-Day Exchange
+        - generic [ref=e113]:
+          - img [ref=e115]
+          - heading "Secure Payment" [level=5] [ref=e118]
+          - paragraph [ref=e119]: 100% Protected
+        - generic [ref=e120]:
+          - img [ref=e122]
+          - heading "Cash on Delivery" [level=5] [ref=e124]
+          - paragraph [ref=e125]: Pay at Door
+      - generic [ref=e126]:
+        - generic [ref=e127]:
+          - heading "FATIMA ZEHRA" [level=3] [ref=e128]
+          - paragraph [ref=e129]: Defining the future of Eastern couture. From intricate craftsmanship to modern silhouettes, we create legacies, not just garments.
+          - generic [ref=e130]:
+            - link [ref=e131] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e132]
+            - link [ref=e134] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e135]
+            - link [ref=e138] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e139]
+        - generic [ref=e141]:
+          - heading "Navigation" [level=4] [ref=e142]
+          - list [ref=e143]:
+            - listitem [ref=e144]:
+              - link "Shop" [ref=e145] [cursor=pointer]:
+                - /url: /products
+                - text: Shop
+            - listitem [ref=e146]:
+              - link "About" [ref=e147] [cursor=pointer]:
+                - /url: /about
+                - text: About
+            - listitem [ref=e148]:
+              - link "Contact" [ref=e149] [cursor=pointer]:
+                - /url: /contact
+                - text: Contact
+            - listitem [ref=e150]:
+              - link "Orders" [ref=e151] [cursor=pointer]:
+                - /url: /orders
+                - text: Orders
+        - generic [ref=e152]:
+          - heading "Boutique Office" [level=4] [ref=e153]
+          - generic [ref=e154]:
+            - generic [ref=e155]:
+              - img [ref=e156]
+              - paragraph [ref=e159]: House No. R-98, Sector 5C-2, North Karachi
+            - generic [ref=e160]:
+              - img [ref=e161]
+              - paragraph [ref=e163]: +92 300 2385209
+            - generic [ref=e164]:
+              - img [ref=e165]
+              - paragraph [ref=e168]: hnaveed264@gmail.com
+        - generic [ref=e169]:
+          - heading "The Insider" [level=4] [ref=e170]
+          - paragraph [ref=e171]: Join our elite circle for private collection launches.
+          - generic [ref=e172]:
+            - textbox "EMAIL ADDRESS" [ref=e173]
+            - button [ref=e174] [cursor=pointer]:
+              - img [ref=e175]
+      - generic [ref=e179]:
+        - generic [ref=e180]:
+          - generic [ref=e182]: "N"
+          - generic [ref=e183]:
+            - paragraph [ref=e184]: Architected By
+            - heading "HAFIZ NAVEED UDDIN" [level=6] [ref=e185]
+            - paragraph [ref=e186]: Agentic AI Developer / Full-Stack Engineer
+        - generic [ref=e187]:
+          - link "HAFIZNAVEEDCHUHAN@GMAIL.COM" [ref=e188] [cursor=pointer]:
+            - /url: mailto:HAFIZNAVEEDCHUHAN@GMAIL.COM
+          - generic [ref=e189]: Available for New Ventures
+      - paragraph [ref=e191]: © 2026 Fatima Zehra Boutique. Crafted for Excellence.
+  - button "Open chat" [ref=e192] [cursor=pointer]:
+    - img [ref=e193]
+  - generic [ref=e195]:
+    - button "Open WhatsApp chat" [ref=e196] [cursor=pointer]:
+      - img [ref=e197]
+    - generic: Chat with us
+  - alert [ref=e199]
+```

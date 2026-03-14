@@ -1,0 +1,187 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img [ref=e7]
+          - text: Karachi, Pakistan
+        - generic [ref=e10]:
+          - img [ref=e11]
+          - text: +92 300 2385209
+      - generic [ref=e13]: Free Worldwide Shipping on Orders Over $200
+    - navigation [ref=e14]:
+      - generic [ref=e16]:
+        - link "Fatima Zehra Signature Logo FATIMA ZEHRA Luxury Boutique" [ref=e17] [cursor=pointer]:
+          - /url: /
+          - img "Fatima Zehra Signature Logo" [ref=e21]
+          - generic [ref=e22]:
+            - generic [ref=e23]: FATIMA ZEHRA
+            - generic [ref=e24]: Luxury Boutique
+        - generic [ref=e25]:
+          - link "Home" [ref=e26] [cursor=pointer]:
+            - /url: /
+          - link "Shop" [ref=e27] [cursor=pointer]:
+            - /url: /products
+          - link "About" [active] [ref=e28] [cursor=pointer]:
+            - /url: /about
+          - link "Contact" [ref=e29] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=e30]:
+          - button [ref=e31] [cursor=pointer]:
+            - img [ref=e32]
+          - link "0" [ref=e35] [cursor=pointer]:
+            - /url: /cart
+            - img [ref=e36]
+            - generic [ref=e40]: "0"
+          - link [ref=e41] [cursor=pointer]:
+            - /url: /profile
+            - img [ref=e42]
+  - main [ref=e45]:
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - img "Fatima Zehra Boutique Main" [ref=e50]
+        - generic [ref=e51]:
+          - generic [ref=e52]: Premium Bespoke Tailoring
+          - heading "Fatima Zehra Boutique" [level=1] [ref=e53]:
+            - text: Fatima Zehra
+            - text: Boutique
+          - paragraph [ref=e54]: "\"Definement in every stitch, excellence in every detail.\""
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - heading "The Craftsmanship" [level=2] [ref=e60]
+            - heading "Where Tradition Meets Modernity" [level=3] [ref=e61]:
+              - text: Where Tradition
+              - text: Meets Modernity
+          - paragraph [ref=e62]: Fatima Zehra Boutique mein hum sirf suits nahi banate, hum ek legacy create karte hain. Pichle kayi saalon se hum mardana fashion mein apne "Bespoke" experience ki wajah se pehchane jate hain. Hamara har suit, sherwani aur waistcoat aapki body measurements ke mutabiq customize kiya jata hai.
+          - generic [ref=e63]:
+            - generic [ref=e64]:
+              - generic [ref=e65]: "01."
+              - paragraph [ref=e66]: "Behtareen Fabric: Hum sirf top-tier imported aur local fabrics use karte hain."
+            - generic [ref=e67]:
+              - generic [ref=e68]: "02."
+              - paragraph [ref=e69]: "Master Cut: Hamare master tailors har cut ko perfection se design karte hain."
+          - link "Book Your Appointment" [ref=e70] [cursor=pointer]:
+            - /url: https://wa.me/923002385209
+        - generic [ref=e71]:
+          - img "Suit Design" [ref=e73]
+          - generic [ref=e74]:
+            - img "Fabric" [ref=e76]
+            - generic [ref=e79]:
+              - paragraph [ref=e80]:
+                - text: Best
+                - text: Quality
+              - paragraph [ref=e81]: Guaranteed Selection
+      - generic [ref=e83]:
+        - generic [ref=e84]:
+          - generic [ref=e86]: ✂️
+          - heading "Master Tailoring" [level=4] [ref=e87]
+          - paragraph [ref=e88]: Har stitch mein perfection. Hum ensure karte hain ke aapka suit aapke liye hi bana ho.
+        - generic [ref=e89]:
+          - generic [ref=e91]: 👔
+          - heading "Formal & Casual" [level=4] [ref=e92]
+          - paragraph [ref=e93]: Office wear ho ya Wedding event, hum har maukay ke liye best fashion provide karte hain.
+        - generic [ref=e94]:
+          - generic [ref=e96]: ⭐
+          - heading "Client Priority" [level=4] [ref=e97]
+          - paragraph [ref=e98]: Hafiz Naveed Chuhan aur unki team aapki satisfaction ko pehle rakhti hai.
+      - generic [ref=e101]:
+        - heading "Visit Fatima Zehra Today" [level=2] [ref=e102]
+        - paragraph [ref=e103]: "Hafiz Naveed Chuhan: 923002385209"
+        - generic [ref=e104]:
+          - generic [ref=e105]: "Email: hafiznaveedchuhan@gmail.com"
+          - generic [ref=e106]: "Location: Karachi, Pakistan"
+  - contentinfo [ref=e107]:
+    - generic [ref=e109]:
+      - generic [ref=e110]:
+        - generic [ref=e111]:
+          - img [ref=e113]
+          - heading "Free Shipping" [level=5] [ref=e118]
+          - paragraph [ref=e119]: Across Pakistan
+        - generic [ref=e120]:
+          - img [ref=e122]
+          - heading "Easy Returns" [level=5] [ref=e125]
+          - paragraph [ref=e126]: 7-Day Exchange
+        - generic [ref=e127]:
+          - img [ref=e129]
+          - heading "Secure Payment" [level=5] [ref=e132]
+          - paragraph [ref=e133]: 100% Protected
+        - generic [ref=e134]:
+          - img [ref=e136]
+          - heading "Cash on Delivery" [level=5] [ref=e138]
+          - paragraph [ref=e139]: Pay at Door
+      - generic [ref=e140]:
+        - generic [ref=e141]:
+          - heading "FATIMA ZEHRA" [level=3] [ref=e142]
+          - paragraph [ref=e143]: Defining the future of Eastern couture. From intricate craftsmanship to modern silhouettes, we create legacies, not just garments.
+          - generic [ref=e144]:
+            - link [ref=e145] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e146]
+            - link [ref=e148] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e149]
+            - link [ref=e152] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e153]
+        - generic [ref=e155]:
+          - heading "Navigation" [level=4] [ref=e156]
+          - list [ref=e157]:
+            - listitem [ref=e158]:
+              - link "Shop" [ref=e159] [cursor=pointer]:
+                - /url: /products
+                - text: Shop
+            - listitem [ref=e160]:
+              - link "About" [ref=e161] [cursor=pointer]:
+                - /url: /about
+                - text: About
+            - listitem [ref=e162]:
+              - link "Contact" [ref=e163] [cursor=pointer]:
+                - /url: /contact
+                - text: Contact
+            - listitem [ref=e164]:
+              - link "Orders" [ref=e165] [cursor=pointer]:
+                - /url: /orders
+                - text: Orders
+        - generic [ref=e166]:
+          - heading "Boutique Office" [level=4] [ref=e167]
+          - generic [ref=e168]:
+            - generic [ref=e169]:
+              - img [ref=e170]
+              - paragraph [ref=e173]: House No. R-98, Sector 5C-2, North Karachi
+            - generic [ref=e174]:
+              - img [ref=e175]
+              - paragraph [ref=e177]: +92 300 2385209
+            - generic [ref=e178]:
+              - img [ref=e179]
+              - paragraph [ref=e182]: hnaveed264@gmail.com
+        - generic [ref=e183]:
+          - heading "The Insider" [level=4] [ref=e184]
+          - paragraph [ref=e185]: Join our elite circle for private collection launches.
+          - generic [ref=e186]:
+            - textbox "EMAIL ADDRESS" [ref=e187]
+            - button [ref=e188] [cursor=pointer]:
+              - img [ref=e189]
+      - generic [ref=e193]:
+        - generic [ref=e194]:
+          - generic [ref=e196]: "N"
+          - generic [ref=e197]:
+            - paragraph [ref=e198]: Architected By
+            - heading "HAFIZ NAVEED UDDIN" [level=6] [ref=e199]
+            - paragraph [ref=e200]: Agentic AI Developer / Full-Stack Engineer
+        - generic [ref=e201]:
+          - link "HAFIZNAVEEDCHUHAN@GMAIL.COM" [ref=e202] [cursor=pointer]:
+            - /url: mailto:HAFIZNAVEEDCHUHAN@GMAIL.COM
+          - generic [ref=e203]: Available for New Ventures
+      - paragraph [ref=e205]: © 2026 Fatima Zehra Boutique. Crafted for Excellence.
+  - button "Open chat" [ref=e206] [cursor=pointer]:
+    - img [ref=e207]
+  - generic [ref=e209]:
+    - button "Open WhatsApp chat" [ref=e210] [cursor=pointer]:
+      - img [ref=e211]
+    - generic: Chat with us
+  - alert [ref=e213]
+```

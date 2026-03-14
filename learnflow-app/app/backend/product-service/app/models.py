@@ -60,7 +60,7 @@ class ProductCreate(SQLModel):
     """Create product"""
     name: str = Field(max_length=255)
     description: Optional[str] = None
-    price: Decimal = Field(max_digits=10, decimal_places=2)
+    price: Decimal = Field()
     category_id: Optional[int] = None
     image_url: Optional[str] = Field(None, max_length=500)
     stock_quantity: int = Field(default=0)
@@ -71,7 +71,7 @@ class ProductUpdate(SQLModel):
     """Update product"""
     name: Optional[str] = Field(None, max_length=255)
     description: Optional[str] = None
-    price: Optional[Decimal] = Field(None, max_digits=10, decimal_places=2)
+    price: Optional[Decimal] = Field(None)
     category_id: Optional[int] = None
     image_url: Optional[str] = Field(None, max_length=500)
     stock_quantity: Optional[int] = None

@@ -4,8 +4,9 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import { PRODUCTS } from '@/lib/products'
-import { Star, Heart, ShoppingCart } from 'lucide-react'
+import { notFound } from 'next/navigation'
+import { Star, Heart, ShoppingCart, MessageCircle } from 'lucide-react'
+import { WhatsAppButton } from './WhatsAppButton'
 
 export default function ProductDetailClient({ params }: { params: { id: string } }) {
   const router = useRouter()
@@ -17,6 +18,8 @@ export default function ProductDetailClient({ params }: { params: { id: string }
   const [showPaymentForm, setShowPaymentForm] = useState(false)
   const [wishlist, setWishlist] = useState(false)
   const [orderPlaced, setOrderPlaced] = useState(false)
+  const [addingToCart, setAddingToCart] = useState(false)
+  const [placingOrder, setPlacingOrder] = useState(false)
 
   const [paymentData, setPaymentData] = useState({
     fullName: '',
@@ -31,29 +34,85 @@ export default function ProductDetailClient({ params }: { params: { id: string }
   })
 
   useEffect(() => {
-    if (params && params.id) {
-      const productId = parseInt(params.id, 10)
-      const foundProduct = PRODUCTS.find((p: any) => p.id === productId)
+    const fetchProduct = async () => {
+      try {
+        if (!params || !params.id) {
+          setLoading(false)
+          return
+        }
 
-      if (foundProduct) {
-        setProduct(foundProduct)
-        if (foundProduct.sizes && foundProduct.sizes.length > 0) {
-          setSelectedSize(foundProduct.sizes[0])
+        const productId = params.id
+        const apiUrl = process.env.NEXT_PUBLIC_PRODUCT_SERVICE_URL || 'http://localhost:8002'
+
+        const response = await fetch(`${apiUrl}/api/products/${productId}`)
+
+        if (!response.ok) {
+          if (response.status === 404) {
+            notFound()
+          }
+          throw new Error('Failed to fetch product')
         }
-        if (foundProduct.colors && foundProduct.colors.length > 0) {
-          setSelectedColor(foundProduct.colors[0])
+
+        const data = await response.json()
+        setProduct(data)
+
+        if (data.sizes && data.sizes.length > 0) {
+          setSelectedSize(data.sizes[0])
         }
+        if (data.colors && data.colors.length > 0) {
+          setSelectedColor(data.colors[0])
+        }
+      } catch (err) {
+        console.error('Error fetching product:', err)
+      } finally {
+        setLoading(false)
       }
     }
-    setLoading(false)
+
+    fetchProduct()
   }, [params])
 
-  const handleAddToCart = () => {
+  const handleAddToCart = async () => {
     if (!selectedSize) {
       alert('لطفاً سائز منتخب کریں!')
       return
     }
-    setShowPaymentForm(true)
+
+    setAddingToCart(true)
+    try {
+      const orderServiceUrl = process.env.NEXT_PUBLIC_ORDER_SERVICE_URL || 'http://localhost:8003'
+      const userId = localStorage.getItem('user_id') || '1'
+      const token = `Bearer ${userId}-test`
+
+      const response = await fetch(`${orderServiceUrl}/api/cart/items`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': token
+        },
+        body: JSON.stringify({
+          product_id: product.id,
+          quantity: quantity,
+          size: selectedSize,
+          color: selectedColor || ''
+        })
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}))
+        throw new Error(errorData.detail || `کارٹ میں شامل کرنے میں خرابی (${response.status})`)
+      }
+
+      const cartItem = await response.json()
+      console.log('Item added to cart:', cartItem)
+      alert(`✅ "${product.name}" کارٹ میں شامل ہو گیا!`)
+      setShowPaymentForm(true)
+    } catch (error) {
+      console.error('Error adding to cart:', error)
+      alert(`❌ خرابی: ${error instanceof Error ? error.message : 'کوئی مسئلہ پیش آیا'}`)
+    } finally {
+      setAddingToCart(false)
+    }
   }
 
   const handlePaymentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -64,7 +123,7 @@ export default function ProductDetailClient({ params }: { params: { id: string }
     }))
   }
 
-  const handlePlaceOrder = (e: React.FormEvent) => {
+  const handlePlaceOrder = async (e: React.FormEvent) => {
     e.preventDefault()
 
     if (!paymentData.fullName || !paymentData.email || !paymentData.phone ||
@@ -74,11 +133,46 @@ export default function ProductDetailClient({ params }: { params: { id: string }
       return
     }
 
-    setOrderPlaced(true)
-    setTimeout(() => {
-      alert(`✅ آپ کا آرڈر #${Math.random().toString(36).substr(2, 9).toUpperCase()} کامیاب ہو گیا`)
-      router.push('/products')
-    }, 2000)
+    setPlacingOrder(true)
+    try {
+      const orderServiceUrl = process.env.NEXT_PUBLIC_ORDER_SERVICE_URL || 'http://localhost:8003'
+      const userId = localStorage.getItem('user_id') || '1'
+      const token = `Bearer ${userId}-test`
+
+      // Create checkout/order
+      const response = await fetch(`${orderServiceUrl}/api/checkout`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': token
+        },
+        body: JSON.stringify({
+          shipping_address: `${paymentData.address}, ${paymentData.city} ${paymentData.zipCode}`,
+          payment_method: 'card',
+          customer_email: paymentData.email,
+          customer_phone: paymentData.phone,
+          customer_name: paymentData.fullName
+        })
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}))
+        throw new Error(errorData.detail || `آرڈر مکمل کرنے میں خرابی (${response.status})`)
+      }
+
+      const order = await response.json()
+      setOrderPlaced(true)
+
+      setTimeout(() => {
+        const orderId = order.order_id || order.id || 'UNKNOWN'
+        alert(`✅ آپ کا آرڈر #${orderId} کامیاب ہو گیا!`)
+        router.push('/products')
+      }, 2000)
+    } catch (error) {
+      console.error('Error placing order:', error)
+      alert(`❌ خرابی: ${error instanceof Error ? error.message : 'آرڈر مکمل نہ ہو سکا'}`)
+      setPlacingOrder(false)
+    }
   }
 
   if (loading) {
@@ -271,31 +365,57 @@ export default function ProductDetailClient({ params }: { params: { id: string }
               </div>
             </div>
 
-            {/* Add to Cart & Wishlist */}
-            <div className="flex gap-4">
-              <button
-                onClick={handleAddToCart}
-                disabled={!product.inStock}
-                className={`flex-1 flex items-center justify-center gap-3 py-4 rounded-lg font-bold text-white transition text-xl ${
-                  product.inStock
-                    ? 'bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 shadow-lg'
-                    : 'bg-gray-300 cursor-not-allowed'
-                }`}
-              >
-                <ShoppingCart size={28} />
-                کارٹ میں شامل کریں
-              </button>
+            {/* Add to Cart & Wishlist & WhatsApp */}
+            <div className="flex flex-col gap-4">
+              <div className="flex gap-3">
+                <button
+                  onClick={handleAddToCart}
+                  disabled={!product.inStock || addingToCart}
+                  className={`flex-1 flex items-center justify-center gap-3 py-4 rounded-lg font-bold text-white transition text-xl ${
+                    product.inStock && !addingToCart
+                      ? 'bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 shadow-lg'
+                      : 'bg-gray-300 cursor-not-allowed'
+                  }`}
+                >
+                  {addingToCart ? (
+                    <>
+                      <div className="animate-spin">⏳</div>
+                      شامل کیا جا رہا ہے...
+                    </>
+                  ) : (
+                    <>
+                      <ShoppingCart size={28} />
+                      کارٹ میں شامل کریں
+                    </>
+                  )}
+                </button>
 
-              <button
-                onClick={() => setWishlist(!wishlist)}
-                className={`px-8 py-4 border-2 rounded-lg transition font-bold text-3xl ${
-                  wishlist
-                    ? 'bg-pink-50 border-pink-600 text-pink-600'
-                    : 'border-gray-300 text-gray-600 hover:border-pink-400'
-                }`}
-              >
-                <Heart size={28} fill={wishlist ? 'currentColor' : 'none'} />
-              </button>
+                <button
+                  onClick={() => setWishlist(!wishlist)}
+                  className={`px-8 py-4 border-2 rounded-lg transition font-bold text-2xl ${
+                    wishlist
+                      ? 'bg-pink-50 border-pink-600 text-pink-600'
+                      : 'border-gray-300 text-gray-600 hover:border-pink-400'
+                  }`}
+                  title="Add to Wishlist"
+                >
+                  <Heart size={28} fill={wishlist ? 'currentColor' : 'none'} />
+                </button>
+              </div>
+
+              {/* WhatsApp Button */}
+              <div className="w-full">
+                <WhatsAppButton
+                  productName={product.name}
+                  productPrice={product.price}
+                  productId={product.id}
+                  productCategory={product.category}
+                  buttonText="📱 WhatsApp پر پوچھیں"
+                  variant="primary"
+                  size="md"
+                  className="w-full justify-center"
+                />
+              </div>
             </div>
 
             {/* Delivery Info */}
@@ -473,9 +593,14 @@ export default function ProductDetailClient({ params }: { params: { id: string }
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-6 py-4 bg-gradient-to-r from-pink-600 to-pink-700 text-white rounded-lg font-bold hover:from-pink-700 hover:to-pink-800 transition text-xl shadow-lg"
+                    disabled={placingOrder}
+                    className={`flex-1 px-6 py-4 text-white rounded-lg font-bold transition text-xl shadow-lg ${
+                      placingOrder
+                        ? 'bg-gray-400 cursor-not-allowed'
+                        : 'bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800'
+                    }`}
                   >
-                    ✅ آرڈر مکمل کریں
+                    {placingOrder ? '⏳ مکمل کیا جا رہا ہے...' : '✅ آرڈر مکمل کریں'}
                   </button>
                 </div>
               </form>

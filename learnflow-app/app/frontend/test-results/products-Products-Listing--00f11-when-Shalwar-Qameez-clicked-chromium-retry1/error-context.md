@@ -1,0 +1,503 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img [ref=e7]
+          - text: Karachi, Pakistan
+        - generic [ref=e10]:
+          - img [ref=e11]
+          - text: +92 300 2385209
+      - generic [ref=e13]: Free Worldwide Shipping on Orders Over $200
+    - navigation [ref=e14]:
+      - generic [ref=e16]:
+        - link "Fatima Zehra Signature Logo FATIMA ZEHRA Luxury Boutique" [ref=e17] [cursor=pointer]:
+          - /url: /
+          - img "Fatima Zehra Signature Logo" [ref=e21]
+          - generic [ref=e22]:
+            - generic [ref=e23]: FATIMA ZEHRA
+            - generic [ref=e24]: Luxury Boutique
+        - generic [ref=e25]:
+          - link "Home" [ref=e26] [cursor=pointer]:
+            - /url: /
+          - link "Shop" [ref=e27] [cursor=pointer]:
+            - /url: /products
+          - link "About" [ref=e28] [cursor=pointer]:
+            - /url: /about
+          - link "Contact" [ref=e29] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=e30]:
+          - button [ref=e31] [cursor=pointer]:
+            - img [ref=e32]
+          - link "0" [ref=e35] [cursor=pointer]:
+            - /url: /cart
+            - img [ref=e36]
+            - generic [ref=e40]: "0"
+          - link [ref=e41] [cursor=pointer]:
+            - /url: /profile
+            - img [ref=e42]
+  - main [ref=e45]:
+    - main [ref=e46]:
+      - generic [ref=e48]:
+        - heading "Our Collection" [level=1] [ref=e49]
+        - paragraph [ref=e50]: Discover 40+ premium ladies suits, shalwar qameez, and designer wear.
+      - generic [ref=e52]:
+        - complementary [ref=e53]:
+          - generic [ref=e54]:
+            - heading "Filters" [level=2] [ref=e55]:
+              - img [ref=e56]
+              - text: Filters
+            - generic [ref=e58]:
+              - heading "Categories" [level=3] [ref=e59]
+              - generic [ref=e60]:
+                - button "All Products (40)" [ref=e61] [cursor=pointer]
+                - button "Fancy Suits (10)" [ref=e62] [cursor=pointer]
+                - button "Shalwar Qameez (10)" [active] [ref=e63] [cursor=pointer]
+                - button "Cotton Suits (10)" [ref=e64] [cursor=pointer]
+                - button "Designer Brands (10)" [ref=e65] [cursor=pointer]
+            - generic [ref=e67]:
+              - heading "Price Range" [level=3] [ref=e68]
+              - generic [ref=e69]:
+                - slider [ref=e70]: "0"
+                - slider [ref=e71]: "10000"
+                - generic [ref=e72]:
+                  - generic [ref=e73]: Rs 0
+                  - generic [ref=e74]: Rs 10,000
+            - generic [ref=e76]:
+              - heading "Sort By" [level=3] [ref=e77]
+              - combobox [ref=e78]:
+                - option "Newest" [selected]
+                - 'option "Price: Low to High"'
+                - 'option "Price: High to Low"'
+                - option "Top Rated"
+            - button "Clear Filters" [ref=e79] [cursor=pointer]
+        - generic [ref=e80]:
+          - generic [ref=e82]:
+            - img [ref=e83]
+            - textbox "Search by name, material, or category..." [ref=e86]
+          - paragraph [ref=e88]: Showing 10 products
+          - generic [ref=e89]:
+            - link "Royal Blue Shalwar Qameez -24% In Stock Shalwar Qameez Royal Blue Shalwar Qameez Elegant royal blue with silver embroidery accents. (112 reviews) Cambric Cotton Rs 3,800 Rs 5,000 Add to Cart WhatsApp Us" [ref=e91] [cursor=pointer]:
+              - /url: /products/20
+              - generic [ref=e92]:
+                - generic [ref=e93]:
+                  - img "Royal Blue Shalwar Qameez" [ref=e94]
+                  - generic [ref=e95]: "-24%"
+                  - generic [ref=e96]: In Stock
+                  - button [ref=e97]:
+                    - img [ref=e98]
+                - generic [ref=e100]:
+                  - generic [ref=e102]: Shalwar Qameez
+                  - heading "Royal Blue Shalwar Qameez" [level=3] [ref=e103]
+                  - paragraph [ref=e104]: Elegant royal blue with silver embroidery accents.
+                  - generic [ref=e105]:
+                    - generic [ref=e106]:
+                      - img [ref=e107]
+                      - img [ref=e109]
+                      - img [ref=e111]
+                      - img [ref=e113]
+                      - img [ref=e115]
+                    - generic [ref=e117]: (112 reviews)
+                  - paragraph [ref=e118]: Cambric Cotton
+                  - generic [ref=e119]:
+                    - generic [ref=e121]:
+                      - generic [ref=e122]: Rs 3,800
+                      - generic [ref=e123]: Rs 5,000
+                    - button "Add to Cart" [ref=e124]:
+                      - img [ref=e125]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e129]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e130]
+                      - text: WhatsApp Us
+            - link "Eid Special Collection -26% In Stock Shalwar Qameez Eid Special Collection Special Eid collection with premium finish and dupatta. (78 reviews) Premium Lawn Rs 4,800 Rs 6,500 Add to Cart WhatsApp Us" [ref=e133] [cursor=pointer]:
+              - /url: /products/19
+              - generic [ref=e134]:
+                - generic [ref=e135]:
+                  - img "Eid Special Collection" [ref=e136]
+                  - generic [ref=e137]: "-26%"
+                  - generic [ref=e138]: In Stock
+                  - button [ref=e139]:
+                    - img [ref=e140]
+                - generic [ref=e142]:
+                  - generic [ref=e144]: Shalwar Qameez
+                  - heading "Eid Special Collection" [level=3] [ref=e145]
+                  - paragraph [ref=e146]: Special Eid collection with premium finish and dupatta.
+                  - generic [ref=e147]:
+                    - generic [ref=e148]:
+                      - img [ref=e149]
+                      - img [ref=e151]
+                      - img [ref=e153]
+                      - img [ref=e155]
+                      - img [ref=e157]
+                    - generic [ref=e159]: (78 reviews)
+                  - paragraph [ref=e160]: Premium Lawn
+                  - generic [ref=e161]:
+                    - generic [ref=e163]:
+                      - generic [ref=e164]: Rs 4,800
+                      - generic [ref=e165]: Rs 6,500
+                    - button "Add to Cart" [ref=e166]:
+                      - img [ref=e167]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e171]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e172]
+                      - text: WhatsApp Us
+            - link "Geometric Pattern Suit -23% In Stock Shalwar Qameez Geometric Pattern Suit Modern geometric patterns with contrast borders. (134 reviews) Lawn Cotton Rs 3,100 Rs 4,000 Add to Cart WhatsApp Us" [ref=e175] [cursor=pointer]:
+              - /url: /products/18
+              - generic [ref=e176]:
+                - generic [ref=e177]:
+                  - img "Geometric Pattern Suit" [ref=e178]
+                  - generic [ref=e179]: "-23%"
+                  - generic [ref=e180]: In Stock
+                  - button [ref=e181]:
+                    - img [ref=e182]
+                - generic [ref=e184]:
+                  - generic [ref=e186]: Shalwar Qameez
+                  - heading "Geometric Pattern Suit" [level=3] [ref=e187]
+                  - paragraph [ref=e188]: Modern geometric patterns with contrast borders.
+                  - generic [ref=e189]:
+                    - generic [ref=e190]:
+                      - img [ref=e191]
+                      - img [ref=e193]
+                      - img [ref=e195]
+                      - img [ref=e197]
+                      - img [ref=e199]
+                    - generic [ref=e201]: (134 reviews)
+                  - paragraph [ref=e202]: Lawn Cotton
+                  - generic [ref=e203]:
+                    - generic [ref=e205]:
+                      - generic [ref=e206]: Rs 3,100
+                      - generic [ref=e207]: Rs 4,000
+                    - button "Add to Cart" [ref=e208]:
+                      - img [ref=e209]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e213]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e214]
+                      - text: WhatsApp Us
+            - link "Floral Print Daily Wear -20% In Stock Shalwar Qameez Floral Print Daily Wear Cheerful floral prints for comfortable daily wear. (245 reviews) Cotton Blend Rs 2,400 Rs 3,000 Add to Cart WhatsApp Us" [ref=e217] [cursor=pointer]:
+              - /url: /products/17
+              - generic [ref=e218]:
+                - generic [ref=e219]:
+                  - img "Floral Print Daily Wear" [ref=e220]
+                  - generic [ref=e221]: "-20%"
+                  - generic [ref=e222]: In Stock
+                  - button [ref=e223]:
+                    - img [ref=e224]
+                - generic [ref=e226]:
+                  - generic [ref=e228]: Shalwar Qameez
+                  - heading "Floral Print Daily Wear" [level=3] [ref=e229]
+                  - paragraph [ref=e230]: Cheerful floral prints for comfortable daily wear.
+                  - generic [ref=e231]:
+                    - generic [ref=e232]:
+                      - img [ref=e233]
+                      - img [ref=e235]
+                      - img [ref=e237]
+                      - img [ref=e239]
+                      - img [ref=e241]
+                    - generic [ref=e243]: (245 reviews)
+                  - paragraph [ref=e244]: Cotton Blend
+                  - generic [ref=e245]:
+                    - generic [ref=e247]:
+                      - generic [ref=e248]: Rs 2,400
+                      - generic [ref=e249]: Rs 3,000
+                    - button "Add to Cart" [ref=e250]:
+                      - img [ref=e251]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e255]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e256]
+                      - text: WhatsApp Us
+            - link "Chikan Kari Suit -27% In Stock Shalwar Qameez Chikan Kari Suit Authentic Lucknowi chikan embroidery on premium fabric. (89 reviews) Muslin Rs 5,500 Rs 7,500 Add to Cart WhatsApp Us" [ref=e259] [cursor=pointer]:
+              - /url: /products/16
+              - generic [ref=e260]:
+                - generic [ref=e261]:
+                  - img "Chikan Kari Suit" [ref=e262]
+                  - generic [ref=e263]: "-27%"
+                  - generic [ref=e264]: In Stock
+                  - button [ref=e265]:
+                    - img [ref=e266]
+                - generic [ref=e268]:
+                  - generic [ref=e270]: Shalwar Qameez
+                  - heading "Chikan Kari Suit" [level=3] [ref=e271]
+                  - paragraph [ref=e272]: Authentic Lucknowi chikan embroidery on premium fabric.
+                  - generic [ref=e273]:
+                    - generic [ref=e274]:
+                      - img [ref=e275]
+                      - img [ref=e277]
+                      - img [ref=e279]
+                      - img [ref=e281]
+                      - img [ref=e283]
+                    - generic [ref=e285]: (89 reviews)
+                  - paragraph [ref=e286]: Muslin
+                  - generic [ref=e287]:
+                    - generic [ref=e289]:
+                      - generic [ref=e290]: Rs 5,500
+                      - generic [ref=e291]: Rs 7,500
+                    - button "Add to Cart" [ref=e292]:
+                      - img [ref=e293]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e297]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e298]
+                      - text: WhatsApp Us
+            - link "Pastel Summer Collection -24% In Stock Shalwar Qameez Pastel Summer Collection Light and breezy pastel shades perfect for summer days. (198 reviews) Lawn Rs 2,600 Rs 3,400 Add to Cart WhatsApp Us" [ref=e301] [cursor=pointer]:
+              - /url: /products/15
+              - generic [ref=e302]:
+                - generic [ref=e303]:
+                  - img "Pastel Summer Collection" [ref=e304]
+                  - generic [ref=e305]: "-24%"
+                  - generic [ref=e306]: In Stock
+                  - button [ref=e307]:
+                    - img [ref=e308]
+                - generic [ref=e310]:
+                  - generic [ref=e312]: Shalwar Qameez
+                  - heading "Pastel Summer Collection" [level=3] [ref=e313]
+                  - paragraph [ref=e314]: Light and breezy pastel shades perfect for summer days.
+                  - generic [ref=e315]:
+                    - generic [ref=e316]:
+                      - img [ref=e317]
+                      - img [ref=e319]
+                      - img [ref=e321]
+                      - img [ref=e323]
+                      - img [ref=e325]
+                    - generic [ref=e327]: (198 reviews)
+                  - paragraph [ref=e328]: Lawn
+                  - generic [ref=e329]:
+                    - generic [ref=e331]:
+                      - generic [ref=e332]: Rs 2,600
+                      - generic [ref=e333]: Rs 3,400
+                    - button "Add to Cart" [ref=e334]:
+                      - img [ref=e335]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e339]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e340]
+                      - text: WhatsApp Us
+            - link "Traditional Block Print -24% In Stock Shalwar Qameez Traditional Block Print Hand block printed design with traditional patterns. (167 reviews) Pure Cotton Rs 3,200 Rs 4,200 Add to Cart WhatsApp Us" [ref=e343] [cursor=pointer]:
+              - /url: /products/14
+              - generic [ref=e344]:
+                - generic [ref=e345]:
+                  - img "Traditional Block Print" [ref=e346]
+                  - generic [ref=e347]: "-24%"
+                  - generic [ref=e348]: In Stock
+                  - button [ref=e349]:
+                    - img [ref=e350]
+                - generic [ref=e352]:
+                  - generic [ref=e354]: Shalwar Qameez
+                  - heading "Traditional Block Print" [level=3] [ref=e355]
+                  - paragraph [ref=e356]: Hand block printed design with traditional patterns.
+                  - generic [ref=e357]:
+                    - generic [ref=e358]:
+                      - img [ref=e359]
+                      - img [ref=e361]
+                      - img [ref=e363]
+                      - img [ref=e365]
+                      - img [ref=e367]
+                    - generic [ref=e369]: (167 reviews)
+                  - paragraph [ref=e370]: Pure Cotton
+                  - generic [ref=e371]:
+                    - generic [ref=e373]:
+                      - generic [ref=e374]: Rs 3,200
+                      - generic [ref=e375]: Rs 4,200
+                    - button "Add to Cart" [ref=e376]:
+                      - img [ref=e377]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e381]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e382]
+                      - text: WhatsApp Us
+            - link "Embroidered Neck Design -24% In Stock Shalwar Qameez Embroidered Neck Design Beautiful neck embroidery with matching trouser and dupatta. (156 reviews) Cambric Rs 4,200 Rs 5,500 Add to Cart WhatsApp Us" [ref=e385] [cursor=pointer]:
+              - /url: /products/13
+              - generic [ref=e386]:
+                - generic [ref=e387]:
+                  - img "Embroidered Neck Design" [ref=e388]
+                  - generic [ref=e389]: "-24%"
+                  - generic [ref=e390]: In Stock
+                  - button [ref=e391]:
+                    - img [ref=e392]
+                - generic [ref=e394]:
+                  - generic [ref=e396]: Shalwar Qameez
+                  - heading "Embroidered Neck Design" [level=3] [ref=e397]
+                  - paragraph [ref=e398]: Beautiful neck embroidery with matching trouser and dupatta.
+                  - generic [ref=e399]:
+                    - generic [ref=e400]:
+                      - img [ref=e401]
+                      - img [ref=e403]
+                      - img [ref=e405]
+                      - img [ref=e407]
+                      - img [ref=e409]
+                    - generic [ref=e411]: (156 reviews)
+                  - paragraph [ref=e412]: Cambric
+                  - generic [ref=e413]:
+                    - generic [ref=e415]:
+                      - generic [ref=e416]: Rs 4,200
+                      - generic [ref=e417]: Rs 5,500
+                    - button "Add to Cart" [ref=e418]:
+                      - img [ref=e419]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e423]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e424]
+                      - text: WhatsApp Us
+            - link "Printed Lawn Collection -26% In Stock Shalwar Qameez Printed Lawn Collection Vibrant digital prints for a fresh summer look. (189 reviews) Digital Lawn Rs 2,800 Rs 3,800 Add to Cart WhatsApp Us" [ref=e427] [cursor=pointer]:
+              - /url: /products/12
+              - generic [ref=e428]:
+                - generic [ref=e429]:
+                  - img "Printed Lawn Collection" [ref=e430]
+                  - generic [ref=e431]: "-26%"
+                  - generic [ref=e432]: In Stock
+                  - button [ref=e433]:
+                    - img [ref=e434]
+                - generic [ref=e436]:
+                  - generic [ref=e438]: Shalwar Qameez
+                  - heading "Printed Lawn Collection" [level=3] [ref=e439]
+                  - paragraph [ref=e440]: Vibrant digital prints for a fresh summer look.
+                  - generic [ref=e441]:
+                    - generic [ref=e442]:
+                      - img [ref=e443]
+                      - img [ref=e445]
+                      - img [ref=e447]
+                      - img [ref=e449]
+                      - img [ref=e451]
+                    - generic [ref=e453]: (189 reviews)
+                  - paragraph [ref=e454]: Digital Lawn
+                  - generic [ref=e455]:
+                    - generic [ref=e457]:
+                      - generic [ref=e458]: Rs 2,800
+                      - generic [ref=e459]: Rs 3,800
+                    - button "Add to Cart" [ref=e460]:
+                      - img [ref=e461]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e465]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e466]
+                      - text: WhatsApp Us
+            - link "Classic White Shalwar Qameez -22% In Stock Shalwar Qameez Classic White Shalwar Qameez Timeless white with subtle embroidery for everyday elegance. (234 reviews) Lawn Cotton Rs 3,500 Rs 4,500 Add to Cart WhatsApp Us" [ref=e469] [cursor=pointer]:
+              - /url: /products/11
+              - generic [ref=e470]:
+                - generic [ref=e471]:
+                  - img "Classic White Shalwar Qameez" [ref=e472]
+                  - generic [ref=e473]: "-22%"
+                  - generic [ref=e474]: In Stock
+                  - button [ref=e475]:
+                    - img [ref=e476]
+                - generic [ref=e478]:
+                  - generic [ref=e480]: Shalwar Qameez
+                  - heading "Classic White Shalwar Qameez" [level=3] [ref=e481]
+                  - paragraph [ref=e482]: Timeless white with subtle embroidery for everyday elegance.
+                  - generic [ref=e483]:
+                    - generic [ref=e484]:
+                      - img [ref=e485]
+                      - img [ref=e487]
+                      - img [ref=e489]
+                      - img [ref=e491]
+                      - img [ref=e493]
+                    - generic [ref=e495]: (234 reviews)
+                  - paragraph [ref=e496]: Lawn Cotton
+                  - generic [ref=e497]:
+                    - generic [ref=e499]:
+                      - generic [ref=e500]: Rs 3,500
+                      - generic [ref=e501]: Rs 4,500
+                    - button "Add to Cart" [ref=e502]:
+                      - img [ref=e503]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e507]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e508]
+                      - text: WhatsApp Us
+  - contentinfo [ref=e510]:
+    - generic [ref=e512]:
+      - generic [ref=e513]:
+        - generic [ref=e514]:
+          - img [ref=e516]
+          - heading "Free Shipping" [level=5] [ref=e521]
+          - paragraph [ref=e522]: Across Pakistan
+        - generic [ref=e523]:
+          - img [ref=e525]
+          - heading "Easy Returns" [level=5] [ref=e528]
+          - paragraph [ref=e529]: 7-Day Exchange
+        - generic [ref=e530]:
+          - img [ref=e532]
+          - heading "Secure Payment" [level=5] [ref=e535]
+          - paragraph [ref=e536]: 100% Protected
+        - generic [ref=e537]:
+          - img [ref=e539]
+          - heading "Cash on Delivery" [level=5] [ref=e541]
+          - paragraph [ref=e542]: Pay at Door
+      - generic [ref=e543]:
+        - generic [ref=e544]:
+          - heading "FATIMA ZEHRA" [level=3] [ref=e545]
+          - paragraph [ref=e546]: Defining the future of Eastern couture. From intricate craftsmanship to modern silhouettes, we create legacies, not just garments.
+          - generic [ref=e547]:
+            - link [ref=e548] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e549]
+            - link [ref=e551] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e552]
+            - link [ref=e555] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e556]
+        - generic [ref=e558]:
+          - heading "Navigation" [level=4] [ref=e559]
+          - list [ref=e560]:
+            - listitem [ref=e561]:
+              - link "Shop" [ref=e562] [cursor=pointer]:
+                - /url: /products
+                - text: Shop
+            - listitem [ref=e563]:
+              - link "About" [ref=e564] [cursor=pointer]:
+                - /url: /about
+                - text: About
+            - listitem [ref=e565]:
+              - link "Contact" [ref=e566] [cursor=pointer]:
+                - /url: /contact
+                - text: Contact
+            - listitem [ref=e567]:
+              - link "Orders" [ref=e568] [cursor=pointer]:
+                - /url: /orders
+                - text: Orders
+        - generic [ref=e569]:
+          - heading "Boutique Office" [level=4] [ref=e570]
+          - generic [ref=e571]:
+            - generic [ref=e572]:
+              - img [ref=e573]
+              - paragraph [ref=e576]: House No. R-98, Sector 5C-2, North Karachi
+            - generic [ref=e577]:
+              - img [ref=e578]
+              - paragraph [ref=e580]: +92 300 2385209
+            - generic [ref=e581]:
+              - img [ref=e582]
+              - paragraph [ref=e585]: hnaveed264@gmail.com
+        - generic [ref=e586]:
+          - heading "The Insider" [level=4] [ref=e587]
+          - paragraph [ref=e588]: Join our elite circle for private collection launches.
+          - generic [ref=e589]:
+            - textbox "EMAIL ADDRESS" [ref=e590]
+            - button [ref=e591] [cursor=pointer]:
+              - img [ref=e592]
+      - generic [ref=e596]:
+        - generic [ref=e597]:
+          - generic [ref=e599]: "N"
+          - generic [ref=e600]:
+            - paragraph [ref=e601]: Architected By
+            - heading "HAFIZ NAVEED UDDIN" [level=6] [ref=e602]
+            - paragraph [ref=e603]: Agentic AI Developer / Full-Stack Engineer
+        - generic [ref=e604]:
+          - link "HAFIZNAVEEDCHUHAN@GMAIL.COM" [ref=e605] [cursor=pointer]:
+            - /url: mailto:HAFIZNAVEEDCHUHAN@GMAIL.COM
+          - generic [ref=e606]: Available for New Ventures
+      - paragraph [ref=e608]: © 2026 Fatima Zehra Boutique. Crafted for Excellence.
+  - button "Open chat" [ref=e609] [cursor=pointer]:
+    - img [ref=e610]
+  - generic [ref=e612]:
+    - button "Open WhatsApp chat" [ref=e613] [cursor=pointer]:
+      - img [ref=e614]
+    - generic: Chat with us
+  - alert [ref=e616]
+```

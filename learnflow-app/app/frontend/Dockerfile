@@ -17,9 +17,12 @@ RUN npm run build
 # Expose port
 EXPOSE 3000
 
+# Install serve to run static export
+RUN npm install -g serve
+
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD wget --quiet --tries=1 --spider http://localhost:3000/ || exit 1
 
-# Run application
-CMD ["npm", "start"]
+# Run application - serve the static export
+CMD ["serve", "-s", "out", "-l", "3000"]

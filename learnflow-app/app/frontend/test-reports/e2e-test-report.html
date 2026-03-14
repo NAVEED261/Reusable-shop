@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fatima Zehra Boutique - E2E Test Report</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.6; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    header { background: linear-gradient(135deg, #ec4899, #9333ea); color: white; padding: 40px 0; }
+    header h1 { font-size: 32px; margin-bottom: 8px; }
+    header p { opacity: 0.9; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: -40px 0 40px; position: relative; z-index: 10; }
+    .stat-card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; }
+    .stat-card .number { font-size: 36px; font-weight: 800; }
+    .stat-card .label { font-size: 14px; color: #64748b; margin-top: 4px; }
+    .stat-card.pass .number { color: #22c55e; }
+    .stat-card.fail .number { color: #ef4444; }
+    .stat-card.total .number { color: #3b82f6; }
+    .stat-card.rate .number { color: #f59e0b; }
+    .stat-card.critical .number { color: #dc2626; }
+    .section { background: white; border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .section h2 { font-size: 20px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid #f1f5f9; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+    .badge.critical { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+    .badge.high { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+    .badge.medium { background: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
+    .badge.low { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+    .badge.pass { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+    .badge.fail { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+    .badge.skip { background: #f8fafc; color: #64748b; border: 1px solid #cbd5e1; }
+    .badge.fixed { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #f1f5f9; }
+    th { background: #f8fafc; font-weight: 600; font-size: 13px; color: #64748b; text-transform: uppercase; }
+    tr:hover { background: #fafbfc; }
+    .issue-card { padding: 16px; margin-bottom: 12px; border-radius: 8px; border-left: 4px solid; }
+    .issue-card.critical { border-color: #dc2626; background: #fef2f2; }
+    .issue-card.high { border-color: #ea580c; background: #fff7ed; }
+    .issue-card.medium { border-color: #d97706; background: #fffbeb; }
+    .issue-card.low { border-color: #16a34a; background: #f0fdf4; }
+    .issue-card h4 { margin-bottom: 4px; }
+    .issue-card p { font-size: 14px; color: #64748b; }
+    .progress-bar { height: 8px; background: #e2e8f0; border-radius: 4px; overflow: hidden; margin: 8px 0; }
+    .progress-bar .fill { height: 100%; border-radius: 4px; }
+    .progress-bar .fill.green { background: #22c55e; }
+    .progress-bar .fill.yellow { background: #f59e0b; }
+    .progress-bar .fill.red { background: #ef4444; }
+    .fix-applied { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px 16px; margin: 8px 0; }
+    .fix-applied h4 { color: #2563eb; }
+    .recommendation { background: #f8fafc; border-radius: 8px; padding: 16px; margin: 8px 0; border: 1px solid #e2e8f0; }
+    .recommendation h4 { margin-bottom: 4px; }
+    .recommendation p { font-size: 14px; color: #64748b; }
+    code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+    .timestamp { color: #94a3b8; font-size: 12px; }
+    footer { text-align: center; padding: 40px 0; color: #94a3b8; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Fatima Zehra Boutique - E2E Test Report</h1>
+      <p>Comprehensive End-to-End Testing Suite | Generated: 2026-02-11T06:34:00Z</p>
+      <p class="timestamp">Target: http://localhost:3000 | Duration: 53.0s | Test Runner: HAFIZ-NAVEED-UDDIN</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat-card total">
+        <div class="number">100</div>
+        <div class="label">Total Tests</div>
+      </div>
+      <div class="stat-card pass">
+        <div class="number">96</div>
+        <div class="label">Passed</div>
+      </div>
+      <div class="stat-card fail">
+        <div class="number">4</div>
+        <div class="label">Failed</div>
+      </div>
+      <div class="stat-card rate">
+        <div class="number">96.0%</div>
+        <div class="label">Pass Rate</div>
+      </div>
+      <div class="stat-card critical">
+        <div class="number">0</div>
+        <div class="label">Critical Issues</div>
+      </div>
+    </div>
+
+    <!-- Pass Rate Progress -->
+    <div class="section">
+      <h2>Overall Pass Rate</h2>
+      <div class="progress-bar" style="height: 16px;">
+        <div class="fill green" style="width: 96%;"></div>
+      </div>
+      <p>96 of 100 tests passed. 4 failures are due to backend microservices not running (expected in frontend-only mode).</p>
+    </div>
+
+    <!-- Issues Found & Fixed -->
+    <div class="section">
+      <h2>Issues Found and Fixed</h2>
+
+      <div class="fix-applied">
+        <h4><span class="badge fixed">FIXED</span> CRITICAL: All 40 Product Images Returning 404</h4>
+        <p><strong>Root Cause:</strong> Image files on disk had generic names (<code>download.jpg</code>, <code>download (1).jpg</code>) but code referenced specific names (<code>fancy-suits-01.jpg</code>, <code>shalwar-qameez-01.jpg</code>, etc.)</p>
+        <p><strong>Fix Applied:</strong> Copied all image files to match expected filenames across all 4 categories (40 images total) and 3 testimonial images.</p>
+        <p><strong>Files Fixed:</strong></p>
+        <ul style="font-size:14px; margin-left: 20px; margin-top: 4px;">
+          <li><code>public/images/fancy-suits/fancy-suits-01.jpg</code> through <code>fancy-suits-10.jpg</code></li>
+          <li><code>public/images/shalwar-qameez/shalwar-qameez-01.jpg</code> through <code>shalwar-qameez-10.jpg</code></li>
+          <li><code>public/images/cotton-suits/cotton-suits-01.jpg</code> through <code>cotton-suits-10.jpg</code></li>
+          <li><code>public/images/designer-brands/designer-brands-01.jpg</code> through <code>designer-brands-10.jpg</code></li>
+          <li><code>public/images/testimonials/customer-1.jpg</code> through <code>customer-3.jpg</code></li>
+        </ul>
+      </div>
+
+      <div class="fix-applied">
+        <h4><span class="badge fixed">FIXED</span> LOW: Missing Favicon (favicon.svg)</h4>
+        <p><strong>Root Cause:</strong> The layout referenced <code>/favicon.svg</code> but the file did not exist.</p>
+        <p><strong>Fix Applied:</strong> Created <code>public/favicon.svg</code> with FZ branding (pink-purple gradient).</p>
+      </div>
+
+      <div class="fix-applied">
+        <h4><span class="badge fixed">FIXED</span> MEDIUM: X-Powered-By Header Exposed (Security)</h4>
+        <p><strong>Root Cause:</strong> Next.js default config exposes <code>X-Powered-By: Next.js</code> header.</p>
+        <p><strong>Fix Applied:</strong> Added <code>poweredByHeader: false</code> to <code>next.config.js</code>.</p>
+      </div>
+    </div>
+
+    <!-- Remaining Issues -->
+    <div class="section">
+      <h2>Remaining Issues (4 Failures)</h2>
+
+      <div class="issue-card high">
+        <h4><span class="badge high">HIGH</span> User Service (8001) Unavailable</h4>
+        <p>Backend microservice not running. Start with: <code>cd app/backend/user-service && uvicorn app.main:app --port 8001</code></p>
+      </div>
+
+      <div class="issue-card high">
+        <h4><span class="badge high">HIGH</span> Product Service (8002) Unavailable</h4>
+        <p>Backend microservice not running. Start with: <code>cd app/backend/product-service && uvicorn app.main:app --port 8002</code></p>
+      </div>
+
+      <div class="issue-card high">
+        <h4><span class="badge high">HIGH</span> Order Service (8003) Unavailable</h4>
+        <p>Backend microservice not running. Start with: <code>cd app/backend/order-service && uvicorn app.main:app --port 8003</code></p>
+      </div>
+
+      <div class="issue-card high">
+        <h4><span class="badge high">HIGH</span> Chat Service (8004) Unavailable</h4>
+        <p>Backend microservice not running. Start with: <code>cd app/backend/chat-service && uvicorn app.main:app --port 8004</code></p>
+      </div>
+    </div>
+
+    <!-- Test Suite Results Detail -->
+    <div class="section">
+      <h2>Test Suite Breakdown</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Test Suite</th>
+            <th>Tests</th>
+            <th>Passed</th>
+            <th>Failed</th>
+            <th>Pass Rate</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Homepage</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0</td>
+            <td>100%</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Navigation</td>
+            <td>15</td>
+            <td>15</td>
+            <td>0</td>
+            <td>100%</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Product Content</td>
+            <td>9</td>
+            <td>9</td>
+            <td>0</td>
+            <td>100%</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Product Detail</td>
+            <td>7</td>
+            <td>7</td>
+            <td>0</td>
+            <td>100%</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Image Assets</td>
+            <td>7</td>
+            <td>7</td>
+            <td>0</td>
+            <td>100%</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Layout/Components</td>
+            <td>9</td>
+            <td>9</td>
+            <td>0</td>
+            <td>100%</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Cart Page</td>
+            <td>4</td>
+            <td>4</td>
+            <td>0</td>
+            <td>100%</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Static Assets</td>
+            <td>3</td>
+            <td>3</td>
+            <td>0</td>
+            <td>100%</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Backend Services</td>
+            <td>4</td>
+            <td>0</td>
+            <td>4</td>
+            <td>0%</td>
+            <td><span class="badge fail">FAIL</span> (services not running)</td>
+          </tr>
+          <tr>
+            <td>Security</td>
+            <td>6</td>
+            <td>6</td>
+            <td>0</td>
+            <td>100%</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Performance</td>
+            <td>6</td>
+            <td>6</td>
+            <td>0</td>
+            <td>100%</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Checkout Flow</td>
+            <td>3</td>
+            <td>3</td>
+            <td>0</td>
+            <td>100%</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Authentication</td>
+            <td>2</td>
+            <td>2</td>
+            <td>0</td>
+            <td>100%</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Accessibility</td>
+            <td>5</td>
+            <td>5</td>
+            <td>0</td>
+            <td>100%</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+          <tr style="font-weight: bold; background: #f8fafc;">
+            <td>TOTAL</td>
+            <td>100</td>
+            <td>96</td>
+            <td>4</td>
+            <td>96.0%</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Architectural Observations -->
+    <div class="section">
+      <h2>Architectural Observations</h2>
+
+      <div class="recommendation">
+        <h4>SEO Concern: Product Detail Uses Client-Side Rendering</h4>
+        <p>The <code>ProductDetailClient</code> component is marked <code>'use client'</code> and loads product data via <code>useEffect</code>. This means SSR HTML does not contain product-specific content (name, price, description). Search engines may not index product pages correctly. <strong>Recommendation:</strong> Convert to a Server Component or use <code>generateMetadata()</code> for SEO-critical data.</p>
+      </div>
+
+      <div class="recommendation">
+        <h4>Static Export Mode (<code>output: 'export'</code>)</h4>
+        <p>The <code>next.config.js</code> has <code>output: 'export'</code> which generates a static site. This works well for the current product catalog (40 products defined in TypeScript), but limits dynamic features like server-side API routes. Backend services must handle all dynamic operations.</p>
+      </div>
+
+      <div class="recommendation">
+        <h4>Cart State Uses LocalStorage (Zustand Persist)</h4>
+        <p>Cart state is persisted in <code>localStorage</code> via Zustand. This works for single-device usage but does not sync across devices. For a production e-commerce platform, consider syncing cart state with a backend API.</p>
+      </div>
+
+      <div class="recommendation">
+        <h4>Stripe Integration Requires Backend</h4>
+        <p>The checkout flow calls <code>/api/checkout</code> and <code>/api/payments/create-intent</code> on the order service. Without the backend running, the full payment flow cannot be tested. Stripe test mode should be enabled for staging environments.</p>
+      </div>
+
+      <div class="recommendation">
+        <h4>Chat Widget Error Handling</h4>
+        <p>The chat widget gracefully handles errors when the chat service is unavailable, showing a fallback message. This is good defensive coding.</p>
+      </div>
+    </div>
+
+    <!-- Performance Metrics -->
+    <div class="section">
+      <h2>Performance Metrics</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Page</th>
+            <th>Load Time</th>
+            <th>HTML Size</th>
+            <th>Target</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Homepage</td>
+            <td>390ms</td>
+            <td>~192KB</td>
+            <td>&lt;3000ms</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Products Page</td>
+            <td>447ms</td>
+            <td>-</td>
+            <td>&lt;3000ms</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Product Detail</td>
+            <td>225ms</td>
+            <td>-</td>
+            <td>&lt;3000ms</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Cart Page</td>
+            <td>323ms</td>
+            <td>-</td>
+            <td>&lt;3000ms</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td>5 Concurrent Requests</td>
+            <td>1706ms</td>
+            <td>-</td>
+            <td>&lt;10000ms</td>
+            <td><span class="badge pass">PASS</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Security Audit -->
+    <div class="section">
+      <h2>Security Audit Results</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Check</th>
+            <th>Status</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>X-Powered-By Header</td>
+            <td><span class="badge pass">PASS</span></td>
+            <td>Header removed via <code>poweredByHeader: false</code></td>
+          </tr>
+          <tr>
+            <td>Content-Type Header</td>
+            <td><span class="badge pass">PASS</span></td>
+            <td>Correctly set to text/html</td>
+          </tr>
+          <tr>
+            <td>No Error Stack Traces</td>
+            <td><span class="badge pass">PASS</span></td>
+            <td>No stack traces or Internal Server Error exposed</td>
+          </tr>
+          <tr>
+            <td>No API Keys in HTML</td>
+            <td><span class="badge pass">PASS</span></td>
+            <td>No Stripe keys, OpenAI keys, or secrets in source</td>
+          </tr>
+          <tr>
+            <td>.env File Not Accessible</td>
+            <td><span class="badge pass">PASS</span></td>
+            <td>.env returns 404 (not publicly accessible)</td>
+          </tr>
+          <tr>
+            <td>No External Source Maps</td>
+            <td><span class="badge pass">PASS</span></td>
+            <td>No external source map URLs in HTML</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Test Files Created -->
+    <div class="section">
+      <h2>Test Files Created</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>File</th>
+            <th>Type</th>
+            <th>Tests</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>tests/e2e/e2e-test-runner.js</code></td>
+            <td>Node.js HTTP</td>
+            <td>100</td>
+            <td>Comprehensive HTTP-based E2E tests (runs without browser)</td>
+          </tr>
+          <tr>
+            <td><code>tests/e2e/homepage.spec.ts</code></td>
+            <td>Playwright</td>
+            <td>11</td>
+            <td>Homepage visual and interaction tests</td>
+          </tr>
+          <tr>
+            <td><code>tests/e2e/navigation.spec.ts</code></td>
+            <td>Playwright</td>
+            <td>14</td>
+            <td>Navigation, routing, mobile menu tests</td>
+          </tr>
+          <tr>
+            <td><code>tests/e2e/products.spec.ts</code></td>
+            <td>Playwright</td>
+            <td>20</td>
+            <td>Products listing, search, filter, detail tests</td>
+          </tr>
+          <tr>
+            <td><code>tests/e2e/cart-checkout.spec.ts</code></td>
+            <td>Playwright</td>
+            <td>10</td>
+            <td>Cart operations, checkout flow, Stripe integration</td>
+          </tr>
+          <tr>
+            <td><code>tests/e2e/chat-whatsapp.spec.ts</code></td>
+            <td>Playwright</td>
+            <td>15</td>
+            <td>Chat widget and WhatsApp button interaction tests</td>
+          </tr>
+          <tr>
+            <td><code>tests/test_backend_api.py</code></td>
+            <td>pytest</td>
+            <td>37</td>
+            <td>Backend API tests for all 4 microservices</td>
+          </tr>
+          <tr>
+            <td><code>tests/e2e/playwright.config.ts</code></td>
+            <td>Config</td>
+            <td>-</td>
+            <td>Playwright configuration (Chrome + Mobile)</td>
+          </tr>
+          <tr style="font-weight: bold; background: #f8fafc;">
+            <td colspan="2">TOTAL</td>
+            <td>207</td>
+            <td>Total test scenarios across all files</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="section">
+      <h2>Recommendations</h2>
+      <ol style="margin-left: 20px; line-height: 2;">
+        <li><strong>Start Backend Services:</strong> Run <code>docker-compose up</code> or start each service individually to enable full checkout and chat testing.</li>
+        <li><strong>Install Playwright Browsers:</strong> Run <code>npx playwright install</code> on Windows (not WSL) to enable browser-based E2E tests.</li>
+        <li><strong>Fix Product Detail SEO:</strong> Convert <code>ProductDetailClient</code> to use server-side data fetching for product name, price, and description.</li>
+        <li><strong>Add Stripe Test Keys:</strong> Set <code>NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY</code> environment variable for Stripe Elements testing.</li>
+        <li><strong>Add CI/CD Integration:</strong> Wire up test suite to GitHub Actions for automated testing on every push.</li>
+        <li><strong>Implement Image Optimization:</strong> Product images are 5-12KB JPEG files. Consider WebP format and proper sizing (800x1200px) for production.</li>
+        <li><strong>Add Error Boundary:</strong> Wrap key components in React Error Boundaries to prevent full-page crashes from individual component errors.</li>
+      </ol>
+    </div>
+  </div>
+
+  <footer>
+    <p>Generated by HAFIZ-NAVEED-UDDIN Autonomous E2E Testing Agent | 2026-02-11</p>
+    <p>Fatima Zehra Boutique - Men's Boutique E-Commerce Platform</p>
+  </footer>
+</body>
+</html>

@@ -3,6 +3,7 @@
 from datetime import datetime
 from typing import Optional
 from sqlmodel import SQLModel, Field
+from sqlalchemy import Column, JSON
 
 
 # Database Model
@@ -15,7 +16,7 @@ class ChatMessage(SQLModel, table=True):
     session_id: str = Field(index=True, max_length=100)
     role: str = Field(max_length=20)  # "user" or "assistant"
     content: str
-    metadata: Optional[dict] = Field(default=None)
+    msg_metadata: Optional[dict] = Field(default=None, sa_column=Column("metadata", JSON))
     created_at: datetime = Field(default_factory=datetime.utcnow, index=True)
 
 

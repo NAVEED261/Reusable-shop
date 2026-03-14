@@ -5,6 +5,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   reactStrictMode: true,
+  poweredByHeader: false,
   images: {
     unoptimized: true,
     remotePatterns: [

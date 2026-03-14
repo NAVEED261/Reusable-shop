@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, MessageSquare, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function ContactPage() {
@@ -26,208 +26,191 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-
     // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
+    await new Promise((resolve) => setTimeout(resolve, 1500));
     setSubmitted(true);
     setFormData({ name: "", email: "", phone: "", feedback: "" });
     setLoading(false);
-
-    // Hide success message after 5 seconds
     setTimeout(() => setSubmitted(false), 5000);
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-pink-500 to-purple-600 text-white py-20">
-        <div className="container-wide text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">Get In Touch</h1>
-          <p className="text-xl text-pink-50 max-w-2xl mx-auto">
-            We'd love to hear from you. Send us your feedback, questions, or inquiries and we'll get back to you as soon as possible.
+    <div className="min-h-screen bg-[#fafafa] dark:bg-slate-950">
+      
+      {/* --- LUXURY HERO SECTION --- */}
+      <section className="bg-slate-900 text-white py-24 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+          <span className="text-amber-500 tracking-[0.4em] uppercase text-xs font-bold mb-4 block">
+            Let's Craft Excellence
+          </span>
+          <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 tracking-tight">
+            Contact <span className="text-amber-500 italic font-normal">Us</span>
+          </h1>
+          <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+            Aapki fit aur style hamari zimmedari hai. Bespoke tailoring ya kisi bhi inquiry ke liye humse rabta karein.
           </p>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-16 bg-white dark:bg-slate-800">
-        <div className="container-wide">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      {/* --- CONTACT INFO CARDS --- */}
+      <section className="py-20 px-6 -mt-12 relative z-20">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          {/* Card 1: Visit Us */}
+          <div className="bg-white p-10 shadow-2xl border-b-4 border-amber-500 rounded-sm group hover:-translate-y-2 transition-transform duration-300">
+            <div className="w-14 h-14 bg-slate-900 text-amber-500 flex items-center justify-center rounded-full mb-6 group-hover:bg-amber-500 group-hover:text-white transition-colors">
+              <MapPin size={28} />
+            </div>
+            <h3 className="text-xl font-bold mb-3 tracking-tight uppercase">Visit Our Studio</h3>
+            <p className="text-gray-500 mb-4 leading-relaxed italic text-sm">Experience luxury fabrics in person.</p>
+            <p className="text-slate-900 font-bold">Model Town, Lahore, Pakistan</p>
+          </div>
+
+          {/* Card 2: Call/WhatsApp */}
+          <div className="bg-white p-10 shadow-2xl border-b-4 border-amber-500 rounded-sm group hover:-translate-y-2 transition-transform duration-300">
+            <div className="w-14 h-14 bg-slate-900 text-amber-500 flex items-center justify-center rounded-full mb-6 group-hover:bg-amber-500 group-hover:text-white transition-colors">
+              <Phone size={28} />
+            </div>
+            <h3 className="text-xl font-bold mb-3 tracking-tight uppercase">Direct Line</h3>
+            <p className="text-gray-500 mb-4 leading-relaxed italic text-sm">Available for consultations (10 AM - 10 PM)</p>
+            <a href="tel:+923002385209" className="text-slate-900 font-bold text-lg hover:text-amber-600 transition-colors">+92 300 2385209</a>
+          </div>
+
+          {/* Card 3: Email */}
+          <div className="bg-white p-10 shadow-2xl border-b-4 border-amber-500 rounded-sm group hover:-translate-y-2 transition-transform duration-300">
+            <div className="w-14 h-14 bg-slate-900 text-amber-500 flex items-center justify-center rounded-full mb-6 group-hover:bg-amber-500 group-hover:text-white transition-colors">
+              <Mail size={28} />
+            </div>
+            <h3 className="text-xl font-bold mb-3 tracking-tight uppercase">Support Email</h3>
+            <p className="text-gray-500 mb-4 leading-relaxed italic text-sm">We respond within 24 hours.</p>
+            <a href="mailto:HAFIZNAVEEDCHUHAN@GMAIL.COM" className="text-slate-900 font-bold text-sm truncate block hover:text-amber-600 transition-colors">HAFIZNAVEEDCHUHAN@GMAIL.COM</a>
+          </div>
+
+        </div>
+      </section>
+
+      {/* --- FORM & MISSION SECTION --- */}
+      <section className="py-20 px-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+          
+          {/* Left Side: Mission & Content */}
+          <div className="space-y-10">
             <div>
-              <h2 className="text-4xl font-bold mb-6 text-slate-900 dark:text-white">Our Mission</h2>
-              <p className="text-lg text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
-                At Fatima Zehra Boutique, our mission is to empower every woman with access to premium, elegant fashion that celebrates her unique style and personality.
+              <h2 className="text-4xl font-serif font-bold mb-6">Our <span className="text-amber-600">Mission</span></h2>
+              <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                Fatima Zehra Boutique ka maqsad sirf kapray bechna nahi, balkay aapki shakhsiyat ko mardana wajahat aur naye fashion se araasta karna hai. Hum har suit ko aik 'Masterpiece' samajh kar silye hain.
               </p>
-              <p className="text-lg text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
-                We believe that fashion is not just about clothing—it's about confidence, expression, and celebrating the beauty within every individual.
-              </p>
-              <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-                Every piece in our collection is carefully curated to ensure quality, style, and affordability, making luxury fashion accessible to all.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-pink-100 to-pink-200 dark:from-pink-900 dark:to-pink-800 p-8 rounded-lg text-center">
-                <div className="text-4xl font-bold text-pink-600 dark:text-pink-300 mb-2">40+</div>
-                <p className="text-slate-700 dark:text-slate-300 font-semibold">Premium Products</p>
+              <div className="flex gap-4 items-center p-6 bg-amber-50 border-l-4 border-amber-500">
+                 <Clock className="text-amber-600 shrink-0" size={30} />
+                 <p className="text-sm font-semibold text-slate-800 italic">"Hum waqt par delivery aur behtareen fitting ki guarantee dete hain."</p>
               </div>
-              <div className="bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900 dark:to-purple-800 p-8 rounded-lg text-center">
-                <div className="text-4xl font-bold text-purple-600 dark:text-purple-300 mb-2">4</div>
-                <p className="text-slate-700 dark:text-slate-300 font-semibold">Collections</p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div className="p-8 bg-slate-900 text-white rounded-sm text-center">
+                <p className="text-4xl font-bold text-amber-500 mb-2 font-serif tracking-tighter">15+</p>
+                <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400">Years Experience</p>
+              </div>
+              <div className="p-8 bg-amber-500 text-white rounded-sm text-center">
+                <p className="text-4xl font-bold mb-2 font-serif tracking-tighter">100%</p>
+                <p className="text-[10px] uppercase tracking-widest font-bold text-amber-900">Premium Fabric</p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Contact Info Section */}
-      <section className="py-16 bg-slate-50 dark:bg-slate-700">
-        <div className="container-wide">
-          <h2 className="text-3xl font-bold text-center mb-12 text-slate-900 dark:text-white">Contact Information</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-              <div className="flex items-center justify-center mb-4">
-                <div className="bg-pink-100 dark:bg-pink-900 p-4 rounded-full">
-                  <Mail className="text-pink-600 dark:text-pink-300" size={24} />
+          {/* Right Side: Contact Form */}
+          <div className="bg-white shadow-2xl p-10 border border-slate-100 rounded-sm">
+            <h3 className="text-2xl font-bold mb-8 tracking-tight uppercase flex items-center gap-3">
+              <MessageSquare className="text-amber-500" /> Send a Message
+            </h3>
+
+            {submitted && (
+              <div className="mb-8 p-4 bg-green-50 border-l-4 border-green-500 text-green-800 text-sm animate-fade-in">
+                ✓ Message received! Hamari team jald aap se rabta karegi.
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-[10px] uppercase tracking-widest font-bold text-slate-500">Full Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    placeholder="E.g. Naveed Chuhan"
+                    className="w-full bg-slate-50 border-b-2 border-slate-200 py-3 px-4 focus:border-amber-500 outline-none transition-all text-slate-900"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] uppercase tracking-widest font-bold text-slate-500">Email Address</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    placeholder="E.g. info@boutique.com"
+                    className="w-full bg-slate-50 border-b-2 border-slate-200 py-3 px-4 focus:border-amber-500 outline-none transition-all text-slate-900"
+                  />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-center mb-2 text-slate-900 dark:text-white">Email</h3>
-              <p className="text-center text-slate-600 dark:text-slate-300">
-                <a href="mailto:HAFIZNAVEEDCHUHAN@GMAIL.COM" className="hover:text-pink-600 dark:hover:text-pink-400 transition-colors">
-                  HAFIZNAVEEDCHUHAN@GMAIL.COM
-                </a>
-              </p>
-            </div>
 
-            <div className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-              <div className="flex items-center justify-center mb-4">
-                <div className="bg-purple-100 dark:bg-purple-900 p-4 rounded-full">
-                  <Phone className="text-purple-600 dark:text-purple-300" size={24} />
-                </div>
+              <div className="space-y-2">
+                <label className="text-[10px] uppercase tracking-widest font-bold text-slate-500">Phone Number (WhatsApp)</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  placeholder="E.g. +92 300 1234567"
+                  className="w-full bg-slate-50 border-b-2 border-slate-200 py-3 px-4 focus:border-amber-500 outline-none transition-all text-slate-900"
+                />
               </div>
-              <h3 className="text-xl font-bold text-center mb-2 text-slate-900 dark:text-white">Phone</h3>
-              <p className="text-center text-slate-600 dark:text-slate-300">
-                <a href="tel:+923001234567" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                  +92 300 1234567
-                </a>
-              </p>
-            </div>
 
-            <div className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-              <div className="flex items-center justify-center mb-4">
-                <div className="bg-blue-100 dark:bg-blue-900 p-4 rounded-full">
-                  <MapPin className="text-blue-600 dark:text-blue-300" size={24} />
-                </div>
+              <div className="space-y-2">
+                <label className="text-[10px] uppercase tracking-widest font-bold text-slate-500">Inquiry / Feedback</label>
+                <textarea
+                  name="feedback"
+                  value={formData.feedback}
+                  onChange={handleChange}
+                  required
+                  rows={4}
+                  placeholder="How can we help you today?"
+                  className="w-full bg-slate-50 border-b-2 border-slate-200 py-3 px-4 focus:border-amber-500 outline-none transition-all text-slate-900 resize-none"
+                />
               </div>
-              <h3 className="text-xl font-bold text-center mb-2 text-slate-900 dark:text-white">Location</h3>
-              <p className="text-center text-slate-600 dark:text-slate-300">
-                Lahore, Pakistan
-              </p>
-            </div>
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full bg-slate-900 text-white font-bold py-5 px-8 flex items-center justify-center gap-3 group hover:bg-amber-600 transition-all duration-300"
+              >
+                {loading ? "SENDING..." : (
+                  <>
+                    CONFIRM MESSAGE <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
+                  </>
+                )}
+              </button>
+            </form>
           </div>
+
         </div>
       </section>
 
-      {/* Contact Form Section */}
-      <section className="py-16 bg-white dark:bg-slate-800">
-        <div className="container-wide max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-slate-900 dark:text-white">Send us a Message</h2>
-
-          {submitted && (
-            <div className="mb-8 p-4 bg-green-100 dark:bg-green-900 border border-green-400 dark:border-green-600 text-green-800 dark:text-green-200 rounded-lg">
-              ✓ Thank you! Your message has been received. We'll get back to you soon.
-            </div>
-          )}
-
-          <form onSubmit={handleSubmit} className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-700 dark:to-slate-600 p-8 rounded-lg shadow-lg">
-            {/* Name Field */}
-            <div className="mb-6">
-              <label className="block text-slate-900 dark:text-white font-semibold mb-2">Full Name</label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                placeholder="Enter your full name"
-                className="w-full px-4 py-3 border border-slate-300 dark:border-slate-500 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500"
-              />
-            </div>
-
-            {/* Email Field */}
-            <div className="mb-6">
-              <label className="block text-slate-900 dark:text-white font-semibold mb-2">Email Address</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                placeholder="Enter your email address"
-                className="w-full px-4 py-3 border border-slate-300 dark:border-slate-500 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500"
-              />
-            </div>
-
-            {/* Contact Number Field */}
-            <div className="mb-6">
-              <label className="block text-slate-900 dark:text-white font-semibold mb-2">Contact Number</label>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                placeholder="Enter your contact number"
-                className="w-full px-4 py-3 border border-slate-300 dark:border-slate-500 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500"
-              />
-            </div>
-
-            {/* Feedback Field */}
-            <div className="mb-6">
-              <label className="block text-slate-900 dark:text-white font-semibold mb-2">Feedback & Message</label>
-              <textarea
-                name="feedback"
-                value={formData.feedback}
-                onChange={handleChange}
-                required
-                rows={6}
-                placeholder="Share your feedback, questions, or inquiries..."
-                className="w-full px-4 py-3 border border-slate-300 dark:border-slate-500 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 resize-none"
-              />
-            </div>
-
-            {/* Submit Button */}
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              <Send size={20} />
-              {loading ? "Sending..." : "Send Message"}
-            </button>
-          </form>
-
-          {/* Additional Links */}
-          <div className="mt-8 text-center">
-            <p className="text-slate-600 dark:text-slate-300 mb-4">
-              Want to know more about us?
-            </p>
-            <div className="flex justify-center gap-4 flex-wrap">
-              <Link href="/about" className="text-pink-600 dark:text-pink-400 hover:underline font-semibold">
-                About Us
-              </Link>
-              <span className="text-slate-400">•</span>
-              <Link href="/products" className="text-pink-600 dark:text-pink-400 hover:underline font-semibold">
-                Shop Now
-              </Link>
-              <span className="text-slate-400">•</span>
-              <Link href="/terms" className="text-pink-600 dark:text-pink-400 hover:underline font-semibold">
-                Terms & Conditions
-              </Link>
-            </div>
-          </div>
+      {/* --- FOOTER NAV --- */}
+      <footer className="py-12 border-t border-slate-100 text-center">
+        <div className="flex justify-center gap-8 mb-6">
+           <Link href="/about" className="text-[10px] uppercase tracking-widest font-bold text-slate-400 hover:text-amber-500 transition-colors">About</Link>
+           <Link href="/products" className="text-[10px] uppercase tracking-widest font-bold text-slate-400 hover:text-amber-500 transition-colors">Products</Link>
+           <Link href="/privacy" className="text-[10px] uppercase tracking-widest font-bold text-slate-400 hover:text-amber-500 transition-colors">Privacy</Link>
         </div>
-      </section>
+        <p className="text-[10px] uppercase tracking-widest text-slate-300">© 2026 FATIMA ZEHRA BOUTIQUE. ALL RIGHTS RESERVED.</p>
+      </footer>
     </div>
   );
 }

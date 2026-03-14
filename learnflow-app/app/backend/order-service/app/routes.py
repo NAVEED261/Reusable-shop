@@ -1,10 +1,11 @@
-"""Order Service Routes - Cart and Order Management"""
+"""Order Service Routes - Cart, Order Management, and Payments"""
 
 from datetime import datetime
 from decimal import Decimal
 from typing import Optional
-from fastapi import APIRouter, Depends, HTTPException, status, Header
+from fastapi import APIRouter, Depends, HTTPException, status, Header, Request
 from sqlmodel import Session, select, func
+import json
 
 from .models import (
     Cart, CartItem, Order, OrderItem,
@@ -12,6 +13,7 @@ from .models import (
     CartResponse, CartItemResponse, OrderResponse, OrderItemResponse
 )
 from .database import get_session
+from .stripe_client import StripePaymentClient, process_stripe_webhook
 
 router = APIRouter(tags=["orders"])
 
@@ -317,3 +319,177 @@ async def get_order(
         )
 
     return OrderResponse.from_orm(order)
+
+
+# Payment Endpoints - Stripe Integration
+
+class CreatePaymentIntentRequest:
+    """Request model for payment intent creation"""
+    order_id: int
+    amount: float
+    customer_email: str
+    customer_name: str
+
+
+@router.post("/api/payments/create-intent")
+async def create_payment_intent(
+    order_id: int,
+    amount: float,
+    customer_email: str,
+    customer_name: str,
+    user_id: int = Depends(get_user_id_from_header),
+    session: Session = Depends(get_session)
+):
+    """
+    Create Stripe PaymentIntent for order payment
+
+    Returns:
+        Payment intent details with client secret
+    """
+    try:
+        # Verify order belongs to user
+        order = session.exec(
+            select(Order).where(Order.id == order_id)
+        ).first()
+
+        if not order or order.user_id != user_id:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Order not found"
+            )
+
+        # Create payment intent
+        payment_intent = StripePaymentClient.create_payment_intent(
+            amount_pkr=amount,
+            order_id=order_id,
+            customer_email=customer_email,
+            customer_name=customer_name,
+            description=f"Order #{order_id} for {customer_name}"
+        )
+
+        # Update order with payment intent ID
+        order.payment_intent_id = payment_intent["payment_intent_id"]
+        order.status = "pending_payment"
+        session.add(order)
+        session.commit()
+
+        return {
+            "success": True,
+            "payment_intent_id": payment_intent["payment_intent_id"],
+            "client_secret": payment_intent["client_secret"],
+            "amount": payment_intent["amount"],
+            "currency": payment_intent["currency"]
+        }
+
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
+        )
+
+
+@router.post("/api/payments/webhook")
+async def stripe_webhook(
+    request: Request,
+    session: Session = Depends(get_session)
+):
+    """
+    Handle Stripe webhook events
+    Verifies webhook signature and processes payment events
+    """
+    try:
+        # Get webhook signature
+        signature = request.headers.get("stripe-signature")
+        if not signature:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Missing stripe-signature header"
+            )
+
+        # Get raw body
+        body = await request.body()
+        event_json = json.loads(body)
+
+        # Process webhook
+        result = process_stripe_webhook(event_json, signature)
+
+        if not result:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Invalid webhook signature"
+            )
+
+        # Handle payment_intent.succeeded
+        if result.get("status") == "confirmed":
+            order_id = int(result.get("order_id"))
+            order = session.exec(
+                select(Order).where(Order.id == order_id)
+            ).first()
+
+            if order:
+                order.status = "confirmed"
+                order.payment_status = "paid"
+                session.add(order)
+                session.commit()
+
+        # Handle payment_intent.payment_failed
+        elif result.get("status") == "payment_failed":
+            order_id = int(result.get("order_id"))
+            order = session.exec(
+                select(Order).where(Order.id == order_id)
+            ).first()
+
+            if order:
+                order.status = "payment_failed"
+                order.payment_status = "failed"
+                session.add(order)
+                session.commit()
+
+        return {"received": True}
+
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
+        )
+
+
+@router.get("/api/payments/{payment_intent_id}")
+async def get_payment_status(
+    payment_intent_id: str,
+    user_id: int = Depends(get_user_id_from_header),
+    session: Session = Depends(get_session)
+):
+    """
+    Get payment intent status
+    Verify that user owns the order associated with this payment
+    """
+    try:
+        # Find order by payment intent ID
+        order = session.exec(
+            select(Order).where(Order.payment_intent_id == payment_intent_id)
+        ).first()
+
+        if not order or order.user_id != user_id:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Payment not found"
+            )
+
+        # Get payment intent from Stripe
+        payment_intent = StripePaymentClient.retrieve_payment_intent(payment_intent_id)
+
+        return {
+            "order_id": order.id,
+            "payment_intent_id": payment_intent_id,
+            "status": payment_intent.get("status"),
+            "amount": payment_intent.get("amount"),
+            "currency": payment_intent.get("currency"),
+            "order_status": order.status
+        }
+
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
+        )

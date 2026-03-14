@@ -1,0 +1,437 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img [ref=e7]
+          - text: Karachi, Pakistan
+        - generic [ref=e10]:
+          - img [ref=e11]
+          - text: +92 300 2385209
+      - generic [ref=e13]: Free Worldwide Shipping on Orders Over $200
+    - navigation [ref=e14]:
+      - generic [ref=e16]:
+        - link "Fatima Zehra Signature Logo FATIMA ZEHRA Luxury Boutique" [ref=e17] [cursor=pointer]:
+          - /url: /
+          - img "Fatima Zehra Signature Logo" [ref=e21]
+          - generic [ref=e22]:
+            - generic [ref=e23]: FATIMA ZEHRA
+            - generic [ref=e24]: Luxury Boutique
+        - generic [ref=e25]:
+          - link "Home" [ref=e26] [cursor=pointer]:
+            - /url: /
+          - link "Shop" [ref=e27] [cursor=pointer]:
+            - /url: /products
+          - link "About" [ref=e28] [cursor=pointer]:
+            - /url: /about
+          - link "Contact" [ref=e29] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=e30]:
+          - button [ref=e31] [cursor=pointer]:
+            - img [ref=e32]
+          - link "0" [ref=e35] [cursor=pointer]:
+            - /url: /cart
+            - img [ref=e36]
+            - generic [ref=e40]: "0"
+          - link [ref=e41] [cursor=pointer]:
+            - /url: /profile
+            - img [ref=e42]
+  - main [ref=e45]:
+    - main [ref=e46]:
+      - generic [ref=e48]:
+        - heading "Our Collection" [level=1] [ref=e49]
+        - paragraph [ref=e50]: Discover 40+ premium ladies suits, shalwar qameez, and designer wear.
+      - generic [ref=e52]:
+        - complementary [ref=e53]:
+          - generic [ref=e54]:
+            - heading "Filters" [level=2] [ref=e55]:
+              - img [ref=e56]
+              - text: Filters
+            - generic [ref=e58]:
+              - heading "Categories" [level=3] [ref=e59]
+              - generic [ref=e60]:
+                - button "All Products (40)" [ref=e61] [cursor=pointer]
+                - button "Fancy Suits (10)" [ref=e62] [cursor=pointer]
+                - button "Shalwar Qameez (10)" [ref=e63] [cursor=pointer]
+                - button "Cotton Suits (10)" [ref=e64] [cursor=pointer]
+                - button "Designer Brands (10)" [active] [ref=e65] [cursor=pointer]
+            - generic [ref=e67]:
+              - heading "Price Range" [level=3] [ref=e68]
+              - generic [ref=e69]:
+                - slider [ref=e70]: "0"
+                - slider [ref=e71]: "10000"
+                - generic [ref=e72]:
+                  - generic [ref=e73]: Rs 0
+                  - generic [ref=e74]: Rs 10,000
+            - generic [ref=e76]:
+              - heading "Sort By" [level=3] [ref=e77]
+              - combobox [ref=e78]:
+                - option "Newest" [selected]
+                - 'option "Price: Low to High"'
+                - 'option "Price: High to Low"'
+                - option "Top Rated"
+            - button "Clear Filters" [ref=e79] [cursor=pointer]
+        - generic [ref=e80]:
+          - generic [ref=e82]:
+            - img [ref=e83]
+            - textbox "Search by name, material, or category..." [ref=e86]
+          - paragraph [ref=e88]: Showing 8 products
+          - generic [ref=e89]:
+            - link "Limelight Designer -23% In Stock Designer Brands Limelight Designer Limelight designer suit with premium embellishments. (156 reviews) Cotton Blend Rs 5,800 Rs 7,500 Add to Cart WhatsApp Us" [ref=e91] [cursor=pointer]:
+              - /url: /products/40
+              - generic [ref=e92]:
+                - generic [ref=e93]:
+                  - img "Limelight Designer" [ref=e94]
+                  - generic [ref=e95]: "-23%"
+                  - generic [ref=e96]: In Stock
+                  - button [ref=e97]:
+                    - img [ref=e98]
+                - generic [ref=e100]:
+                  - generic [ref=e102]: Designer Brands
+                  - heading "Limelight Designer" [level=3] [ref=e103]
+                  - paragraph [ref=e104]: Limelight designer suit with premium embellishments.
+                  - generic [ref=e105]:
+                    - generic [ref=e106]:
+                      - img [ref=e107]
+                      - img [ref=e109]
+                      - img [ref=e111]
+                      - img [ref=e113]
+                      - img [ref=e115]
+                    - generic [ref=e117]: (156 reviews)
+                  - paragraph [ref=e118]: Cotton Blend
+                  - generic [ref=e119]:
+                    - generic [ref=e121]:
+                      - generic [ref=e122]: Rs 5,800
+                      - generic [ref=e123]: Rs 7,500
+                    - button "Add to Cart" [ref=e124]:
+                      - img [ref=e125]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e129]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e130]
+                      - text: WhatsApp Us
+            - link "Bonanza Satrangi -23% In Stock Designer Brands Bonanza Satrangi Bonanza Satrangi vibrant collection for festive season. (123 reviews) Lawn Rs 6,200 Rs 8,000 Add to Cart WhatsApp Us" [ref=e133] [cursor=pointer]:
+              - /url: /products/39
+              - generic [ref=e134]:
+                - generic [ref=e135]:
+                  - img "Bonanza Satrangi" [ref=e136]
+                  - generic [ref=e137]: "-23%"
+                  - generic [ref=e138]: In Stock
+                  - button [ref=e139]:
+                    - img [ref=e140]
+                - generic [ref=e142]:
+                  - generic [ref=e144]: Designer Brands
+                  - heading "Bonanza Satrangi" [level=3] [ref=e145]
+                  - paragraph [ref=e146]: Bonanza Satrangi vibrant collection for festive season.
+                  - generic [ref=e147]:
+                    - generic [ref=e148]:
+                      - img [ref=e149]
+                      - img [ref=e151]
+                      - img [ref=e153]
+                      - img [ref=e155]
+                      - img [ref=e157]
+                    - generic [ref=e159]: (123 reviews)
+                  - paragraph [ref=e160]: Lawn
+                  - generic [ref=e161]:
+                    - generic [ref=e163]:
+                      - generic [ref=e164]: Rs 6,200
+                      - generic [ref=e165]: Rs 8,000
+                    - button "Add to Cart" [ref=e166]:
+                      - img [ref=e167]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e171]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e172]
+                      - text: WhatsApp Us
+            - link "Ethnic by Outfitters -21% In Stock Designer Brands Ethnic by Outfitters Contemporary ethnic wear with fusion elements. (167 reviews) Lawn Blend Rs 5,500 Rs 7,000 Add to Cart WhatsApp Us" [ref=e175] [cursor=pointer]:
+              - /url: /products/38
+              - generic [ref=e176]:
+                - generic [ref=e177]:
+                  - img "Ethnic by Outfitters" [ref=e178]
+                  - generic [ref=e179]: "-21%"
+                  - generic [ref=e180]: In Stock
+                  - button [ref=e181]:
+                    - img [ref=e182]
+                - generic [ref=e184]:
+                  - generic [ref=e186]: Designer Brands
+                  - heading "Ethnic by Outfitters" [level=3] [ref=e187]
+                  - paragraph [ref=e188]: Contemporary ethnic wear with fusion elements.
+                  - generic [ref=e189]:
+                    - generic [ref=e190]:
+                      - img [ref=e191]
+                      - img [ref=e193]
+                      - img [ref=e195]
+                      - img [ref=e197]
+                      - img [ref=e199]
+                    - generic [ref=e201]: (167 reviews)
+                  - paragraph [ref=e202]: Lawn Blend
+                  - generic [ref=e203]:
+                    - generic [ref=e205]:
+                      - generic [ref=e206]: Rs 5,500
+                      - generic [ref=e207]: Rs 7,000
+                    - button "Add to Cart" [ref=e208]:
+                      - img [ref=e209]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e213]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e214]
+                      - text: WhatsApp Us
+            - link "Nishat Linen Luxury -24% In Stock Designer Brands Nishat Linen Luxury Nishat Linen premium collection with exclusive prints. (145 reviews) Pure Linen Rs 7,200 Rs 9,500 Add to Cart WhatsApp Us" [ref=e217] [cursor=pointer]:
+              - /url: /products/37
+              - generic [ref=e218]:
+                - generic [ref=e219]:
+                  - img "Nishat Linen Luxury" [ref=e220]
+                  - generic [ref=e221]: "-24%"
+                  - generic [ref=e222]: In Stock
+                  - button [ref=e223]:
+                    - img [ref=e224]
+                - generic [ref=e226]:
+                  - generic [ref=e228]: Designer Brands
+                  - heading "Nishat Linen Luxury" [level=3] [ref=e229]
+                  - paragraph [ref=e230]: Nishat Linen premium collection with exclusive prints.
+                  - generic [ref=e231]:
+                    - generic [ref=e232]:
+                      - img [ref=e233]
+                      - img [ref=e235]
+                      - img [ref=e237]
+                      - img [ref=e239]
+                      - img [ref=e241]
+                    - generic [ref=e243]: (145 reviews)
+                  - paragraph [ref=e244]: Pure Linen
+                  - generic [ref=e245]:
+                    - generic [ref=e247]:
+                      - generic [ref=e248]: Rs 7,200
+                      - generic [ref=e249]: Rs 9,500
+                    - button "Add to Cart" [ref=e250]:
+                      - img [ref=e251]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e255]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e256]
+                      - text: WhatsApp Us
+            - link "Sapphire Designer Suit -20% In Stock Designer Brands Sapphire Designer Suit Sapphire signature style with modern aesthetics. (178 reviews) Cotton Silk Rs 6,800 Rs 8,500 Add to Cart WhatsApp Us" [ref=e259] [cursor=pointer]:
+              - /url: /products/36
+              - generic [ref=e260]:
+                - generic [ref=e261]:
+                  - img "Sapphire Designer Suit" [ref=e262]
+                  - generic [ref=e263]: "-20%"
+                  - generic [ref=e264]: In Stock
+                  - button [ref=e265]:
+                    - img [ref=e266]
+                - generic [ref=e268]:
+                  - generic [ref=e270]: Designer Brands
+                  - heading "Sapphire Designer Suit" [level=3] [ref=e271]
+                  - paragraph [ref=e272]: Sapphire signature style with modern aesthetics.
+                  - generic [ref=e273]:
+                    - generic [ref=e274]:
+                      - img [ref=e275]
+                      - img [ref=e277]
+                      - img [ref=e279]
+                      - img [ref=e281]
+                      - img [ref=e283]
+                    - generic [ref=e285]: (178 reviews)
+                  - paragraph [ref=e286]: Cotton Silk
+                  - generic [ref=e287]:
+                    - generic [ref=e289]:
+                      - generic [ref=e290]: Rs 6,800
+                      - generic [ref=e291]: Rs 8,500
+                    - button "Add to Cart" [ref=e292]:
+                      - img [ref=e293]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e297]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e298]
+                      - text: WhatsApp Us
+            - link "Alkaram Studio -26% In Stock Designer Brands Alkaram Studio Alkaram Studio festive collection with luxury dupatta. (134 reviews) Silk Blend Rs 9,200 Rs 12,500 Add to Cart WhatsApp Us" [ref=e301] [cursor=pointer]:
+              - /url: /products/35
+              - generic [ref=e302]:
+                - generic [ref=e303]:
+                  - img "Alkaram Studio" [ref=e304]
+                  - generic [ref=e305]: "-26%"
+                  - generic [ref=e306]: In Stock
+                  - button [ref=e307]:
+                    - img [ref=e308]
+                - generic [ref=e310]:
+                  - generic [ref=e312]: Designer Brands
+                  - heading "Alkaram Studio" [level=3] [ref=e313]
+                  - paragraph [ref=e314]: Alkaram Studio festive collection with luxury dupatta.
+                  - generic [ref=e315]:
+                    - generic [ref=e316]:
+                      - img [ref=e317]
+                      - img [ref=e319]
+                      - img [ref=e321]
+                      - img [ref=e323]
+                      - img [ref=e325]
+                    - generic [ref=e327]: (134 reviews)
+                  - paragraph [ref=e328]: Silk Blend
+                  - generic [ref=e329]:
+                    - generic [ref=e331]:
+                      - generic [ref=e332]: Rs 9,200
+                      - generic [ref=e333]: Rs 12,500
+                    - button "Add to Cart" [ref=e334]:
+                      - img [ref=e335]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e339]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e340]
+                      - text: WhatsApp Us
+            - link "Gul Ahmed Premium -26% In Stock Designer Brands Gul Ahmed Premium Gul Ahmed premium lawn with digital embroidery. (198 reviews) Premium Lawn Rs 7,800 Rs 10,500 Add to Cart WhatsApp Us" [ref=e343] [cursor=pointer]:
+              - /url: /products/34
+              - generic [ref=e344]:
+                - generic [ref=e345]:
+                  - img "Gul Ahmed Premium" [ref=e346]
+                  - generic [ref=e347]: "-26%"
+                  - generic [ref=e348]: In Stock
+                  - button [ref=e349]:
+                    - img [ref=e350]
+                - generic [ref=e352]:
+                  - generic [ref=e354]: Designer Brands
+                  - heading "Gul Ahmed Premium" [level=3] [ref=e355]
+                  - paragraph [ref=e356]: Gul Ahmed premium lawn with digital embroidery.
+                  - generic [ref=e357]:
+                    - generic [ref=e358]:
+                      - img [ref=e359]
+                      - img [ref=e361]
+                      - img [ref=e363]
+                      - img [ref=e365]
+                      - img [ref=e367]
+                    - generic [ref=e369]: (198 reviews)
+                  - paragraph [ref=e370]: Premium Lawn
+                  - generic [ref=e371]:
+                    - generic [ref=e373]:
+                      - generic [ref=e374]: Rs 7,800
+                      - generic [ref=e375]: Rs 10,500
+                    - button "Add to Cart" [ref=e376]:
+                      - img [ref=e377]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e381]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e382]
+                      - text: WhatsApp Us
+            - link "Khaadi Exclusive -23% In Stock Designer Brands Khaadi Exclusive Khaadi exclusive print with traditional craftsmanship. (156 reviews) Khaddar Rs 8,500 Rs 11,000 Add to Cart WhatsApp Us" [ref=e385] [cursor=pointer]:
+              - /url: /products/33
+              - generic [ref=e386]:
+                - generic [ref=e387]:
+                  - img "Khaadi Exclusive" [ref=e388]
+                  - generic [ref=e389]: "-23%"
+                  - generic [ref=e390]: In Stock
+                  - button [ref=e391]:
+                    - img [ref=e392]
+                - generic [ref=e394]:
+                  - generic [ref=e396]: Designer Brands
+                  - heading "Khaadi Exclusive" [level=3] [ref=e397]
+                  - paragraph [ref=e398]: Khaadi exclusive print with traditional craftsmanship.
+                  - generic [ref=e399]:
+                    - generic [ref=e400]:
+                      - img [ref=e401]
+                      - img [ref=e403]
+                      - img [ref=e405]
+                      - img [ref=e407]
+                      - img [ref=e409]
+                    - generic [ref=e411]: (156 reviews)
+                  - paragraph [ref=e412]: Khaddar
+                  - generic [ref=e413]:
+                    - generic [ref=e415]:
+                      - generic [ref=e416]: Rs 8,500
+                      - generic [ref=e417]: Rs 11,000
+                    - button "Add to Cart" [ref=e418]:
+                      - img [ref=e419]
+                      - text: Add to Cart
+                    - link "WhatsApp Us" [ref=e423]:
+                      - /url: https://wa.me/03002385209
+                      - img [ref=e424]
+                      - text: WhatsApp Us
+  - contentinfo [ref=e426]:
+    - generic [ref=e428]:
+      - generic [ref=e429]:
+        - generic [ref=e430]:
+          - img [ref=e432]
+          - heading "Free Shipping" [level=5] [ref=e437]
+          - paragraph [ref=e438]: Across Pakistan
+        - generic [ref=e439]:
+          - img [ref=e441]
+          - heading "Easy Returns" [level=5] [ref=e444]
+          - paragraph [ref=e445]: 7-Day Exchange
+        - generic [ref=e446]:
+          - img [ref=e448]
+          - heading "Secure Payment" [level=5] [ref=e451]
+          - paragraph [ref=e452]: 100% Protected
+        - generic [ref=e453]:
+          - img [ref=e455]
+          - heading "Cash on Delivery" [level=5] [ref=e457]
+          - paragraph [ref=e458]: Pay at Door
+      - generic [ref=e459]:
+        - generic [ref=e460]:
+          - heading "FATIMA ZEHRA" [level=3] [ref=e461]
+          - paragraph [ref=e462]: Defining the future of Eastern couture. From intricate craftsmanship to modern silhouettes, we create legacies, not just garments.
+          - generic [ref=e463]:
+            - link [ref=e464] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e465]
+            - link [ref=e467] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e468]
+            - link [ref=e471] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e472]
+        - generic [ref=e474]:
+          - heading "Navigation" [level=4] [ref=e475]
+          - list [ref=e476]:
+            - listitem [ref=e477]:
+              - link "Shop" [ref=e478] [cursor=pointer]:
+                - /url: /products
+                - text: Shop
+            - listitem [ref=e479]:
+              - link "About" [ref=e480] [cursor=pointer]:
+                - /url: /about
+                - text: About
+            - listitem [ref=e481]:
+              - link "Contact" [ref=e482] [cursor=pointer]:
+                - /url: /contact
+                - text: Contact
+            - listitem [ref=e483]:
+              - link "Orders" [ref=e484] [cursor=pointer]:
+                - /url: /orders
+                - text: Orders
+        - generic [ref=e485]:
+          - heading "Boutique Office" [level=4] [ref=e486]
+          - generic [ref=e487]:
+            - generic [ref=e488]:
+              - img [ref=e489]
+              - paragraph [ref=e492]: House No. R-98, Sector 5C-2, North Karachi
+            - generic [ref=e493]:
+              - img [ref=e494]
+              - paragraph [ref=e496]: +92 300 2385209
+            - generic [ref=e497]:
+              - img [ref=e498]
+              - paragraph [ref=e501]: hnaveed264@gmail.com
+        - generic [ref=e502]:
+          - heading "The Insider" [level=4] [ref=e503]
+          - paragraph [ref=e504]: Join our elite circle for private collection launches.
+          - generic [ref=e505]:
+            - textbox "EMAIL ADDRESS" [ref=e506]
+            - button [ref=e507] [cursor=pointer]:
+              - img [ref=e508]
+      - generic [ref=e512]:
+        - generic [ref=e513]:
+          - generic [ref=e515]: "N"
+          - generic [ref=e516]:
+            - paragraph [ref=e517]: Architected By
+            - heading "HAFIZ NAVEED UDDIN" [level=6] [ref=e518]
+            - paragraph [ref=e519]: Agentic AI Developer / Full-Stack Engineer
+        - generic [ref=e520]:
+          - link "HAFIZNAVEEDCHUHAN@GMAIL.COM" [ref=e521] [cursor=pointer]:
+            - /url: mailto:HAFIZNAVEEDCHUHAN@GMAIL.COM
+          - generic [ref=e522]: Available for New Ventures
+      - paragraph [ref=e524]: © 2026 Fatima Zehra Boutique. Crafted for Excellence.
+  - button "Open chat" [ref=e525] [cursor=pointer]:
+    - img [ref=e526]
+  - generic [ref=e528]:
+    - button "Open WhatsApp chat" [ref=e529] [cursor=pointer]:
+      - img [ref=e530]
+    - generic: Chat with us
+  - alert [ref=e532]
+```
